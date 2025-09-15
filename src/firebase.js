@@ -5,12 +5,13 @@ import { getAuth } from 'firebase/auth';
 // Firebase configuration object
 // Note: Replace these with your actual Firebase project credentials
 const firebaseConfig = {
-  apiKey: "your-api-key-here",
-  authDomain: "your-project-id.firebaseapp.com",
-  projectId: "your-project-id",
-  storageBucket: "your-project-id.appspot.com",
-  messagingSenderId: "your-sender-id",
-  appId: "your-app-id"
+  apiKey: "AIzaSyDpN4-55eHpwFEsdJ81JVfq8RqSzRBohN0",
+  authDomain: "englishlms-6b79d.firebaseapp.com",
+  projectId: "englishlms-6b79d",
+  storageBucket: "englishlms-6b79d.firebasestorage.app",
+  messagingSenderId: "41122169393",
+  appId: "1:41122169393:web:8360fbdb22333774210b10",
+  measurementId: "G-821JXQ9CNP"
 };
 
 // Initialize Firebase
