@@ -7,6 +7,9 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
+import CourseDetail from './pages/CourseDetail';
+import QuizDetail from './pages/QuizDetail';
+import AssignmentDetail from './pages/AssignmentDetail';
 
 function App() {
   return (
@@ -25,6 +28,30 @@ function App() {
               element={
                 <ProtectedRoute>
                   <Dashboard />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/course/:courseId" 
+              element={
+                <ProtectedRoute>
+                  <CourseDetail />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/quiz/:quizId" 
+              element={
+                <ProtectedRoute>
+                  <QuizDetail />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/assignment/:assignmentId" 
+              element={
+                <ProtectedRoute>
+                  <AssignmentDetail />
                 </ProtectedRoute>
               } 
             />

@@ -1,7 +1,7 @@
 // Dashboard page with course, assignment, and quiz sections (protected route)
 import React from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function Dashboard() {
   const { currentUser, logout } = useAuth();
@@ -112,25 +112,25 @@ export default function Dashboard() {
               </div>
               
               <div className="space-y-4">
-                <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer">
+                <Link to="/course/grammar-fundamentals" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
                   <h4 className="font-medium text-gray-900 mb-1">English Grammar Fundamentals</h4>
                   <p className="text-sm text-gray-600 mb-2">Master the basics of English grammar</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-primary-600 bg-primary-100 px-2 py-1 rounded">In Progress</span>
                     <span className="text-xs text-gray-500">75% Complete</span>
                   </div>
-                </div>
+                </Link>
 
-                <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer">
+                <Link to="/course/advanced-vocabulary" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
                   <h4 className="font-medium text-gray-900 mb-1">Advanced Vocabulary</h4>
                   <p className="text-sm text-gray-600 mb-2">Expand your English vocabulary</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-accent-600 bg-accent-100 px-2 py-1 rounded">New</span>
                     <span className="text-xs text-gray-500">0% Complete</span>
                   </div>
-                </div>
+                </Link>
 
-                <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer">
+                <div className="p-4 bg-gray-50 rounded-lg">
                   <h4 className="font-medium text-gray-900 mb-1">Business English</h4>
                   <p className="text-sm text-gray-600 mb-2">Professional English communication</p>
                   <div className="flex items-center justify-between">
@@ -153,32 +153,32 @@ export default function Dashboard() {
               </div>
               
               <div className="space-y-4">
-                <div className="p-4 bg-red-50 border-l-4 border-red-400 rounded-r-lg">
+                <Link to="/assignment/essay-future-goals" className="block p-4 bg-red-50 border-l-4 border-red-400 rounded-r-lg hover:bg-red-100 transition-colors duration-200">
                   <h4 className="font-medium text-gray-900 mb-1">Essay: My Future Goals</h4>
                   <p className="text-sm text-gray-600 mb-2">Write a 500-word essay about your future aspirations</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-red-600 font-medium">Due Tomorrow</span>
                     <span className="text-xs text-gray-500">Not Started</span>
                   </div>
-                </div>
+                </Link>
 
-                <div className="p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg">
+                <Link to="/assignment/grammar-exercise-3" className="block p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg hover:bg-yellow-100 transition-colors duration-200">
                   <h4 className="font-medium text-gray-900 mb-1">Grammar Exercise Set 3</h4>
                   <p className="text-sm text-gray-600 mb-2">Complete exercises on past tense usage</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-yellow-600 font-medium">Due in 3 days</span>
                     <span className="text-xs text-gray-500">50% Complete</span>
                   </div>
-                </div>
+                </Link>
 
-                <div className="p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+                <Link to="/assignment/vocabulary-prep" className="block p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg hover:bg-blue-100 transition-colors duration-200">
                   <h4 className="font-medium text-gray-900 mb-1">Vocabulary Quiz Prep</h4>
                   <p className="text-sm text-gray-600 mb-2">Study materials for upcoming vocabulary test</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-blue-600 font-medium">Due in 1 week</span>
                     <span className="text-xs text-gray-500">Not Started</span>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -194,25 +194,25 @@ export default function Dashboard() {
               </div>
               
               <div className="space-y-4">
-                <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer">
+                <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
                   <h4 className="font-medium text-gray-900 mb-1">Present Perfect Tense</h4>
                   <p className="text-sm text-gray-600 mb-2">Test your understanding of present perfect</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-600">15 Questions</span>
-                    <button className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
+                    <Link to="/quiz/present-perfect" className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
                       Start Quiz
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
-                <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer">
+                <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
                   <h4 className="font-medium text-gray-900 mb-1">Phrasal Verbs</h4>
                   <p className="text-sm text-gray-600 mb-2">Common phrasal verbs in English</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-600">20 Questions</span>
-                    <button className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
+                    <Link to="/quiz/phrasal-verbs" className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
                       Start Quiz
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
