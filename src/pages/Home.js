@@ -67,12 +67,20 @@ export default function Home() {
             </Link>
           ) : (
             <>
-              <Link 
-                to="/login" 
-                className="inline-block btn-primary text-lg px-8 py-3 rounded-xl mr-4"
-              >
-                Get Started
-              </Link>
+              <div className="space-x-4">
+                <Link 
+                  to="/signup" 
+                  className="inline-block btn-primary text-lg px-8 py-3 rounded-xl"
+                >
+                  Get Started
+                </Link>
+                <Link 
+                  to="/login" 
+                  className="inline-block btn-secondary text-lg px-8 py-3 rounded-xl"
+                >
+                  Sign In
+                </Link>
+              </div>
               <p className="text-gray-500 text-sm">
                 Ready to begin your English learning journey?
               </p>

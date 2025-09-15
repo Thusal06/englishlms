@@ -1,28 +1,51 @@
-// Login page with email/password authentication form
+// Signup page with email/password registration form
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
-export default function Login() {
+export default function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const { login } = useAuth();
+  const { signup } = useAuth();
   const navigate = useNavigate();
 
   // Handle form submission
   async function handleSubmit(e) {
     e.preventDefault();
 
+    // Validation
+    if (password !== confirmPassword) {
+      return setError('Passwords do not match');
+    }
+
+    if (password.length < 6) {
+      return setError('Password must be at least 6 characters long');
+    }
+
     try {
       setError('');
       setLoading(true);
-      await login(email, password);
+      await signup(email, password);
       navigate('/dashboard');
     } catch (error) {
-      setError('Failed to log in. Please check your credentials.');
-      console.error('Login error:', error);
+      // Handle specific Firebase errors
+      switch (error.code) {
+        case 'auth/email-already-in-use':
+          setError('An account with this email already exists');
+          break;
+        case 'auth/invalid-email':
+          setError('Please enter a valid email address');
+          break;
+        case 'auth/weak-password':
+          setError('Password is too weak. Please choose a stronger password');
+          break;
+        default:
+          setError('Failed to create account. Please try again.');
+      }
+      console.error('Signup error:', error);
     }
 
     setLoading(false);
@@ -38,11 +61,11 @@ export default function Login() {
               English LMS
             </h1>
           </Link>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">Welcome Back</h2>
-          <p className="text-gray-600">Sign in to continue your learning journey</p>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-2">Create Your Account</h2>
+          <p className="text-gray-600">Join us and start your English learning journey</p>
         </div>
 
-        {/* Login Form */}
+        {/* Signup Form */}
         <div className="card">
           {error && (
             <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg">
@@ -75,9 +98,24 @@ export default function Login() {
                 type="password"
                 required
                 className="input-field"
-                placeholder="Enter your password"
+                placeholder="Create a password (min. 6 characters)"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
+                Confirm Password
+              </label>
+              <input
+                id="confirmPassword"
+                type="password"
+                required
+                className="input-field"
+                placeholder="Confirm your password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </div>
 
@@ -86,19 +124,19 @@ export default function Login() {
               type="submit"
               className="w-full btn-primary py-3 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? 'Signing In...' : 'Sign In'}
+              {loading ? 'Creating Account...' : 'Create Account'}
             </button>
           </form>
 
           {/* Additional Options */}
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
-              Don't have an account?{' '}
+              Already have an account?{' '}
               <Link 
-                to="/signup" 
+                to="/login" 
                 className="text-primary-600 hover:text-primary-700 font-medium transition-colors duration-200"
               >
-                Create one here
+                Sign in here
               </Link>
             </p>
           </div>
