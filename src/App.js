@@ -10,6 +10,8 @@ import Dashboard from './pages/Dashboard';
 import CourseDetail from './pages/CourseDetail';
 import QuizDetail from './pages/QuizDetail';
 import AssignmentDetail from './pages/AssignmentDetail';
+import Discussion from './pages/Discussion';
+import Notes from './pages/Notes';
 
 function App() {
   return (
@@ -52,6 +54,22 @@ function App() {
               element={
                 <ProtectedRoute>
                   <AssignmentDetail />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/discussion/:courseId?" 
+              element={
+                <ProtectedRoute>
+                  <Discussion />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/notes/:courseId?/:lessonId?" 
+              element={
+                <ProtectedRoute>
+                  <Notes />
                 </ProtectedRoute>
               } 
             />

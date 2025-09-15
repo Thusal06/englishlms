@@ -291,12 +291,18 @@ export default function CourseDetail() {
                 {/* Lesson Actions */}
                 <div className="mt-6 flex items-center justify-between">
                   <div className="flex space-x-4">
-                    <button className="btn-secondary">
+                    <Link 
+                      to={`/notes/${course.id}/${selectedLesson.id}`}
+                      className="btn-secondary"
+                    >
                       📝 Take Notes
-                    </button>
-                    <button className="btn-secondary">
+                    </Link>
+                    <Link 
+                      to={`/discussion/${course.id}`}
+                      className="btn-secondary"
+                    >
                       💬 Discussion
-                    </button>
+                    </Link>
                   </div>
                   
                   {selectedLesson.completed && (
