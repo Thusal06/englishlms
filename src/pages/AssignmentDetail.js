@@ -1370,6 +1370,47 @@ export default function AssignmentDetail() {
     setQuizShowResults(false);
   }
 
+  // Missing helper functions for drag-drop and other assignment types
+  function removePlaced(index) {
+    setDdAnswers((prev) => {
+      const updated = { ...prev };
+      delete updated[index];
+      return updated;
+    });
+  }
+
+  function resetDD() {
+    setDdAnswers({});
+    setDdScore(null);
+    setDdShowResults(false);
+    setDdTexts({});
+  }
+
+  function handleTextChange(index, value) {
+    setDdTexts((prev) => ({ ...prev, [index]: value }));
+  }
+
+  // Video drag-drop handlers
+  function handleVideoDragOver(e) {
+    e.preventDefault();
+    setDragActive(true);
+  }
+
+  function handleVideoDragLeave(e) {
+    e.preventDefault();
+    setDragActive(false);
+  }
+
+  function handleVideoDrop(e) {
+    e.preventDefault();
+    setDragActive(false);
+    const droppedFiles = Array.from(e.dataTransfer.files || []);
+    const videoFiles = droppedFiles.filter((f) => f.type.startsWith('video/'));
+    if (videoFiles.length > 0) {
+      setFiles([videoFiles[0]]);
+    }
+  }
+
   // Compute score for quiz-type assignments (supports mcq, fill, truefalse, and match inside quiz)
   function computeQuizScore(assignment) {
     const questions = assignment.questions || [];
@@ -1532,10 +1573,18 @@ export default function AssignmentDetail() {
     addSubmission(assignmentId, submissionData);
     setIsSubmitted(true);
     
-    // Show success message and redirect
+    // Show success message based on submission type
+    const isAutoGraded = ['quiz', 'dragdrop', 'match'].includes(assignment.submissionType);
+    const message = isAutoGraded 
+      ? '🎉 Task completed successfully! Your score has been calculated automatically.'
+      : '📝 Task submitted successfully! Your submission will be reviewed by the instructor.';
+    
     setTimeout(() => {
-      alert('🎉 Task completed successfully! Great work!');
-      navigate('/assignments');
+      alert(message);
+      // Don't auto-redirect for manual grading submissions
+      if (isAutoGraded) {
+        navigate('/assignments');
+      }
     }, 500);
   }
 
@@ -1648,7 +1697,7 @@ export default function AssignmentDetail() {
         </div>
 
         {/* Interactive Drag & Drop UI */}
-        {assignment.submissionType === 'dragdrop' && (
+        {assignment.submissionType === 'dragdrop' && !isSubmitted && (
           <div className="card mb-8">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Task 1</h3>
             <p className="text-gray-600 mb-4">Complete each sentence with the correct word from the box.</p>
@@ -2092,7 +2141,7 @@ export default function AssignmentDetail() {
         )}
 
         {/* Matching Table (Phrase ↔ Function) */}
-        {assignment.submissionType === 'match' && (
+        {assignment.submissionType === 'match' && !isSubmitted && (
           <div className="card mb-8">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Match the Negotiation Phrase</h3>
             <p className="text-gray-600 mb-6">Drag a function label (A–F) from the word bank into the matching row in Column B.</p>
@@ -2177,54 +2226,9 @@ export default function AssignmentDetail() {
             )}
           </div>
         )}
-                        {ddShowResults && (
-                          <div className="mt-1 text-sm">
-                            {isCorrect ? (
-                              <span className="text-green-600">Correct</span>
-                            ) : (
-                              <span className="text-red-600">Correct answer: {s.answer}</span>
-                            )}
-                          </div>
-                        )}
-
-                        {/* Optional free-text completion for vocab-assignment-2 */}
-                        {assignment.id === 'vocab-assignment-2' && (
-                          <div className="mt-3">
-                            <label className="block text-xs text-gray-500 mb-1">Complete the sentence in your own words</label>
-                            <input
-                              type="text"
-                              className="input-field"
-                              placeholder="... finish your idea here"
-                              value={ddTexts[index] || ''}
-                              onChange={(e) => handleTextChange(index, e.target.value)}
-                            />
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Actions */}
-            <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-200">
-              <button type="button" onClick={resetDD} className="btn-secondary">Reset</button>
-              <form onSubmit={handleSubmit}>
-                <button type="submit" className="btn-primary">Submit</button>
-              </form>
-            </div>
-
-            {ddShowResults && (
-              <div className="mt-6 p-4 rounded bg-gray-50 border">
-                <p className="font-semibold text-gray-800">Score: {ddScore} / {assignment.maxScore}</p>
-              </div>
-            )}
-          </div>
-        )}
 
         {/* Video Upload (Drag & Drop) */}
-        {assignment.submissionType === 'video' && (
+        {assignment.submissionType === 'video' && !isSubmitted && (
           <div className="card">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Upload Your Presentation Video</h3>
             <div
