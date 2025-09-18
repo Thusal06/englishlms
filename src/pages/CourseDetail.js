@@ -6,7 +6,7 @@ import { useAssignments } from '../contexts/AssignmentsContext';
 
 export default function CourseDetail() {
   const { courseId } = useParams();
-  const { currentUser } = useAuth();
+  const { currentUser, logout } = useAuth();
   const { addAssignment } = useAssignments();
   const navigate = useNavigate();
   const [course, setCourse] = useState(null);
