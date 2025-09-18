@@ -655,6 +655,65 @@ export default function AssignmentDetail() {
       ]
     },
 
+    // Business English - Lesson 7: Negotiation
+    'be-negotiation-task-1': {
+      id: 'be-negotiation-task-1',
+      title: 'Task 1: Match Negotiation Phrases',
+      description: 'Match the negotiation phrase (Column A) with its function (Column B).',
+      instructions: [
+        'Drag each function label (A–F) from the word bank into the correct phrase row.',
+        'Each label is used exactly once.',
+        'Submit to check your score.'
+      ],
+      dueDate: '2025-11-18',
+      maxScore: 6,
+      submissionType: 'match',
+      status: 'not-started',
+      phrases: [
+        '"Let\'s discuss how we can work this out."',
+        '"What if we tried this approach instead?"',
+        '"That sounds reasonable, but…"',
+        '"I understand your point, but we might face challenges with…"',
+        '"Just to clarify, you\'re suggesting…?"',
+        '"Can we agree to move forward with this plan?"'
+      ],
+      functions: [
+        { key: 'A', text: 'Opening the negotiation' },
+        { key: 'B', text: 'Proposing an alternative solution' },
+        { key: 'C', text: 'Expressing agreement or partial agreement' },
+        { key: 'D', text: 'Expressing polite disagreement' },
+        { key: 'E', text: 'Clarifying understanding' },
+        { key: 'F', text: 'Closing the negotiation' }
+      ],
+      answers: ['A','B','C','D','E','F']
+    },
+    'be-negotiation-task-2': {
+      id: 'be-negotiation-task-2',
+      title: 'Task 2: Complete the Dialogue',
+      description: 'Complete the dialogue using the negotiation phrases from the box by dragging them into the blanks.',
+      instructions: [
+        'Drag each phrase from the word bank into the correct blank.',
+        'Each phrase is used exactly once.',
+        'Submit to check your score.'
+      ],
+      dueDate: '2025-11-19',
+      maxScore: 4,
+      submissionType: 'dragdrop',
+      status: 'not-started',
+      wordBank: [
+        'I understand your point, but we might face challenges with...',
+        'What if we tried this approach instead?',
+        'Can we agree to move forward with this plan?',
+        'Just to clarify, you\'re suggesting...?'
+      ],
+      sentences: [
+        { text: 'Alex: We need to deliver the new feature by Friday, or the client will be unhappy.\\nRiya: __________ (1) We might need an extra day for testing.', answer: 'I understand your point, but we might face challenges with...' },
+        { text: 'Alex: Okay, but we can\'t delay the release. __________ (2) extending the deadline by one day?', answer: 'Can we agree to move forward with this plan?' },
+        { text: 'Riya: That could work. __________ (3) keeping the current deadline but prioritizing the most critical features?', answer: 'What if we tried this approach instead?' },
+        { text: 'Alex: Yes, that makes sense. __________ (4) that we focus on the priority features first?', answer: 'Just to clarify, you\'re suggesting...?' }
+      ]
+    },
+
     // Business English - Lesson 3: Presentations (Video submission)
     'be-presentations-task-1': {
       id: 'be-presentations-task-1',

@@ -784,82 +784,67 @@ export default function CourseDetail() {
         },
         {
           id: 7,
-          title: 'Lesson 7 – Negotiation',
+          title: 'Lesson 7 - Negotiation',
           type: 'content',
           content: `
-            <p>Use clear, professional language to propose solutions, align expectations, and reach agreements.</p>
+            <h3>Common Negotiation Phrases</h3>
+            <p>Negotiation is a key skill in the workplace, especially for software engineers working with clients, vendors, or cross-functional teams. Using the right phrases helps you express ideas clearly, propose solutions, and reach agreements professionally.</p>
 
-            <h4>1. Opening</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>“Let’s discuss how we can work this out.”</li>
-              <li>“I’d like to explore possible solutions.”</li>
-              <li>“Can we review the requirements together?”</li>
+            <h4 class="mt-4">1. Opening the Negotiation</h4>
+            <ul class="list-disc pl-6">
+              <li><strong>"Let's discuss how we can work this out."</strong> – polite way to start a negotiation.</li>
+              <li><strong>"I'd like to explore possible solutions."</strong> – shows willingness to collaborate.</li>
+              <li><strong>"Can we review the requirements together?"</strong> – focuses on facts and shared understanding.</li>
             </ul>
 
-            <h4 class="mt-4">2. Proposals</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>“What if we tried this approach instead?”</li>
-              <li>“We could consider adjusting the timeline to…”</li>
-              <li>“One option might be to…”</li>
+            <h4 class="mt-4">2. Making Proposals</h4>
+            <ul class="list-disc pl-6">
+              <li><strong>"What if we tried this approach instead?"</strong> – suggests an alternative.</li>
+              <li><strong>"We could consider adjusting the timeline to…"</strong> – proposes a compromise.</li>
+              <li><strong>"One option might be to…"</strong> – introduces possible solutions without sounding forceful.</li>
             </ul>
 
-            <h4 class="mt-4">3. Agreement (Full/Partial)</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>“That sounds reasonable, but …”</li>
-              <li>“I can work with that if we …”</li>
-              <li>“We’re aligned on X; now let’s look at Y.”</li>
+            <h4 class="mt-4">3. Expressing Agreement or Partial Agreement</h4>
+            <ul class="list-disc pl-6">
+              <li><strong>"That sounds reasonable, but…"</strong> – agrees in principle while adding conditions.</li>
+              <li><strong>"I can work with that if we…"</strong> – shows willingness to accept with modifications.</li>
+              <li><strong>"We're aligned on X, now let's look at Y."</strong> – confirms agreement on some points while continuing the discussion.</li>
             </ul>
 
-            <h4 class="mt-4">4. Polite Disagreement</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>“I’m not sure that will work because …”</li>
-              <li>“I understand your point, but we might face challenges with …”</li>
-              <li>“That could be difficult to implement due to …”</li>
+            <h4 class="mt-4">4. Expressing Disagreement Politely</h4>
+            <ul class="list-disc pl-6">
+              <li><strong>"I'm not sure that will work because…"</strong> – provides reasoning without confrontation.</li>
+              <li><strong>"I understand your point, but we might face challenges with…"</strong> – acknowledges the other party's view while explaining your concerns.</li>
+              <li><strong>"That could be difficult to implement due to…"</strong> – focuses on objective limitations.</li>
             </ul>
 
-            <h4 class="mt-4">5. Clarifying / Summarizing</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>“Just to clarify, you’re suggesting … ?”</li>
-              <li>“If I understand correctly, we agree on …”</li>
-              <li>“Let’s make sure we’re on the same page regarding …”</li>
+            <h4 class="mt-4">5. Clarifying and Summarizing</h4>
+            <ul class="list-disc pl-6">
+              <li><strong>"Just to clarify, you're suggesting…?"</strong> – confirms understanding.</li>
+              <li><strong>"So, if I understand correctly, we agree on…"</strong> – summarizes agreement points.</li>
+              <li><strong>"Let's make sure we're on the same page regarding…"</strong> – ensures alignment.</li>
             </ul>
 
-            <h4 class="mt-4">6. Closing</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>“Can we agree to move forward with this plan?”</li>
-              <li>“Let’s document the agreed points and proceed.”</li>
-              <li>“I think we have a workable solution.”</li>
+            <h4 class="mt-4">6. Closing the Negotiation</h4>
+            <ul class="list-disc pl-6">
+              <li><strong>"Can we agree to move forward with this plan?"</strong> – formal closing question.</li>
+              <li><strong>"Let's document the agreed points and proceed."</strong> – ensures clarity and follow-up.</li>
+              <li><strong>"I think we have a workable solution."</strong> – signals resolution and consensus.</li>
             </ul>
 
-            <h4 class="mt-4">Tips for Software Engineers</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Use neutral, professional language; avoid emotional phrasing.</li>
-              <li>Focus on facts and solutions, not personalities.</li>
-              <li>Pair phrases with technical rationale when discussing timelines, features, or resources.</li>
+            <h4 class="mt-4">Tips for Software Engineers:</h4>
+            <ul class="list-disc pl-6">
+              <li>Use neutral, professional language; avoid emotional or confrontational words.</li>
+              <li>Focus on solutions and facts, not personalities.</li>
+              <li>Combine negotiation phrases with technical explanations when discussing project timelines, features, or resources.</li>
             </ul>
           `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'business-assignment-1',
-            title: 'Task 1: Match Negotiation Phrases',
-            description: 'Match negotiation phrases to their functions using drag-and-drop',
-            dueDate: '2025-11-05'
-          }
-        },
-        {
-          id: 7,
-          title: 'Lesson 7 - Business Writing',
-          type: 'content',
-          content: 'Content will be added here...',
-          duration: '1 day',
-          completed: false,
-          task: {
-            id: 'business-assignment-7',
-            title: 'Task 7: Advanced Business Writing',
-            description: 'Master advanced business writing techniques and formats',
-            dueDate: '2025-10-31'
-          }
+          tasks: [
+            { id: 'be-negotiation-task-1', title: 'Task 1: Match Negotiation Phrases', description: 'Match the negotiation phrase with its function.', dueDate: '2025-11-18' },
+            { id: 'be-negotiation-task-2', title: 'Task 2: Complete the Dialogue', description: 'Complete the dialogue using the negotiation phrases from the box.', dueDate: '2025-11-19' }
+          ]
         }
       ]
     }
