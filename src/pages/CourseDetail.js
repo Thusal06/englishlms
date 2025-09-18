@@ -288,9 +288,76 @@ export default function CourseDetail() {
         },
         {
           id: 3,
-          title: 'Lesson 3 - Negotiation Language',
+          title: 'Lesson 3 - Delivering Technical Presentations',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <h3>Delivering Technical Presentations</h3>
+
+            <h4>1. Clarity</h4>
+            <p><strong>Definition:</strong> Clarity is about making your message easy to understand. In technical presentations, using simple English and avoiding unnecessary jargon is crucial. When technical terms are necessary, define them immediately.</p>
+            <p><strong>Practical Tips:</strong></p>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>Use short, precise sentences.</li>
+              <li>Avoid idiomatic expressions unless the audience is familiar.</li>
+              <li>Explain acronyms on first use (e.g., API = Application Programming Interface).</li>
+              <li>Repeat key points for emphasis.</li>
+            </ul>
+            <p><strong>Example:</strong> "The system uses a REST API, which stands for Representational State Transfer Application Programming Interface. This allows different applications to communicate efficiently over the internet."</p>
+
+            <h4 class="mt-6">2. Structure</h4>
+            <p><strong>Definition:</strong> Structure refers to the logical sequencing of ideas in a presentation. Linking words and clear organization make it easier for the audience to follow your argument.</p>
+            <p><strong>Practical Tips:</strong></p>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>Start with an introduction → main content → conclusion.</li>
+              <li>Use linking words to show progression: first of all, next, finally.</li>
+              <li>Divide content into manageable sections.</li>
+            </ul>
+            <p><strong>Example:</strong> "First of all, I will describe the software architecture. Then, I will explain the deployment process. Finally, I will summarize the advantages."</p>
+
+            <h4 class="mt-6">3. Guidance</h4>
+            <p><strong>Definition:</strong> Guidance involves orienting your audience throughout the presentation. Signposting phrases help listeners understand where they are in the talk and what to expect next.</p>
+            <p><strong>Practical Tips:</strong></p>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>Introduce each section clearly: "Now, I’d like to move on to…"</li>
+              <li>Highlight key points: "It is important to note that…"</li>
+              <li>Summarize sections briefly: "So far, we have seen…"</li>
+            </ul>
+            <p><strong>Example:</strong> "Now, let’s move on to the system testing phase. It is important to note that automated tests cover over 80% of the code."</p>
+
+            <h4 class="mt-6">4. Support</h4>
+            <p><strong>Definition:</strong> Support involves using visual aids such as slides, diagrams, charts, and screenshots to reinforce spoken content. Visuals help simplify complex technical ideas and maintain audience attention.</p>
+            <p><strong>Practical Tips:</strong></p>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>Keep slides uncluttered: use bullet points, diagrams, and screenshots.</li>
+              <li>Label diagrams clearly.</li>
+              <li>Avoid reading slides verbatim; use them as guidance.</li>
+              <li>Use animations sparingly to highlight key points.</li>
+            </ul>
+            <p><strong>Example:</strong> Slide showing a flowchart of deployment pipeline while explaining the steps verbally.</p>
+
+            <h4 class="mt-6">5. Engagement</h4>
+            <p><strong>Definition:</strong> Engagement is about keeping the audience interested and encouraging interaction. This helps your presentation feel dynamic and memorable.</p>
+            <p><strong>Practical Tips:</strong></p>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>Ask rhetorical questions: "What would happen if the server fails at this stage?"</li>
+              <li>Pause for the audience to reflect on important points.</li>
+              <li>Summarize critical takeaways at the end of each section.</li>
+              <li>Encourage questions at appropriate moments.</li>
+            </ul>
+            <p><strong>Example:</strong> "To sum up, automating code review reduces errors significantly. Think about it—how much time could your team save if most errors are caught before deployment?"</p>
+
+            <h4 class="mt-6">Integrated Example – Short Technical Presentation</h4>
+            <p>"Good morning, everyone. Today, I’ll be talking about our automated testing framework. First of all, I will explain the architecture. Then, I will demonstrate a live test run. It is important to note that this framework reduces manual testing by 50%. Now, let’s move on to how we analyze the results using dashboards. Finally, I’ll summarize the benefits and answer your questions."</p>
+
+            <h4 class="mt-6">Key Takeaways</h4>
+            <ul class="list-disc pl-6 space-y-1">
+              <li><strong>Clarity</strong> ensures your message is understandable.</li>
+              <li><strong>Structure</strong> and linking words organize your content logically.</li>
+              <li><strong>Guidance</strong> via signposting helps the audience follow your flow.</li>
+              <li><strong>Support</strong> with visual aids reinforces key points.</li>
+              <li><strong>Engagement</strong> keeps your audience attentive and interactive.</li>
+            </ul>
+          `,
           duration: '50 min',
           completed: false
         },
@@ -320,9 +387,61 @@ export default function CourseDetail() {
         },
         {
           id: 7,
-          title: 'Lesson 7 - Leadership Communication',
+          title: 'Lesson 7 – Negotiation',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <h3>Negotiation</h3>
+            <p>Negotiation is a key skill in the workplace, especially for software engineers working with clients, vendors, or cross-functional teams. Using the right phrases helps you express ideas clearly, propose solutions, and reach agreements professionally.</p>
+
+            <h4>1. Opening the Negotiation</h4>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>“Let’s discuss how we can work this out.” – polite way to start a negotiation.</li>
+              <li>“I’d like to explore possible solutions.” – shows willingness to collaborate.</li>
+              <li>“Can we review the requirements together?” – focuses on facts and shared understanding.</li>
+            </ul>
+
+            <h4 class="mt-4">2. Making Proposals</h4>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>“What if we tried this approach instead?” – suggests an alternative.</li>
+              <li>“We could consider adjusting the timeline to…” – proposes a compromise.</li>
+              <li>“One option might be to…” – introduces possible solutions without sounding forceful.</li>
+            </ul>
+
+            <h4 class="mt-4">3. Expressing Agreement or Partial Agreement</h4>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>“That sounds reasonable, but…” – agrees in principle while adding conditions.</li>
+              <li>“I can work with that if we…” – shows willingness to accept with modifications.</li>
+              <li>“We’re aligned on X, now let’s look at Y.” – confirms agreement on some points while continuing the discussion.</li>
+            </ul>
+
+            <h4 class="mt-4">4. Expressing Disagreement Politely</h4>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>“I’m not sure that will work because…” – provides reasoning without confrontation.</li>
+              <li>“I understand your point, but we might face challenges with…” – acknowledges the other party’s view while explaining your concerns.</li>
+              <li>“That could be difficult to implement due to…” – focuses on objective limitations.</li>
+            </ul>
+
+            <h4 class="mt-4">5. Clarifying and Summarizing</h4>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>“Just to clarify, you’re suggesting…?” – confirms understanding.</li>
+              <li>“So, if I understand correctly, we agree on…” – summarizes agreement points.</li>
+              <li>“Let’s make sure we’re on the same page regarding…” – ensures alignment.</li>
+            </ul>
+
+            <h4 class="mt-4">6. Closing the Negotiation</h4>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>“Can we agree to move forward with this plan?” – formal closing question.</li>
+              <li>“Let’s document the agreed points and proceed.” – ensures clarity and follow-up.</li>
+              <li>“I think we have a workable solution.” – signals resolution and consensus.</li>
+            </ul>
+
+            <h4 class="mt-4">Tips for Software Engineers</h4>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>Use neutral, professional language; avoid emotional or confrontational words.</li>
+              <li>Focus on solutions and facts, not personalities.</li>
+              <li>Combine negotiation phrases with technical explanations when discussing project timelines, features, or resources.</li>
+            </ul>
+          `,
           duration: '45 min',
           completed: false
         }
@@ -330,15 +449,21 @@ export default function CourseDetail() {
       assignments: [
         {
           id: 'business-assignment-1',
-          title: 'Business Communication Assignment 1',
-          description: 'Write professional emails and meeting minutes',
-          dueDate: '2024-01-20'
+          title: 'Assignment 1: Match the Negotiation Phrase',
+          description: 'Match negotiation phrases (Column A) to their functions (Column B).',
+          dueDate: '2025-10-10'
         },
         {
           id: 'business-assignment-2',
-          title: 'Business Communication Assignment 2',
-          description: 'Create a business presentation and report',
-          dueDate: '2024-01-27'
+          title: 'Assignment 2: Complete the Dialogue',
+          description: 'Drag phrases from the word bank to complete a negotiation dialogue.',
+          dueDate: '2025-10-20'
+        },
+        {
+          id: 'business-assignment-3',
+          title: 'Final Assignment: 3‑Minute Technical Presentation (Video)',
+          description: 'Record and upload a 3-minute technical presentation video.',
+          dueDate: '2025-11-30'
         }
       ]
     }

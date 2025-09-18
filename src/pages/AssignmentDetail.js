@@ -11,6 +11,7 @@ export default function AssignmentDetail() {
   const [submission, setSubmission] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [files, setFiles] = useState([]);
+  const [dragActive, setDragActive] = useState(false);
   // Drag & Drop state for interactive assignments
   const [ddAnswers, setDdAnswers] = useState({}); // {index: token}
   const [ddScore, setDdScore] = useState(null);
@@ -34,6 +35,81 @@ export default function AssignmentDetail() {
       maxScore: 100,
       submissionType: 'text',
       status: 'pending'
+    },
+    // Business English Assignment 2: Dialogue completion (dragdrop)
+    'business-assignment-2': {
+      id: 'business-assignment-2',
+      title: 'Business English Assignment 2: Complete the Dialogue',
+      description: 'Complete the dialogue using the negotiation phrases from the box by dragging them into the blanks.',
+      instructions: [
+        'Drag each phrase from the word bank into the correct blank.',
+        'Each phrase is used exactly once.',
+        'Submit to check your score.'
+      ],
+      dueDate: '2025-10-20',
+      maxScore: 4,
+      submissionType: 'dragdrop',
+      status: 'pending',
+      wordBank: [
+        'I understand your point, but we might face challenges with…',
+        'What if we tried this approach instead?',
+        'Can we agree to move forward with this plan?',
+        'Just to clarify, you’re suggesting…?'
+      ],
+      sentences: [
+        { text: 'Alex: We need to deliver the new feature by Friday, or the client will be unhappy.\nRiya: __________ (1) We might need an extra day for testing.', answer: 'I understand your point, but we might face challenges with…' },
+        { text: 'Alex: Okay, but we can’t delay the release. __________ (2) extending the deadline by one day?', answer: 'Can we agree to move forward with this plan?' },
+        { text: 'Riya: That could work. __________ (3) keeping the current deadline but prioritizing the most critical features?', answer: 'What if we tried this approach instead?' },
+        { text: 'Alex: Yes, that makes sense. __________ (4) that we focus on the priority features first?', answer: 'Just to clarify, you’re suggesting…?' }
+      ]
+    },
+    // Business English Assignment 3: Video upload (final)
+    'business-assignment-3': {
+      id: 'business-assignment-3',
+      title: 'Business English Assignment 3: 3-Minute Technical Presentation (Video)',
+      description: 'Prepare and deliver a 3-minute short technical presentation on a topic of your choice. Record your presentation as a video and upload the file for submission.',
+      instructions: [
+        'Record a 3-minute video presenting a technical topic of your choice.',
+        'Speak clearly, structure your talk (intro → main points → conclusion), and use signposting.',
+        'Drag and drop your video below or click to browse.',
+        'Accepted formats: MP4, WEBM, MOV. Max recommended size 200MB.'
+      ],
+      dueDate: '2025-11-30',
+      maxScore: 100,
+      submissionType: 'video',
+      status: 'pending'
+    },
+    // Business English Assignment 1: Matching table
+    'business-assignment-1': {
+      id: 'business-assignment-1',
+      title: 'Business English Assignment 1: Match the Negotiation Phrase',
+      description: 'Match the negotiation phrase (Column A) with its function (Column B). Drag the function labels (A–F) into the matching rows.',
+      instructions: [
+        'Drag each function label (A–F) from the word bank into the correct phrase row.',
+        'Each label is used exactly once.',
+        'Submit to check your score.'
+      ],
+      dueDate: '2025-10-10',
+      maxScore: 6,
+      submissionType: 'match',
+      status: 'pending',
+      phrases: [
+        '“Let’s discuss how we can work this out.”',
+        '“What if we tried this approach instead?”',
+        '“That sounds reasonable, but…”',
+        '“I understand your point, but we might face challenges with…”',
+        '“Just to clarify, you’re suggesting…?”',
+        '“Can we agree to move forward with this plan?”'
+      ],
+      functions: [
+        { key: 'A', text: 'Opening the negotiation' },
+        { key: 'B', text: 'Proposing an alternative solution' },
+        { key: 'C', text: 'Expressing agreement or partial agreement' },
+        { key: 'D', text: 'Expressing polite disagreement' },
+        { key: 'E', text: 'Clarifying understanding' },
+        { key: 'F', text: 'Closing the negotiation' }
+      ],
+      answers: ['A','B','C','D','E','F']
     },
     'grammar-exercise-3': {
       id: 'grammar-exercise-3',
@@ -180,6 +256,29 @@ export default function AssignmentDetail() {
     }
   };
 
+  // Video drag-and-drop helpers
+  function handleVideoDragOver(e) {
+    e.preventDefault();
+    setDragActive(true);
+  }
+
+  function handleVideoDragLeave(e) {
+    e.preventDefault();
+    setDragActive(false);
+  }
+
+  function handleVideoDrop(e) {
+    e.preventDefault();
+    setDragActive(false);
+    const dtFiles = e.dataTransfer?.files ? Array.from(e.dataTransfer.files) : [];
+    const videoFiles = dtFiles.filter((f) => f.type.startsWith('video/'));
+    if (videoFiles.length === 0) {
+      alert('No video file detected. Please drop an MP4, WEBM, or MOV file.');
+      return;
+    }
+    setFiles([videoFiles[0]]);
+  }
+
   function removePlaced(index) {
     setDdAnswers((prev) => {
       const copy = { ...prev };
@@ -259,6 +358,24 @@ export default function AssignmentDetail() {
       setIsSubmitted(true);
       return;
     }
+    if (assignment.submissionType === 'match') {
+      const total = assignment.phrases.length;
+      const filled = Object.keys(ddAnswers).length;
+      if (filled < total) {
+        alert(`Please match all rows (${filled}/${total}) before submitting.`);
+        return;
+      }
+      let score = 0;
+      assignment.answers.forEach((correctKey, idx) => {
+        if ((ddAnswers[idx] || '').trim().toUpperCase() === correctKey.trim().toUpperCase()) {
+          score += 1;
+        }
+      });
+      setDdScore(score);
+      setDdShowResults(true);
+      setIsSubmitted(true);
+      return;
+    }
 
     if (assignment.submissionType === 'text' && submission.trim().length < 50) {
       alert('Please write at least 50 characters for your submission.');
@@ -268,6 +385,18 @@ export default function AssignmentDetail() {
     if (assignment.submissionType === 'file' && files.length === 0) {
       alert('Please select at least one file to upload.');
       return;
+    }
+
+    if (assignment.submissionType === 'video') {
+      if (files.length === 0) {
+        alert('Please add a video file to submit.');
+        return;
+      }
+      const f = files[0];
+      if (!f.type.startsWith('video/')) {
+        alert('Please upload a valid video file (MP4, WEBM, MOV).');
+        return;
+      }
     }
 
     // Mock submission process
@@ -473,6 +602,92 @@ export default function AssignmentDetail() {
                           </div>
                         )}
 
+        {/* Matching Table (Phrase ↔ Function) */}
+        {assignment.submissionType === 'match' && (
+          <div className="card mb-8">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Match the Negotiation Phrase</h3>
+            <p className="text-gray-600 mb-6">Drag a function label (A–F) from the word bank into the matching row in Column B.</p>
+
+            {/* Word Bank */}
+            <div className="border rounded-lg p-4 bg-gray-50 mb-6">
+              <div className="flex flex-wrap gap-3">
+                {assignment.functions.map((fn, idx) => {
+                  const used = Object.values(ddAnswers).includes(fn.key);
+                  return (
+                    <div
+                      key={fn.key}
+                      draggable={!used}
+                      onDragStart={(e) => handleDragStart(e, fn.key)}
+                      className={`px-3 py-2 rounded border bg-white text-sm shadow-sm select-none ${used ? 'opacity-40 cursor-not-allowed' : 'cursor-move hover:bg-primary-50'}`}
+                      title={fn.text}
+                    >
+                      <span className="font-semibold mr-2">{fn.key}</span>
+                      <span className="text-gray-700">{fn.text}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Table */}
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">#</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Column A – Phrase</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Column B – Function (A–F)</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {assignment.phrases.map((phrase, index) => {
+                    const placed = ddAnswers[index];
+                    const correctKey = assignment.answers[index];
+                    const isCorrect = ddShowResults && placed && placed.toUpperCase() === correctKey.toUpperCase();
+                    return (
+                      <tr key={index}>
+                        <td className="px-4 py-3 text-sm text-gray-500 align-top">{index + 1}</td>
+                        <td className="px-4 py-3 text-sm text-gray-800 align-top">{phrase}</td>
+                        <td className="px-4 py-3 align-top">
+                          <div
+                            onDrop={(e) => handleDrop(e, index)}
+                            onDragOver={handleDragOver}
+                            className={`inline-flex min-w-[160px] items-center px-3 py-2 border-2 rounded-md bg-white ${ddShowResults ? (isCorrect ? 'border-green-400' : 'border-red-400') : 'border-dashed border-gray-300'}`}
+                          >
+                            {placed ? (
+                              <button type="button" onClick={() => removePlaced(index)} className="text-sm font-semibold text-gray-800">
+                                {placed}
+                              </button>
+                            ) : (
+                              <span className="text-sm text-gray-400">Drop A–F here</span>
+                            )}
+                          </div>
+                          {ddShowResults && (
+                            <div className="mt-1 text-xs text-gray-600">Correct: <span className="font-semibold">{correctKey}</span> — {assignment.functions.find(f => f.key === correctKey)?.text}</div>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Actions */}
+            <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-200">
+              <button type="button" onClick={resetDD} className="btn-secondary">Reset</button>
+              <form onSubmit={handleSubmit}>
+                <button type="submit" className="btn-primary">Submit</button>
+              </form>
+            </div>
+
+            {ddShowResults && (
+              <div className="mt-6 p-4 rounded bg-gray-50 border">
+                <p className="font-semibold text-gray-800">Score: {ddScore} / {assignment.maxScore}</p>
+              </div>
+            )}
+          </div>
+        )}
                         {ddShowResults && (
                           <div className="mt-1 text-sm">
                             {isCorrect ? (
@@ -519,8 +734,62 @@ export default function AssignmentDetail() {
           </div>
         )}
 
-        {/* Submission Section (Text/File) */}
-        {assignment.submissionType !== 'dragdrop' && !isSubmitted ? (
+        {/* Video Upload (Drag & Drop) */}
+        {assignment.submissionType === 'video' && (
+          <div className="card">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Upload Your Presentation Video</h3>
+            <div
+              className={`border-2 rounded-lg p-8 text-center transition-colors ${
+                dragActive ? 'border-primary-600 bg-primary-50' : 'border-dashed border-gray-300 bg-gray-50'
+              }`}
+              onDragOver={handleVideoDragOver}
+              onDragEnter={handleVideoDragOver}
+              onDragLeave={handleVideoDragLeave}
+              onDrop={handleVideoDrop}
+            >
+              <svg className="w-12 h-12 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553 2.276A2 2 0 0121 14.09v.82a2 2 0 01-1.447 1.914L15 19M4 6h8m0 0V4m0 2v2" />
+              </svg>
+              <p className="text-gray-700 mb-2">Drag and drop your video file here</p>
+              <p className="text-sm text-gray-500 mb-4">or click the button below to browse</p>
+              <input
+                id="videoInput"
+                type="file"
+                accept="video/*"
+                className="hidden"
+                onChange={(e) => {
+                  const arr = Array.from(e.target.files || []);
+                  const videoFiles = arr.filter((f) => f.type.startsWith('video/'));
+                  if (videoFiles.length > 0) setFiles([videoFiles[0]]);
+                }}
+              />
+              <label htmlFor="videoInput" className="btn-secondary cursor-pointer">Browse Video</label>
+
+              {files.length > 0 && files[0] && (
+                <div className="mt-6 text-left">
+                  <h4 className="text-sm font-medium text-gray-700 mb-2">Selected Video</h4>
+                  <div className="bg-white p-4 border rounded-lg">
+                    <p className="text-sm text-gray-700 mb-3">{files[0].name} <span className="text-gray-400">({(files[0].size / 1024 / 1024).toFixed(2)} MB)</span></p>
+                    <video
+                      controls
+                      className="w-full rounded"
+                      src={URL.createObjectURL(files[0])}
+                    />
+                  </div>
+                </div>
+              )}
+
+              <div className="flex items-center justify-end mt-6">
+                <form onSubmit={handleSubmit}>
+                  <button type="submit" className="btn-primary">Submit Video</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Submission Section (Text/File only) */}
+        {(assignment.submissionType === 'text' || assignment.submissionType === 'file') && !isSubmitted ? (
           <div className="card">
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Submit Your Work</h3>
             
