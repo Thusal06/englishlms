@@ -1773,6 +1773,52 @@ export default function AssignmentDetail() {
                           </div>
                         )}
 
+                        {ddShowResults && (
+                          <div className="mt-1 text-sm">
+                            {isCorrect ? (
+                              <span className="text-green-600">Correct</span>
+                            ) : (
+                              <span className="text-red-600">Correct answer: {s.answer}</span>
+                            )}
+                          </div>
+                        )}
+
+                        {/* Optional free-text completion for vocab-assignment-2 */}
+                        {assignment.id === 'vocab-assignment-2' && (
+                          <div className="mt-3">
+                            <label className="block text-xs text-gray-500 mb-1">Complete the sentence in your own words</label>
+                            <input
+                              type="text"
+                              className="input-field"
+                              placeholder="... finish your idea here"
+                              value={ddTexts[index] || ''}
+                              onChange={(e) => handleTextChange(index, e.target.value)}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Actions */}
+            <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-200">
+              <button type="button" onClick={resetDD} className="btn-secondary">Reset</button>
+              <form onSubmit={handleSubmit}>
+                <button type="submit" className="btn-primary">Submit</button>
+              </form>
+            </div>
+
+            {ddShowResults && (
+              <div className="mt-6 p-4 rounded bg-gray-50 border">
+                <p className="font-semibold text-gray-800">Score: {ddScore} / {assignment.maxScore}</p>
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Quiz Section */}
         {assignment.submissionType === 'quiz' && (
           <div className="card mb-8">
