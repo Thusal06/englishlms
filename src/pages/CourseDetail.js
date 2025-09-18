@@ -22,7 +22,7 @@ export default function CourseDetail() {
       lessons: [
         {
           id: 1,
-          title: 'Introduction to Parts of Speech',
+          title: 'Lesson 1 - Introduction to Parts of Speech',
           type: 'pdf',
           content: '/pdfs/lesson1-parts-of-speech.pdf',
           duration: '45 min',
@@ -30,7 +30,7 @@ export default function CourseDetail() {
         },
         {
           id: 2,
-          title: 'Nouns and Pronouns',
+          title: 'Lesson 2 - Nouns and Pronouns',
           type: 'pdf',
           content: '/pdfs/lesson2-nouns-pronouns.pdf',
           duration: '50 min',
@@ -38,7 +38,7 @@ export default function CourseDetail() {
         },
         {
           id: 3,
-          title: 'Verbs and Tenses',
+          title: 'Lesson 3 - Verbs and Tenses',
           type: 'pdf',
           content: '/pdfs/lesson3-verbs-tenses.pdf',
           duration: '60 min',
@@ -46,7 +46,7 @@ export default function CourseDetail() {
         },
         {
           id: 4,
-          title: 'Adjectives and Adverbs',
+          title: 'Lesson 4 - Adjectives and Adverbs',
           type: 'pdf',
           content: '/pdfs/lesson4-adjectives-adverbs.pdf',
           duration: '40 min',
@@ -54,11 +54,41 @@ export default function CourseDetail() {
         },
         {
           id: 5,
-          title: 'Sentence Structure',
+          title: 'Lesson 5 - Sentence Structure',
           type: 'pdf',
           content: '/pdfs/lesson5-sentence-structure.pdf',
           duration: '55 min',
           completed: false
+        },
+        {
+          id: 6,
+          title: 'Lesson 6 - Punctuation and Capitalization',
+          type: 'pdf',
+          content: '/pdfs/lesson6-punctuation.pdf',
+          duration: '45 min',
+          completed: false
+        },
+        {
+          id: 7,
+          title: 'Lesson 7 - Complex Sentence Patterns',
+          type: 'pdf',
+          content: '/pdfs/lesson7-complex-sentences.pdf',
+          duration: '50 min',
+          completed: false
+        }
+      ],
+      assignments: [
+        {
+          id: 'grammar-assignment-1',
+          title: 'Grammar Practice Assignment 1',
+          description: 'Complete exercises on parts of speech and sentence structure',
+          dueDate: '2024-01-15'
+        },
+        {
+          id: 'grammar-assignment-2',
+          title: 'Grammar Practice Assignment 2',
+          description: 'Advanced grammar exercises and essay writing',
+          dueDate: '2024-01-22'
         }
       ]
     },
@@ -67,12 +97,12 @@ export default function CourseDetail() {
       title: 'Advanced Vocabulary',
       description: 'Expand your English vocabulary with advanced words and expressions',
       instructor: 'Prof. Michael Chen',
-      duration: '6 weeks',
+      duration: '7 weeks',
       level: 'Advanced',
       lessons: [
         {
           id: 1,
-          title: 'Academic Vocabulary',
+          title: 'Lesson 1 - Academic Vocabulary',
           type: 'pdf',
           content: '/pdfs/vocab1-academic.pdf',
           duration: '35 min',
@@ -80,11 +110,145 @@ export default function CourseDetail() {
         },
         {
           id: 2,
-          title: 'Business English Terms',
+          title: 'Lesson 2 - Business English Terms',
           type: 'pdf',
           content: '/pdfs/vocab2-business.pdf',
           duration: '40 min',
           completed: false
+        },
+        {
+          id: 3,
+          title: 'Lesson 3 - Scientific and Technical Vocabulary',
+          type: 'pdf',
+          content: '/pdfs/vocab3-scientific.pdf',
+          duration: '45 min',
+          completed: false
+        },
+        {
+          id: 4,
+          title: 'Lesson 4 - Idiomatic Expressions',
+          type: 'pdf',
+          content: '/pdfs/vocab4-idioms.pdf',
+          duration: '50 min',
+          completed: false
+        },
+        {
+          id: 5,
+          title: 'Lesson 5 - Phrasal Verbs and Collocations',
+          type: 'pdf',
+          content: '/pdfs/vocab5-phrasal-verbs.pdf',
+          duration: '55 min',
+          completed: false
+        },
+        {
+          id: 6,
+          title: 'Lesson 6 - Advanced Synonyms and Antonyms',
+          type: 'pdf',
+          content: '/pdfs/vocab6-synonyms.pdf',
+          duration: '40 min',
+          completed: false
+        },
+        {
+          id: 7,
+          title: 'Lesson 7 - Context-Based Vocabulary Usage',
+          type: 'pdf',
+          content: '/pdfs/vocab7-context.pdf',
+          duration: '45 min',
+          completed: false
+        }
+      ],
+      assignments: [
+        {
+          id: 'vocab-assignment-1',
+          title: 'Vocabulary Building Assignment 1',
+          description: 'Create sentences using advanced vocabulary words',
+          dueDate: '2024-01-18'
+        },
+        {
+          id: 'vocab-assignment-2',
+          title: 'Vocabulary Building Assignment 2',
+          description: 'Write a comprehensive essay using advanced vocabulary',
+          dueDate: '2024-01-25'
+        }
+      ]
+    },
+    'business-english': {
+      id: 'business-english',
+      title: 'Business English',
+      description: 'Professional English communication skills for the workplace',
+      instructor: 'Ms. Jennifer Williams',
+      duration: '6 weeks',
+      level: 'Intermediate',
+      lessons: [
+        {
+          id: 1,
+          title: 'Lesson 1 - Professional Email Writing',
+          type: 'pdf',
+          content: '/pdfs/business1-emails.pdf',
+          duration: '40 min',
+          completed: true
+        },
+        {
+          id: 2,
+          title: 'Lesson 2 - Meeting and Presentation Skills',
+          type: 'pdf',
+          content: '/pdfs/business2-meetings.pdf',
+          duration: '45 min',
+          completed: true
+        },
+        {
+          id: 3,
+          title: 'Lesson 3 - Negotiation Language',
+          type: 'pdf',
+          content: '/pdfs/business3-negotiation.pdf',
+          duration: '50 min',
+          completed: true
+        },
+        {
+          id: 4,
+          title: 'Lesson 4 - Report Writing',
+          type: 'pdf',
+          content: '/pdfs/business4-reports.pdf',
+          duration: '55 min',
+          completed: true
+        },
+        {
+          id: 5,
+          title: 'Lesson 5 - Customer Service Communication',
+          type: 'pdf',
+          content: '/pdfs/business5-customer-service.pdf',
+          duration: '45 min',
+          completed: true
+        },
+        {
+          id: 6,
+          title: 'Lesson 6 - Cross-Cultural Communication',
+          type: 'pdf',
+          content: '/pdfs/business6-cross-cultural.pdf',
+          duration: '50 min',
+          completed: true
+        },
+        {
+          id: 7,
+          title: 'Lesson 7 - Leadership Communication',
+          type: 'pdf',
+          content: '/pdfs/business7-leadership.pdf',
+          duration: '45 min',
+          completed: true
+        }
+      ],
+      assignments: [
+        {
+          id: 'business-assignment-1',
+          title: 'Business Communication Assignment 1',
+          description: 'Write professional emails and meeting minutes',
+          dueDate: '2024-01-20'
+        },
+        {
+          id: 'business-assignment-2',
+          title: 'Business Communication Assignment 2',
+          description: 'Create a business presentation and report',
+          dueDate: '2024-01-27'
         }
       ]
     }
@@ -233,6 +397,37 @@ export default function CourseDetail() {
                     </div>
                   </button>
                 ))}
+                
+                {/* Course Assignments Section */}
+                {course.assignments && course.assignments.length > 0 && (
+                  <div className="mt-6 pt-4 border-t border-gray-200">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Course Assignments</h4>
+                    <div className="space-y-2">
+                      {course.assignments.map((assignment, index) => (
+                        <Link
+                          key={assignment.id}
+                          to={`/assignment/${assignment.id}`}
+                          className="block w-full text-left p-3 bg-accent-50 hover:bg-accent-100 border-2 border-accent-200 rounded-lg transition-colors duration-200"
+                        >
+                          <div className="flex items-center justify-between">
+                            <div className="flex-1">
+                              <h5 className="font-medium text-gray-900 text-sm mb-1">
+                                Assignment {index + 1}
+                              </h5>
+                              <p className="text-xs text-gray-600 mb-1">{assignment.title}</p>
+                              <p className="text-xs text-gray-500">Due: {assignment.dueDate}</p>
+                            </div>
+                            <div className="ml-2">
+                              <svg className="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                              </svg>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

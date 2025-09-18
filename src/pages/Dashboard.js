@@ -79,7 +79,7 @@ export default function Dashboard() {
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">Pending Assignments</p>
-                <p className="text-2xl font-bold text-gray-900">5</p>
+                <p className="text-2xl font-bold text-gray-900">6</p>
               </div>
             </div>
           </div>
@@ -130,14 +130,14 @@ export default function Dashboard() {
                   </div>
                 </Link>
 
-                <div className="p-4 bg-gray-50 rounded-lg">
+                <Link to="/course/business-english" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
                   <h4 className="font-medium text-gray-900 mb-1">Business English</h4>
                   <p className="text-sm text-gray-600 mb-2">Professional English communication</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-green-600 bg-green-100 px-2 py-1 rounded">Completed</span>
                     <span className="text-xs text-gray-500">100% Complete</span>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -153,29 +153,29 @@ export default function Dashboard() {
               </div>
               
               <div className="space-y-4">
-                <Link to="/assignment/essay-future-goals" className="block p-4 bg-red-50 border-l-4 border-red-400 rounded-r-lg hover:bg-red-100 transition-colors duration-200">
-                  <h4 className="font-medium text-gray-900 mb-1">Essay: My Future Goals</h4>
-                  <p className="text-sm text-gray-600 mb-2">Write a 500-word essay about your future aspirations</p>
+                <Link to="/assignment/grammar-assignment-1" className="block p-4 bg-red-50 border-l-4 border-red-400 rounded-r-lg hover:bg-red-100 transition-colors duration-200">
+                  <h4 className="font-medium text-gray-900 mb-1">Grammar Practice Assignment 1</h4>
+                  <p className="text-sm text-gray-600 mb-2">Complete exercises on parts of speech and sentence structure</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-red-600 font-medium">Due Tomorrow</span>
+                    <span className="text-xs text-red-600 font-medium">Due Jan 15</span>
                     <span className="text-xs text-gray-500">Not Started</span>
                   </div>
                 </Link>
 
-                <Link to="/assignment/grammar-exercise-3" className="block p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg hover:bg-yellow-100 transition-colors duration-200">
-                  <h4 className="font-medium text-gray-900 mb-1">Grammar Exercise Set 3</h4>
-                  <p className="text-sm text-gray-600 mb-2">Complete exercises on past tense usage</p>
+                <Link to="/assignment/vocab-assignment-1" className="block p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg hover:bg-yellow-100 transition-colors duration-200">
+                  <h4 className="font-medium text-gray-900 mb-1">Vocabulary Building Assignment 1</h4>
+                  <p className="text-sm text-gray-600 mb-2">Create sentences using advanced vocabulary words</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-yellow-600 font-medium">Due in 3 days</span>
-                    <span className="text-xs text-gray-500">50% Complete</span>
+                    <span className="text-xs text-yellow-600 font-medium">Due Jan 18</span>
+                    <span className="text-xs text-gray-500">In Progress</span>
                   </div>
                 </Link>
 
-                <Link to="/assignment/vocabulary-prep" className="block p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg hover:bg-blue-100 transition-colors duration-200">
-                  <h4 className="font-medium text-gray-900 mb-1">Vocabulary Quiz Prep</h4>
-                  <p className="text-sm text-gray-600 mb-2">Study materials for upcoming vocabulary test</p>
+                <Link to="/assignment/business-assignment-1" className="block p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg hover:bg-blue-100 transition-colors duration-200">
+                  <h4 className="font-medium text-gray-900 mb-1">Business Communication Assignment 1</h4>
+                  <p className="text-sm text-gray-600 mb-2">Write professional emails and meeting minutes</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-blue-600 font-medium">Due in 1 week</span>
+                    <span className="text-xs text-blue-600 font-medium">Due Jan 20</span>
                     <span className="text-xs text-gray-500">Not Started</span>
                   </div>
                 </Link>
