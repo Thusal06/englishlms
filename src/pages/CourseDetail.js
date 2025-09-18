@@ -46,9 +46,69 @@ export default function CourseDetail() {
         },
         {
           id: 4,
-          title: 'Lesson 4 - Adjectives and Adverbs',
+          title: 'Lesson 4 - Linking Words',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+
+            <h4>What are linking words?</h4>
+            <p>Linking words (connectors/transition words) connect ideas smoothly, ensure logical progression, and make your speech easier to follow. Using them effectively signals relationships between ideas, shows the flow of your argument, and enhances professionalism.</p>
+
+            <h4 class="mt-4">Categories of Linking Words and Their Functions</h4>
+            <div class="overflow-x-auto mt-2">
+              <table class="min-w-full border border-gray-300 text-sm">
+                <thead>
+                  <tr class="bg-gray-50">
+                    <th class="border border-gray-300 px-3 py-2 text-left">Function</th>
+                    <th class="border border-gray-300 px-3 py-2 text-left">Linking Words</th>
+                    <th class="border border-gray-300 px-3 py-2 text-left">Example in a Technical Presentation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 px-3 py-2 align-top">Adding Information</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">furthermore, moreover, in addition, also</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>“The new software reduces processing time. Moreover, it improves data security.”</em></td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 px-3 py-2 align-top">Contrasting Ideas</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">however, on the other hand, whereas, although, in contrast</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>“The old system was fast. However, it was prone to errors.”</em></td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-3 py-2 align-top">Giving Examples</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">for example, such as, in particular, to illustrate</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>“Several tools, for example Jenkins and Travis CI, can automate testing.”</em></td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 px-3 py-2 align-top">Sequencing / Ordering</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">first of all, then, next, finally, subsequently</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>“First of all, I will explain the architecture. Then, I will demonstrate the deployment process. Finally, I will summarise the advantages.”</em></td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-3 py-2 align-top">Cause and Effect</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">therefore, as a result, consequently, thus</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>“The system failed to integrate properly. As a result, we had to postpone the release.”</em></td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 px-3 py-2 align-top">Summarising / Concluding</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">in conclusion, to sum up, overall, in short</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>“In conclusion, the new approach increases efficiency and reduces errors.”</em></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 class="mt-6">Tips for Using Linking Words Effectively</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Vary your connectors:</strong> Avoid repeating the same words too often; it keeps your presentation engaging.</li>
+              <li><strong>Position carefully:</strong> Many linking words work best at the beginning of a sentence or clause for clarity.</li>
+              <li><strong>Match function to context:</strong> Ensure the connector reflects the relationship between ideas (e.g., don’t use “however” when adding information).</li>
+              <li><strong>Combine with intonation:</strong> Pause slightly when introducing a linking word to signal a transition.</li>
+            </ul>
+
+            <h4 class="mt-6">Example of Integrated Use</h4>
+            <p><em>“First of all, I will explain the system architecture. Then, I will move on to the implementation details. Moreover, I will highlight the potential risks. Finally, I will summarise the benefits of our approach.”</em></p>
+          `,
           duration: '40 min',
           completed: false
         },
@@ -75,20 +135,79 @@ export default function CourseDetail() {
           content: 'Content will be added here...',
           duration: '50 min',
           completed: false
-        }
-      ],
-      assignments: [
-        {
-          id: 'grammar-assignment-1',
-          title: 'Grammar Practice Assignment 1',
-          description: 'Complete exercises on parts of speech and sentence structure',
-          dueDate: '2024-01-15'
         },
         {
-          id: 'grammar-assignment-2',
-          title: 'Grammar Practice Assignment 2',
-          description: 'Advanced grammar exercises and essay writing',
-          dueDate: '2024-01-22'
+          id: 4,
+          title: 'Lesson 4 - Linking Words',
+          type: 'content',
+          content: `
+            <h4>What are linking words?</h4>
+            <p>Linking words (connectors/transition words) connect ideas smoothly, ensure logical progression, and make your speech easier to follow. Using them effectively signals relationships between ideas, shows the flow of your argument, and enhances professionalism.</p>
+
+            <h4 class="mt-4">Categories of Linking Words and Their Functions</h4>
+            <div class="overflow-x-auto mt-2">
+              <table class="min-w-full border border-gray-300 text-sm">
+                <thead>
+                  <tr class="bg-gray-50">
+                    <th class="border border-gray-300 px-3 py-2 text-left">Function</th>
+                    <th class="border border-gray-300 px-3 py-2 text-left">Linking Words</th>
+                    <th class="border border-gray-300 px-3 py-2 text-left">Example in a Technical Presentation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 px-3 py-2 align-top">Adding Information</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">furthermore, moreover, in addition, also</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"The new software reduces processing time. Moreover, it improves data security."</em></td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 px-3 py-2 align-top">Contrasting Ideas</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">however, on the other hand, whereas, although, in contrast</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"The old system was fast. However, it was prone to errors."</em></td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-3 py-2 align-top">Giving Examples</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">for example, such as, in particular, to illustrate</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"Several tools, for example Jenkins and Travis CI, can automate testing."</em></td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 px-3 py-2 align-top">Sequencing / Ordering</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">first of all, then, next, finally, subsequently</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"First of all, I will explain the architecture. Then, I will demonstrate the deployment process. Finally, I will summarise the advantages."</em></td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-3 py-2 align-top">Cause and Effect</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">therefore, as a result, consequently, thus</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"The system failed to integrate properly. As a result, we had to postpone the release."</em></td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 px-3 py-2 align-top">Summarising / Concluding</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top">in conclusion, to sum up, overall, in short</td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"In conclusion, the new approach increases efficiency and reduces errors."</em></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 class="mt-6">Tips for Using Linking Words Effectively</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Vary your connectors:</strong> Avoid repeating the same words too often; it keeps your presentation engaging.</li>
+              <li><strong>Position carefully:</strong> Many linking words work best at the beginning of a sentence or clause for clarity.</li>
+              <li><strong>Match function to context:</strong> Ensure the connector reflects the relationship between ideas (e.g., don't use "however" when adding information).</li>
+              <li><strong>Combine with intonation:</strong> Pause slightly when introducing a linking word to signal a transition.</li>
+            </ul>
+
+            <h4 class="mt-6">Example of Integrated Use</h4>
+            <p><em>"First of all, I will explain the system architecture. Then, I will move on to the implementation details. Moreover, I will highlight the potential risks. Finally, I will summarise the benefits of our approach."</em></p>
+          `,
+          duration: '40 min',
+          completed: false,
+          task: {
+            id: 'grammar-assignment-1',
+            title: 'Task 1: Linking Words Quiz',
+            description: 'Interactive quiz on linking words and connectors',
+            dueDate: '2025-10-05'
+          }
         }
       ]
     },
@@ -102,52 +221,65 @@ export default function CourseDetail() {
       lessons: [
         {
           id: 1,
-          title: 'Lesson 1 - Workplace Jargon',
+          title: 'Lesson 1 - Academic Vocabulary',
+          type: 'content',
+          content: `
+            <h4>Academic Vocabulary Essentials</h4>
+            <p>Academic vocabulary forms the foundation of professional and scholarly communication. These words appear frequently in research papers, presentations, and formal discussions.</p>
+
+            <h4 class="mt-4">Core Academic Terms</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Analyze:</strong> To examine in detail to understand structure or meaning.</li>
+              <li><strong>Synthesize:</strong> To combine elements to form a coherent whole.</li>
+              <li><strong>Evaluate:</strong> To assess the value, importance, or quality of something.</li>
+              <li><strong>Hypothesis:</strong> A proposed explanation for a phenomenon.</li>
+              <li><strong>Methodology:</strong> The systematic approach to research or problem-solving.</li>
+            </ul>
+
+            <h4 class="mt-6">Usage in Context</h4>
+            <p><em>"To analyze the data effectively, we must first synthesize information from multiple sources. Our methodology allows us to evaluate each hypothesis systematically."</em></p>
+
+            <h4 class="mt-6">Practice Tips</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Use academic vocabulary in professional emails and reports.</li>
+              <li>Practice with synonyms to avoid repetition.</li>
+              <li>Focus on precision over complexity.</li>
+            </ul>
+          `,
+          duration: '45 min',
+          completed: false,
+          task: {
+            id: 'vocabulary-assignment-1',
+            title: 'Task 1: Academic Vocabulary Practice',
+            description: 'Complete exercises on academic vocabulary usage and context',
+            dueDate: '2025-10-15'
+          }
+        },
+        {
+          id: 2,
+          title: 'Lesson 2 - Workplace Jargon',
           type: 'content',
           content: `
             <ul class="space-y-3">
               <li>
                 <p><strong>Backlog:</strong> A list of all the work a team needs to complete (features, bug fixes, tasks), prioritized for development.</p>
-                <p><em>Example:</em> “We’ll pick the next task from the backlog.”</p>
+                <p><em>Example:</em> "We'll pick the next task from the backlog."</p>
               </li>
               <li>
-                <p><strong>Bandwidth:</strong> A team’s or individual’s capacity to take on new work.</p>
-                <p><em>Example:</em> “We don’t have the bandwidth to add that feature this sprint.”</p>
-              </li>
-              <li>
-                <p><strong>Black economy:</strong> Unrecorded and untaxed economic activity, often informal or illegal.</p>
-                <p><em>Example:</em> “Some freelance jobs done without invoices contribute to the black economy.”</p>
-              </li>
-              <li>
-                <p><strong>Blow-by-blow:</strong> A detailed, step-by-step account of an event or process.</p>
-                <p><em>Example:</em> “The team lead gave us a blow-by-blow explanation of the release issue.”</p>
+                <p><strong>Bandwidth:</strong> A team's or individual's capacity to take on new work.</p>
+                <p><em>Example:</em> "We don't have the bandwidth to add that feature this sprint."</p>
               </li>
               <li>
                 <p><strong>Bottleneck:</strong> A point where the flow of work slows or halts due to constraints.</p>
-                <p><em>Example:</em> “Code reviews are creating a bottleneck in our process.”</p>
-              </li>
-              <li>
-                <p><strong>Go‑to‑market (GTM):</strong> The strategy to launch a new product or service (marketing, sales, distribution, pricing).</p>
-                <p><em>Example:</em> “The go‑to‑market plan for our app targets small businesses first.”</p>
-              </li>
-              <li>
-                <p><strong>Onboarding:</strong> The process of welcoming and integrating a new employee into the company and team.</p>
-                <p><em>Example:</em> “The onboarding program includes training sessions and mentorship.”</p>
-              </li>
-              <li>
-                <p><strong>Stand‑up:</strong> A short, daily team meeting where members share updates, plans, and blockers.</p>
-                <p><em>Example:</em> “During today’s stand‑up, I’ll update on the bug fix progress.”</p>
+                <p><em>Example:</em> "Code reviews are creating a bottleneck in our process."</p>
               </li>
               <li>
                 <p><strong>Sprint:</strong> A short, fixed period (usually 1–4 weeks) for completing selected tasks from the backlog.</p>
-                <p><em>Example:</em> “This sprint focuses on developing the payment feature.”</p>
+                <p><em>Example:</em> "This sprint focuses on developing the payment feature."</p>
               </li>
               <li>
                 <p><strong>Sync‑up:</strong> A quick meeting to align on status, progress, or plans.</p>
-                <p><em>Example:</em> “Let’s have a quick sync‑up before the client call.”</p>
-              </li>
-              <li>
-                <p><strong>Back to the drawing board:</strong> Start over after a failed or flawed attempt.</p>
+                <p><em>Example:</em> "Let's have a quick sync‑up before the client call."</p>
                 <p><em>Example:</em> “The prototype didn’t work, so it’s back to the drawing board.”</p>
               </li>
             </ul>
@@ -240,25 +372,11 @@ export default function CourseDetail() {
         },
         {
           id: 7,
-          title: 'Lesson 7 - Context-Based Vocabulary Usage',
+          title: 'Lesson 7 - Advanced Vocabulary Strategies',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '45 min',
+          duration: '50 min',
           completed: false
-        }
-      ],
-      assignments: [
-        {
-          id: 'vocab-assignment-1',
-          title: 'Vocabulary Building Assignment 1',
-          description: 'Create sentences using advanced vocabulary words',
-          dueDate: '2024-01-18'
-        },
-        {
-          id: 'vocab-assignment-2',
-          title: 'Vocabulary Building Assignment 2',
-          description: 'Write a comprehensive essay using advanced vocabulary',
-          dueDate: '2024-01-25'
         }
       ]
     },
@@ -291,8 +409,6 @@ export default function CourseDetail() {
           title: 'Lesson 3 - Delivering Technical Presentations',
           type: 'content',
           content: `
-            <h3>Delivering Technical Presentations</h3>
-
             <h4>1. Clarity</h4>
             <ul class="list-disc pl-6 space-y-2">
               <li>Use short, precise sentences.</li>
@@ -380,7 +496,6 @@ export default function CourseDetail() {
           title: 'Lesson 7 – Negotiation',
           type: 'content',
           content: `
-            <h3>Negotiation</h3>
             <p>Use clear, professional language to propose solutions, align expectations, and reach agreements.</p>
 
             <h4>1. Opening</h4>
@@ -433,27 +548,21 @@ export default function CourseDetail() {
             </ul>
           `,
           duration: '45 min',
-          completed: false
-        }
-      ],
-      assignments: [
-        {
-          id: 'business-assignment-1',
-          title: 'Assignment 1: Match the Negotiation Phrase',
-          description: 'Match negotiation phrases (Column A) to their functions (Column B).',
-          dueDate: '2025-10-10'
-        },
-        {
-          id: 'business-assignment-2',
-          title: 'Assignment 2: Complete the Dialogue',
-          description: 'Drag phrases from the word bank to complete a negotiation dialogue.',
-          dueDate: '2025-10-20'
-        },
-        {
-          id: 'business-assignment-3',
-          title: 'Final Assignment: 3‑Minute Technical Presentation (Video)',
-          description: 'Record and upload a 3-minute technical presentation video.',
-          dueDate: '2025-11-30'
+          completed: false,
+          tasks: [
+            {
+              id: 'business-assignment-1',
+              title: 'Task 1: Match Negotiation Phrases',
+              description: 'Match negotiation phrases to their functions using drag-and-drop',
+              dueDate: '2025-11-05'
+            },
+            {
+              id: 'business-assignment-2',
+              title: 'Task 2: Complete the Dialogue',
+              description: 'Fill in negotiation dialogue blanks with appropriate phrases',
+              dueDate: '2025-11-10'
+            }
+          ]
         }
       ]
     }
@@ -603,36 +712,63 @@ export default function CourseDetail() {
                   </button>
                 ))}
                 
-                {/* Course Assignments Section */}
-                {course.assignments && course.assignments.length > 0 && (
-                  <div className="mt-6 pt-4 border-t border-gray-200">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Course Assignments</h4>
-                    <div className="space-y-2">
-                      {course.assignments.map((assignment, index) => (
+                {/* Render lesson tasks inline */}
+                {course.lessons.map((lesson) => {
+                  // Single task
+                  if (lesson.task) {
+                    return (
+                      <div key={`task-${lesson.id}`} className="ml-4 mt-2">
                         <Link
-                          key={assignment.id}
-                          to={`/assignment/${assignment.id}`}
-                          className="block w-full text-left p-3 bg-accent-50 hover:bg-accent-100 border-2 border-accent-200 rounded-lg transition-colors duration-200"
+                          to={`/assignment/${lesson.task.id}`}
+                          className="block w-full text-left p-2 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-md transition-colors duration-200"
                         >
                           <div className="flex items-center justify-between">
                             <div className="flex-1">
-                              <h5 className="font-medium text-gray-900 text-sm mb-1">
-                                Assignment {index + 1}
+                              <h5 className="font-medium text-blue-900 text-xs mb-1">
+                                {lesson.task.title}
                               </h5>
-                              <p className="text-xs text-gray-600 mb-1">{assignment.title}</p>
-                              <p className="text-xs text-gray-500">Due: {assignment.dueDate}</p>
+                              <p className="text-xs text-blue-600">Due: {lesson.task.dueDate}</p>
                             </div>
                             <div className="ml-2">
-                              <svg className="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                               </svg>
                             </div>
                           </div>
                         </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                      </div>
+                    );
+                  }
+                  // Multiple tasks
+                  if (lesson.tasks && lesson.tasks.length > 0) {
+                    return (
+                      <div key={`tasks-${lesson.id}`} className="ml-4 mt-2 space-y-1">
+                        {lesson.tasks.map((task) => (
+                          <Link
+                            key={task.id}
+                            to={`/assignment/${task.id}`}
+                            className="block w-full text-left p-2 bg-green-50 hover:bg-green-100 border border-green-200 rounded-md transition-colors duration-200"
+                          >
+                            <div className="flex items-center justify-between">
+                              <div className="flex-1">
+                                <h5 className="font-medium text-green-900 text-xs mb-1">
+                                  {task.title}
+                                </h5>
+                                <p className="text-xs text-green-600">Due: {task.dueDate}</p>
+                              </div>
+                              <div className="ml-2">
+                                <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    );
+                  }
+                  return null;
+                })}
               </div>
             </div>
           </div>
@@ -647,6 +783,39 @@ export default function CourseDetail() {
                       {selectedLesson.title}
                     </h2>
                     <p className="text-gray-600">Duration: {selectedLesson.duration}</p>
+                    
+                    {/* Show lesson tasks */}
+                    {selectedLesson.task && (
+                      <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                        <h4 className="text-sm font-semibold text-blue-900 mb-2">Lesson Task</h4>
+                        <Link
+                          to={`/assignment/${selectedLesson.task.id}`}
+                          className="text-blue-700 hover:text-blue-800 font-medium text-sm"
+                        >
+                          {selectedLesson.task.title} →
+                        </Link>
+                        <p className="text-xs text-blue-600 mt-1">Due: {selectedLesson.task.dueDate}</p>
+                      </div>
+                    )}
+                    
+                    {selectedLesson.tasks && selectedLesson.tasks.length > 0 && (
+                      <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+                        <h4 className="text-sm font-semibold text-green-900 mb-2">Lesson Tasks</h4>
+                        <div className="space-y-2">
+                          {selectedLesson.tasks.map((task) => (
+                            <div key={task.id}>
+                              <Link
+                                to={`/assignment/${task.id}`}
+                                className="text-green-700 hover:text-green-800 font-medium text-sm"
+                              >
+                                {task.title} →
+                              </Link>
+                              <p className="text-xs text-green-600">Due: {task.dueDate}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                   {!selectedLesson.completed && (
                     <button

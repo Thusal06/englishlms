@@ -17,6 +17,10 @@ export default function AssignmentDetail() {
   const [ddScore, setDdScore] = useState(null);
   const [ddShowResults, setDdShowResults] = useState(false);
   const [ddTexts, setDdTexts] = useState({}); // optional free-text per sentence for certain tasks
+  // Quiz state
+  const [quizAnswers, setQuizAnswers] = useState({}); // { [qid]: value | {matchIndex: token} }
+  const [quizScore, setQuizScore] = useState(null);
+  const [quizShowResults, setQuizShowResults] = useState(false);
 
   // Mock assignment data
   const assignmentData = {
@@ -35,6 +39,103 @@ export default function AssignmentDetail() {
       maxScore: 100,
       submissionType: 'text',
       status: 'pending'
+    },
+    // Grammar Assignment 1: Linking words quiz
+    'grammar-assignment-1': {
+      id: 'grammar-assignment-1',
+      title: 'Grammar Assignment 1: Linking Words (Interactive Quiz)',
+      description: 'Listen to the audio and answer the questions about linking words (connectors).',
+      instructions: [
+        'Play the audio and read each question carefully.',
+        'Answer all questions. Some items are multiple choice, fill-in-the-blank, matching, or true/false.',
+        'Submit to check your score.'
+      ],
+      dueDate: '2025-10-05',
+      maxScore: 10,
+      submissionType: 'quiz',
+      status: 'not-started',
+      audioSrc: '', // placeholder – provide URL when available
+      questions: [
+        {
+          id: 'q1',
+          type: 'mcq',
+          prompt: 'Linking words are also known as:',
+          options: ['Verbs', 'Adjectives', 'Connectors', 'Pronouns'],
+          correctIndex: 2
+        },
+        {
+          id: 'q2',
+          type: 'fill',
+          prompt: 'The new system is faster. ______, it is more reliable.',
+          accept: ['moreover', 'furthermore']
+        },
+        {
+          id: 'q3',
+          type: 'match',
+          prompt: 'Match the linking word with its correct function:',
+          items: ['However,', 'For example,', 'Finally,', 'Therefore', 'In conclusion'],
+          functionBank: [
+            { key: 'a', text: 'Summarising' },
+            { key: 'b', text: 'Cause & effect' },
+            { key: 'c', text: '' },
+            { key: 'd', text: 'Giving examples' },
+            { key: 'e', text: 'Sequencing' },
+            { key: 'f', text: 'Contrasting ideas' }
+          ],
+          // answers by index 0..4 -> key
+          answers: ['f', 'd', 'e', 'b', 'a']
+        },
+        {
+          id: 'q4',
+          type: 'truefalse',
+          prompt: '“Linking words should always be placed at the end of a sentence.”',
+          correct: false
+        },
+        {
+          id: 'q5',
+          type: 'mcq',
+          prompt: 'Which category does the word “consequently” belong to?',
+          options: ['Adding information', 'Sequencing', 'Cause & effect', 'Summarising'],
+          correctIndex: 2
+        },
+        {
+          id: 'q6',
+          type: 'fill',
+          prompt: 'Several platforms, ______ Google Meet and Zoom, support online collaboration.',
+          accept: ['such as']
+        },
+        {
+          id: 'q7',
+          type: 'mcq',
+          prompt: 'Which sequence of connectors is best for organising a presentation?',
+          options: [
+            'Then – However – But – Anyway',
+            'First of all – Next – Moreover – Finally',
+            'Finally – Next – Moreover – First of all',
+            'However – Moreover – For example – In short'
+          ],
+          correctIndex: 1
+        },
+        {
+          id: 'q8',
+          type: 'truefalse',
+          prompt: 'Using varied connectors makes a presentation more engaging.',
+          correct: true
+        },
+        {
+          id: 'q9',
+          type: 'fill',
+          prompt: 'The team missed the deadline. ______, the project was delayed.',
+          accept: ['as a result', 'therefore']
+        },
+        {
+          id: 'q10',
+          type: 'mcq',
+          prompt: 'Which of the following is not a summarising connector?',
+          options: ['In conclusion', 'To sum up', 'Overall', 'On the other hand'],
+          correctIndex: 3
+        }
+      ]
     },
     // Business English Assignment 2: Dialogue completion (dragdrop)
     'business-assignment-2': {
@@ -337,6 +438,41 @@ export default function AssignmentDetail() {
     e.preventDefault();
   }
 
+  // Quiz-specific helpers
+  function handleQuizMCQChange(qid, index) {
+    setQuizAnswers((prev) => ({ ...prev, [qid]: index }));
+  }
+  function handleQuizFillChange(qid, value) {
+    setQuizAnswers((prev) => ({ ...prev, [qid]: (value || '') }));
+  }
+  function handleQuizTFChange(qid, value) {
+    setQuizAnswers((prev) => ({ ...prev, [qid]: value }));
+  }
+  function handleQuizDragStart(e, token) {
+    e.dataTransfer.setData('token', token);
+  }
+  function handleQuizDrop(e, qid, index) {
+    e.preventDefault();
+    const token = e.dataTransfer.getData('token');
+    if (!token) return;
+    setQuizAnswers((prev) => ({
+      ...prev,
+      [qid]: { ...(typeof prev[qid] === 'object' ? prev[qid] : {}), [index]: token },
+    }));
+  }
+  function quizRemovePlaced(qid, index) {
+    setQuizAnswers((prev) => {
+      const cur = typeof prev[qid] === 'object' ? { ...prev[qid] } : {};
+      delete cur[index];
+      return { ...prev, [qid]: cur };
+    });
+  }
+  function quizReset() {
+    setQuizAnswers({});
+    setQuizScore(null);
+    setQuizShowResults(false);
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     // Interactive drag & drop submission
@@ -602,6 +738,167 @@ export default function AssignmentDetail() {
                           </div>
                         )}
 
+        {/* Quiz Section */}
+        {assignment.submissionType === 'quiz' && (
+          <div className="card mb-8">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Interactive Quiz</h3>
+            {assignment.audioSrc ? (
+              <audio controls className="w-full mb-4">
+                <source src={assignment.audioSrc} />
+                Your browser does not support the audio element.
+              </audio>
+            ) : (
+              <div className="mb-4 text-sm text-gray-500">No audio provided.</div>
+            )}
+
+            <div className="space-y-6">
+              {(assignment.questions || []).map((q, qIndex) => (
+                <div key={q.id} className="border rounded-lg p-4">
+                  <div className="flex items-start justify-between">
+                    <p className="font-medium text-gray-900">Q{qIndex + 1}. {q.prompt}</p>
+                    {quizShowResults && (
+                      <span className="text-xs text-gray-500">{q.type.toUpperCase()}</span>
+                    )}
+                  </div>
+
+                  {q.type === 'mcq' && (
+                    <div className="mt-3 space-y-2">
+                      {q.options.map((opt, idx) => {
+                        const selected = quizAnswers[q.id] === idx;
+                        const correct = quizShowResults && idx === q.correctIndex;
+                        const wrong = quizShowResults && selected && idx !== q.correctIndex;
+                        return (
+                          <label key={idx} className={`flex items-center p-2 rounded cursor-pointer ${correct ? 'bg-green-50' : wrong ? 'bg-red-50' : ''}`}>
+                            <input
+                              type="radio"
+                              name={`mcq-${q.id}`}
+                              checked={selected || false}
+                              onChange={() => handleQuizMCQChange(q.id, idx)}
+                              className="mr-2"
+                            />
+                            <span className="text-gray-800">{opt}</span>
+                          </label>
+                        );
+                      })}
+                    </div>
+                  )}
+
+                  {q.type === 'fill' && (
+                    <div className="mt-3">
+                      <input
+                        type="text"
+                        className="input-field"
+                        placeholder="Type your answer"
+                        value={(quizAnswers[q.id] || '')}
+                        onChange={(e) => handleQuizFillChange(q.id, e.target.value)}
+                      />
+                      {quizShowResults && (
+                        <p className="mt-2 text-sm text-gray-600">Accepted: {q.accept.join(', ')}</p>
+                      )}
+                    </div>
+                  )}
+
+                  {q.type === 'truefalse' && (
+                    <div className="mt-3 space-x-6">
+                      <label className="inline-flex items-center">
+                        <input
+                          type="radio"
+                          name={`tf-${q.id}`}
+                          checked={quizAnswers[q.id] === true}
+                          onChange={() => handleQuizTFChange(q.id, true)}
+                          className="mr-2"
+                        />
+                        True
+                      </label>
+                      <label className="inline-flex items-center">
+                        <input
+                          type="radio"
+                          name={`tf-${q.id}`}
+                          checked={quizAnswers[q.id] === false}
+                          onChange={() => handleQuizTFChange(q.id, false)}
+                          className="mr-2"
+                        />
+                        False
+                      </label>
+                      {quizShowResults && (
+                        <span className="ml-4 text-sm text-gray-600">Correct: {q.correct ? 'True' : 'False'}</span>
+                      )}
+                    </div>
+                  )}
+
+                  {q.type === 'match' && (
+                    <div className="mt-3">
+                      {/* Word Bank */}
+                      <div className="border rounded-lg p-3 bg-gray-50 mb-3">
+                        <div className="flex flex-wrap gap-2">
+                          {q.functionBank.map((fn) => {
+                            const used = Object.values((quizAnswers[q.id] || {})).includes(fn.key);
+                            return (
+                              <div
+                                key={fn.key}
+                                draggable={!used}
+                                onDragStart={(e) => handleQuizDragStart(e, fn.key)}
+                                className={`px-2 py-1 rounded border bg-white text-xs shadow-sm select-none ${used ? 'opacity-40 cursor-not-allowed' : 'cursor-move hover:bg-primary-50'}`}
+                              >
+                                <span className="font-semibold mr-1 uppercase">{fn.key}</span>
+                                <span className="text-gray-700">{fn.text || '—'}</span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Items to match */}
+                      <div className="space-y-2">
+                        {q.items.map((it, idx) => {
+                          const placed = (quizAnswers[q.id] || {})[idx];
+                          const correctKey = q.answers[idx];
+                          const isCorrect = quizShowResults && placed && placed.toLowerCase() === correctKey.toLowerCase();
+                          return (
+                            <div key={idx} className="flex items-center">
+                              <div className="w-1/2 pr-2 text-gray-800">{it}</div>
+                              <div className="w-1/2">
+                                <div
+                                  onDrop={(e) => handleQuizDrop(e, q.id, idx)}
+                                  onDragOver={handleDragOver}
+                                  className={`inline-flex min-w-[120px] items-center px-3 py-2 border-2 rounded-md bg-white ${quizShowResults ? (isCorrect ? 'border-green-400' : 'border-red-400') : 'border-dashed border-gray-300'}`}
+                                >
+                                  {placed ? (
+                                    <button type="button" onClick={() => quizRemovePlaced(q.id, idx)} className="text-sm font-semibold text-gray-800">
+                                      {placed.toUpperCase()}
+                                    </button>
+                                  ) : (
+                                    <span className="text-sm text-gray-400">Drop key here</span>
+                                  )}
+                                </div>
+                                {quizShowResults && (
+                                  <div className="mt-1 text-xs text-gray-600">Correct: <span className="font-semibold uppercase">{correctKey}</span></div>
+                                )}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-200">
+              <button type="button" onClick={quizReset} className="btn-secondary">Reset</button>
+              <form onSubmit={handleSubmit}>
+                <button type="submit" className="btn-primary">Submit</button>
+              </form>
+            </div>
+
+            {quizShowResults && (
+              <div className="mt-6 p-4 rounded bg-gray-50 border">
+                <p className="font-semibold text-gray-800">Score: {quizScore} / {assignment.maxScore}</p>
+              </div>
+            )}
+          </div>
+        )}
         {/* Matching Table (Phrase ↔ Function) */}
         {assignment.submissionType === 'match' && (
           <div className="card mb-8">
