@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAssignments } from '../contexts/AssignmentsContext';
 
 export default function Assignments() {
-  const { assignments, updateAssignmentStatus } = useAssignments();
+  const { assignments, updateAssignmentStatus, resetAllAssignments } = useAssignments();
   const [activeTab, setActiveTab] = useState('all');
 
   const filteredAssignments = assignments.filter(assignment => {
@@ -24,6 +24,19 @@ export default function Assignments() {
             Back to Dashboard
           </Link>
         </div>
+
+        {/* Dev-only: Reset cached assignment states */}
+        {process.env.NODE_ENV !== 'production' && (
+          <div className="mb-6">
+            <button
+              onClick={() => { resetAllAssignments(); window.location.reload(); }}
+              className="inline-flex items-center px-3 py-1.5 border border-red-300 text-xs font-medium rounded-md text-red-700 bg-red-50 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+              title="Clear local cached assignment states for this user"
+            >
+              Reset Tasks (Dev)
+            </button>
+          </div>
+        )}
 
         {/* Tabs */}
         <div className="border-b border-gray-200 mb-6">
