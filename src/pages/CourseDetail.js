@@ -970,64 +970,6 @@ export default function CourseDetail() {
                     </div>
                   </button>
                 ))}
-                
-                {/* Render lesson tasks inline */}
-                {course.lessons.map((lesson) => {
-                  // Single task
-                  if (lesson.task) {
-                    return (
-                      <div key={`task-${lesson.id}`} className="ml-4 mt-2">
-                        <Link
-                          to={`/assignment/${lesson.task.id}`}
-                          className="block w-full text-left p-2 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-md transition-colors duration-200"
-                        >
-                          <div className="flex items-center justify-between">
-                            <div className="flex-1">
-                              <h5 className="font-medium text-blue-900 text-xs mb-1">
-                                {lesson.task.title}
-                              </h5>
-                              <p className="text-xs text-blue-600">Due: {lesson.task.dueDate}</p>
-                            </div>
-                            <div className="ml-2">
-                              <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                              </svg>
-                            </div>
-                          </div>
-                        </Link>
-                      </div>
-                    );
-                  }
-                  // Multiple tasks
-                  if (lesson.tasks && lesson.tasks.length > 0) {
-                    return (
-                      <div key={`tasks-${lesson.id}`} className="ml-4 mt-2 space-y-1">
-                        {lesson.tasks.map((task) => (
-                          <Link
-                            key={task.id}
-                            to={`/assignment/${task.id}`}
-                            className="block w-full text-left p-2 bg-green-50 hover:bg-green-100 border border-green-200 rounded-md transition-colors duration-200"
-                          >
-                            <div className="flex items-center justify-between">
-                              <div className="flex-1">
-                                <h5 className="font-medium text-green-900 text-xs mb-1">
-                                  {task.title}
-                                </h5>
-                                <p className="text-xs text-green-600">Due: {task.dueDate}</p>
-                              </div>
-                              <div className="ml-2">
-                                <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                </svg>
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    );
-                  }
-                  return null;
-                })}
               </div>
             </div>
           </div>
