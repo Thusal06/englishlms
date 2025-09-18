@@ -38,12 +38,12 @@ export default function AssignmentDetail() {
       dueDate: '2024-01-20',
       maxScore: 100,
       submissionType: 'text',
-      status: 'pending'
+      status: 'not-started'
     },
     // Grammar Assignment 1: Linking words quiz
     'grammar-assignment-1': {
       id: 'grammar-assignment-1',
-      title: 'Grammar Assignment 1: Linking Words (Interactive Quiz)',
+      title: 'Task 1: Linking Words Quiz',
       description: 'Listen to the audio and answer the questions about linking words (connectors).',
       instructions: [
         'Play the audio and read each question carefully.',
@@ -140,7 +140,7 @@ export default function AssignmentDetail() {
     // Business English Assignment 2: Dialogue completion (dragdrop)
     'business-assignment-2': {
       id: 'business-assignment-2',
-      title: 'Business English Assignment 2: Complete the Dialogue',
+      title: 'Task 2: Complete the Dialogue',
       description: 'Complete the dialogue using the negotiation phrases from the box by dragging them into the blanks.',
       instructions: [
         'Drag each phrase from the word bank into the correct blank.',
@@ -167,7 +167,7 @@ export default function AssignmentDetail() {
     // Business English Assignment 3: Video upload (final)
     'business-assignment-3': {
       id: 'business-assignment-3',
-      title: 'Business English Assignment 3: 3-Minute Technical Presentation (Video)',
+      title: 'Task 1: Technical Presentation Practice (Video)',
       description: 'Prepare and deliver a 3-minute short technical presentation on a topic of your choice. Record your presentation as a video and upload the file for submission.',
       instructions: [
         'Record a 3-minute video presenting a technical topic of your choice.',
@@ -178,12 +178,12 @@ export default function AssignmentDetail() {
       dueDate: '2025-11-30',
       maxScore: 100,
       submissionType: 'video',
-      status: 'pending'
+      status: 'not-started'
     },
     // Business English Assignment 1: Matching table
     'business-assignment-1': {
       id: 'business-assignment-1',
-      title: 'Business English Assignment 1: Match the Negotiation Phrase',
+      title: 'Task 1: Match Negotiation Phrases',
       description: 'Match the negotiation phrase (Column A) with its function (Column B). Drag the function labels (A–F) into the matching rows.',
       instructions: [
         'Drag each function label (A–F) from the word bank into the correct phrase row.',
@@ -225,19 +225,18 @@ export default function AssignmentDetail() {
       dueDate: '2024-01-18',
       maxScore: 50,
       submissionType: 'file',
-      status: 'in-progress'
+      status: 'not-started'
     },
-    'vocabulary-prep': {
-      id: 'vocabulary-prep',
-      title: 'Vocabulary Quiz Prep',
-      description: 'Study materials for upcoming vocabulary test covering units 1-5.',
+    'vocabulary-assignment-1': {
+      id: 'vocabulary-assignment-1',
+      title: 'Task 1: Academic Vocabulary Practice',
+      description: 'Complete exercises on academic vocabulary usage and context.',
       instructions: [
-        'Review vocabulary lists from units 1-5',
-        'Create flashcards for difficult words',
-        'Practice using words in sentences',
-        'Submit a summary of your study plan'
+        'Review the academic vocabulary terms from Lesson 1',
+        'Complete the vocabulary matching exercise',
+        'Write example sentences using each term'
       ],
-      dueDate: '2024-01-25',
+      dueDate: '2025-10-15',
       maxScore: 25,
       submissionType: 'text',
       status: 'not-started'
@@ -255,7 +254,7 @@ export default function AssignmentDetail() {
       dueDate: '2025-10-31',
       maxScore: 11,
       submissionType: 'dragdrop',
-      status: 'pending',
+      status: 'not-started',
       wordBank: [
         'bottleneck',
         'bandwidth',
@@ -329,7 +328,7 @@ export default function AssignmentDetail() {
       dueDate: '2025-11-15',
       maxScore: 10,
       submissionType: 'dragdrop',
-      status: 'pending',
+      status: 'not-started',
       wordBank: [
         'backlog',
         'bandwidth',

@@ -15,9 +15,8 @@ export default function CourseDetail() {
     'grammar-fundamentals': {
       id: 'grammar-fundamentals',
       title: 'English Grammar Fundamentals',
-      description: 'Master the basics of English grammar with comprehensive lessons and exercises',
-      instructor: 'Dr. Sarah Johnson',
-      duration: '8 weeks',
+      description: 'Master the fundamentals of English grammar with comprehensive lessons and exercises',
+      duration: '7 days',
       level: 'Beginner',
       lessons: [
         {
@@ -25,7 +24,7 @@ export default function CourseDetail() {
           title: 'Lesson 1 - Introduction to Parts of Speech',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '45 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -33,7 +32,7 @@ export default function CourseDetail() {
           title: 'Lesson 2 - Nouns and Pronouns',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '50 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -41,7 +40,7 @@ export default function CourseDetail() {
           title: 'Lesson 3 - Verbs and Tenses',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '60 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -109,7 +108,7 @@ export default function CourseDetail() {
             <h4 class="mt-6">Example of Integrated Use</h4>
             <p><em>“First of all, I will explain the system architecture. Then, I will move on to the implementation details. Moreover, I will highlight the potential risks. Finally, I will summarise the benefits of our approach.”</em></p>
           `,
-          duration: '40 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -117,7 +116,7 @@ export default function CourseDetail() {
           title: 'Lesson 5 - Sentence Structure',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '55 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -125,7 +124,7 @@ export default function CourseDetail() {
           title: 'Lesson 6 - Punctuation and Capitalization',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '45 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -133,7 +132,7 @@ export default function CourseDetail() {
           title: 'Lesson 7 - Complex Sentence Patterns',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '50 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -200,7 +199,7 @@ export default function CourseDetail() {
             <h4 class="mt-6">Example of Integrated Use</h4>
             <p><em>"First of all, I will explain the system architecture. Then, I will move on to the implementation details. Moreover, I will highlight the potential risks. Finally, I will summarise the benefits of our approach."</em></p>
           `,
-          duration: '40 min',
+          duration: '1 day',
           completed: false,
           task: {
             id: 'grammar-assignment-1',
@@ -215,8 +214,7 @@ export default function CourseDetail() {
       id: 'advanced-vocabulary',
       title: 'Advanced Vocabulary',
       description: 'Expand your English vocabulary with advanced words and expressions',
-      instructor: 'Prof. Michael Chen',
-      duration: '7 weeks',
+      duration: '7 days',
       level: 'Advanced',
       lessons: [
         {
@@ -246,7 +244,7 @@ export default function CourseDetail() {
               <li>Focus on precision over complexity.</li>
             </ul>
           `,
-          duration: '45 min',
+          duration: '1 day',
           completed: false,
           task: {
             id: 'vocabulary-assignment-1',
@@ -284,7 +282,7 @@ export default function CourseDetail() {
               </li>
             </ul>
           `,
-          duration: '35 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -292,7 +290,7 @@ export default function CourseDetail() {
           title: 'Lesson 2 - Business English Terms',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '40 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -300,7 +298,7 @@ export default function CourseDetail() {
           title: 'Lesson 3 - Scientific and Technical Vocabulary',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '45 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -308,7 +306,7 @@ export default function CourseDetail() {
           title: 'Lesson 4 - Idiomatic Expressions',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '50 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -316,7 +314,7 @@ export default function CourseDetail() {
           title: 'Lesson 5 - Phrasal Verbs and Collocations',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '55 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -367,7 +365,7 @@ export default function CourseDetail() {
               </li>
             </ul>
           `,
-          duration: '40 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -375,7 +373,7 @@ export default function CourseDetail() {
           title: 'Lesson 7 - Advanced Vocabulary Strategies',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '50 min',
+          duration: '1 day',
           completed: false
         }
       ]
@@ -384,8 +382,7 @@ export default function CourseDetail() {
       id: 'business-english',
       title: 'Business English',
       description: 'Professional English communication skills for the workplace',
-      instructor: 'Ms. Jennifer Williams',
-      duration: '6 weeks',
+      duration: '7 days',
       level: 'Intermediate',
       lessons: [
         {
@@ -393,7 +390,7 @@ export default function CourseDetail() {
           title: 'Lesson 1 - Professional Email Writing',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '40 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -401,7 +398,7 @@ export default function CourseDetail() {
           title: 'Lesson 2 - Meeting and Presentation Skills',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '45 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -464,7 +461,7 @@ export default function CourseDetail() {
               <li><strong>Engagement</strong> keeps attention and invites interaction.</li>
             </ul>
           `,
-          duration: '50 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -472,7 +469,7 @@ export default function CourseDetail() {
           title: 'Lesson 4 - Report Writing',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '55 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -480,7 +477,7 @@ export default function CourseDetail() {
           title: 'Lesson 5 - Customer Service Communication',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '45 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -488,7 +485,7 @@ export default function CourseDetail() {
           title: 'Lesson 6 - Cross-Cultural Communication',
           type: 'content',
           content: 'Content will be added here...',
-          duration: '50 min',
+          duration: '1 day',
           completed: false
         },
         {
@@ -547,7 +544,7 @@ export default function CourseDetail() {
               <li>Pair phrases with technical rationale when discussing timelines, features, or resources.</li>
             </ul>
           `,
-          duration: '45 min',
+          duration: '1 day',
           completed: false,
           tasks: [
             {
