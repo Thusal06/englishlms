@@ -332,9 +332,9 @@ export default function CourseDetail() {
           duration: '1 day',
           completed: false,
           task: {
-            id: 'linking-words-assignment-1',
-            title: 'Task 1: Linking Words Practice',
-            description: 'Complete exercises on using linking words in different contexts',
+            id: 'grammar-assignment-1',
+            title: 'Task 1: Linking Words Quiz (with Audio)',
+            description: 'Listen to the audio and complete the questions. Audio can be played up to 3 times.',
             dueDate: '2025-10-10'
           }
         },

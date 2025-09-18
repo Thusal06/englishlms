@@ -1,5 +1,5 @@
 // Assignment detail page with submission functionality
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useAssignments } from '../contexts/AssignmentsContext';
@@ -23,6 +23,9 @@ export default function AssignmentDetail() {
   const [quizAnswers, setQuizAnswers] = useState({}); // { [qid]: value | {matchIndex: token} }
   const [quizScore, setQuizScore] = useState(null);
   const [quizShowResults, setQuizShowResults] = useState(false);
+  // Optional audio support for quiz-type assignments
+  const audioRef = useRef(null);
+  const [audioPlays, setAudioPlays] = useState(0);
 
   // Mock assignment data
   const assignmentData = {
@@ -56,7 +59,7 @@ export default function AssignmentDetail() {
       maxScore: 10,
       submissionType: 'quiz',
       status: 'not-started',
-      audioSrc: '', // placeholder – provide URL when available
+      audioSrc: '/grammar4.mpeg',
       questions: [
         {
           id: 'q1',
@@ -1386,10 +1389,30 @@ export default function AssignmentDetail() {
           <div className="card mb-8">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Interactive Quiz</h3>
             {assignment.audioSrc ? (
-              <audio controls className="w-full mb-4">
-                <source src={assignment.audioSrc} />
-                Your browser does not support the audio element.
-              </audio>
+              <div className="mb-4">
+                <audio
+                  ref={audioRef}
+                  controls={audioPlays < 3}
+                  onPlay={() => {
+                    setAudioPlays((prev) => {
+                      const next = prev + 1;
+                      if (next >= 3 && audioRef.current) {
+                        audioRef.current.onended = () => {
+                          if (audioRef.current) audioRef.current.controls = false;
+                        };
+                      }
+                      return next;
+                    });
+                  }}
+                  className="w-full"
+                >
+                  <source src={assignment.audioSrc} />
+                  Your browser does not support the audio element.
+                </audio>
+                <div className="text-sm text-gray-600 mt-2">
+                  Plays used: {audioPlays} / 3 {audioPlays >= 3 && <span className="text-red-600 ml-2">Audio limit reached</span>}
+                </div>
+              </div>
             ) : (
               <div className="mb-4 text-sm text-gray-500">No audio provided.</div>
             )}
