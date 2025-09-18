@@ -556,6 +556,105 @@ export default function AssignmentDetail() {
       ]
     },
 
+    // Business English - Lesson 1: Writing clear and concise emails
+    'be-email-task-1': {
+      id: 'be-email-task-1',
+      title: 'Task 1: Email Clarity – True/False',
+      description: 'Decide if each statement is True or False.',
+      instructions: ['Select True or False for each item.'],
+      dueDate: '2025-11-12',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'em1', type: 'truefalse', prompt: 'A clear subject line should summarize the purpose of the email.', correct: true },
+        { id: 'em2', type: 'truefalse', prompt: 'Using long, complex sentences makes an email more professional.', correct: false },
+        { id: 'em3', type: 'truefalse', prompt: 'Bullet points can help make an email easier to read.', correct: true },
+        { id: 'em4', type: 'truefalse', prompt: 'It is acceptable to use informal abbreviations like “u” and “btw” in professional emails.', correct: false },
+        { id: 'em5', type: 'truefalse', prompt: 'Keeping emails short and to the point saves the reader’s time.', correct: true }
+      ]
+    },
+    'be-email-task-2': {
+      id: 'be-email-task-2',
+      title: 'Task 2: Email Essentials – MCQ',
+      description: 'Choose the best option for clarity and professionalism.',
+      instructions: ['Select one option per question.'],
+      dueDate: '2025-11-13',
+      maxScore: 4,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'emc1', type: 'mcq', prompt: 'Which subject line is the clearest?', options: ['Meeting','Budget Meeting – Friday, 2 PM','Some updates','Important'], correctIndex: 1 },
+        { id: 'emc2', type: 'mcq', prompt: 'Which opening is most appropriate for a business email?', options: ["Hey, what’s up?",'Good morning, I hope this message finds you well.','Yo, how are things?','Sup'], correctIndex: 1 },
+        { id: 'emc3', type: 'mcq', prompt: 'Which sentence is the most concise?', options: ['I am just writing this email to let you know that we might have a meeting tomorrow, if that’s okay with you.','Could we meet tomorrow to discuss the project?','I was wondering if, maybe, you have some free time tomorrow so we can possibly talk about the project.','There’s a chance that we might, at some point, consider meeting tomorrow.'], correctIndex: 1 },
+        { id: 'emc4', type: 'mcq', prompt: 'Which closing is most suitable for a professional email?', options: ['Bye','Later','Best regards,','See ya'], correctIndex: 2 }
+      ]
+    },
+
+    // Business English - Lesson 5: Teamwork and leadership communication
+    'be-teamwork-task-1': {
+      id: 'be-teamwork-task-1',
+      title: 'Task 1: Leadership Communication – Complete the Sentences',
+      description: 'Choose the correct letter from the box to complete each sentence.',
+      instructions: ['Drag the correct letter (A–E) to complete each scenario.'],
+      dueDate: '2025-11-16',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        {
+          id: 'tw1',
+          type: 'match',
+          prompt: 'Match each leadership scenario to the correct function (A–E).',
+          items: [
+            'When you want to encourage collaboration',
+            'When you delegate responsibility to someone',
+            'When you show recognition to your team',
+            'When you invite input from others',
+            'When you redirect the team to stay positive'
+          ],
+          functionBank: [
+            { key: 'A', text: 'Encouraging collaboration' },
+            { key: 'B', text: 'Delegating responsibility' },
+            { key: 'C', text: 'Recognizing achievement' },
+            { key: 'D', text: 'Inviting input' },
+            { key: 'E', text: 'Promoting a positive mindset' }
+          ],
+          answers: ['A','B','C','D','E']
+        }
+      ]
+    },
+    'be-teamwork-task-2': {
+      id: 'be-teamwork-task-2',
+      title: 'Task 2: Phrase → Purpose (Leadership)',
+      description: 'Match the leadership phrase to the correct purpose.',
+      instructions: ['Drag the correct purpose key (1–4) beside each phrase.'],
+      dueDate: '2025-11-17',
+      maxScore: 4,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        {
+          id: 'tw2',
+          type: 'match',
+          prompt: 'Match the phrase to its purpose',
+          items: [
+            '“Great job on completing the project ahead of time.”',
+            '“Can you handle the presentation for tomorrow’s meeting?”',
+            '“Let’s brainstorm some ideas as a team.”',
+            '“We all need to stick to the deadline.”'
+          ],
+          functionBank: [
+            { key: '1', text: 'Delegating responsibility' },
+            { key: '2', text: 'Motivating and recognizing achievement' },
+            { key: '3', text: 'Encouraging teamwork and idea-sharing' },
+            { key: '4', text: 'Reminding the team about commitment' }
+          ],
+          answers: ['2','1','3','4']
+        }
+      ]
+    },
+
     // Business English - Lesson 3: Presentations (Video submission)
     'be-presentations-task-1': {
       id: 'be-presentations-task-1',

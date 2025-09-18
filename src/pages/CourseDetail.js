@@ -554,17 +554,25 @@ export default function CourseDetail() {
       lessons: [
         {
           id: 1,
-          title: 'Lesson 1 - Professional Email Writing',
+          title: 'Lesson 1 - Writing clear and concise emails',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <h3>Writing Clear and Concise Emails</h3>
+            <p>Professional emails should be easy to read and understand. Keep subject lines specific, use short sentences, and format your content with bullet points when listing information.</p>
+            <ul class="list-disc pl-6 mt-3">
+              <li><strong>Subject:</strong> Summarize the purpose (e.g., “Budget Meeting – Friday, 2 PM”).</li>
+              <li><strong>Opening:</strong> Be polite and professional (e.g., “Good morning, I hope this message finds you well.”).</li>
+              <li><strong>Body:</strong> Keep it brief; use bullet points for clarity.</li>
+              <li><strong>Tone:</strong> Avoid slang and informal abbreviations like “u” or “btw”.</li>
+              <li><strong>Closing:</strong> Use professional sign-offs (e.g., “Best regards,”).</li>
+            </ul>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'business-assignment-1a',
-            title: 'Task 1: Email Writing Practice',
-            description: 'Write professional emails for different business scenarios',
-            dueDate: '2025-10-25'
-          }
+          tasks: [
+            { id: 'be-email-task-1', title: 'Task 1: Email Clarity – True/False', description: 'Decide if each statement is True or False.', dueDate: '2025-11-12' },
+            { id: 'be-email-task-2', title: 'Task 2: Email Essentials – MCQ', description: 'Choose the best option for clarity and professionalism.', dueDate: '2025-11-13' }
+          ]
         },
         {
           id: 2,
