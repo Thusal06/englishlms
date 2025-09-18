@@ -91,11 +91,6 @@ export default function CourseDetail() {
           title: 'Lesson 4 - Linking Words',
           type: 'content',
           content: `
-            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
-              <h3 class="text-lg font-semibold text-blue-800">Task: Linking Words Exercise</h3>
-              <p class="text-blue-700">Complete the following exercises to test your understanding of linking words.</p>
-            </div>
-
             <h4>What are linking words?</h4>
             <p>Linking words (connectors/transition words) connect ideas smoothly, ensure logical progression, and make your speech easier to follow. Using them effectively signals relationships between ideas, shows the flow of your argument, and enhances professionalism.</p>
 
@@ -317,6 +312,14 @@ export default function CourseDetail() {
 
             <h4 class="mt-6">Example of Integrated Use</h4>
             <p><em>“First of all, I will explain the system architecture. Then, I will move on to the implementation details. Moreover, I will highlight the potential risks. Finally, I will summarise the benefits of our approach.”</em></p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-6 mt-8">
+              <h3 class="text-lg font-semibold text-blue-800">📝 Task: Linking Words Exercise</h3>
+              <p class="text-blue-700 mb-4">Complete the following exercises to test your understanding of linking words.</p>
+              <a href="/assignment/linking-words-assignment-1" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+                Start Task
+              </a>
+            </div>
           `,
           duration: '1 day',
           completed: false,

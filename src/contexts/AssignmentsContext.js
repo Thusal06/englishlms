@@ -40,14 +40,24 @@ export function AssignmentsProvider({ children }) {
     });
   };
 
-  const updateAssignmentStatus = (id, status) => {
+  const updateAssignmentStatus = (id, status, submissionData = null) => {
     setAssignments(prev => 
       prev.map(assignment => 
         assignment.id === id 
-          ? { ...assignment, status, submitted: status === 'completed' }
+          ? { 
+              ...assignment, 
+              status, 
+              submitted: status === 'completed',
+              submittedAt: status === 'completed' ? new Date().toISOString() : assignment.submittedAt,
+              submissionData: submissionData || assignment.submissionData
+            }
           : assignment
       )
     );
+  };
+
+  const addSubmission = (assignmentId, submissionData) => {
+    updateAssignmentStatus(assignmentId, 'completed', submissionData);
   };
 
   const getCourseAssignments = (courseId) => {
@@ -68,6 +78,7 @@ export function AssignmentsProvider({ children }) {
         assignments,
         addAssignment,
         updateAssignmentStatus,
+        addSubmission,
         getCourseAssignments,
         getPendingAssignments,
         getCompletedAssignments,

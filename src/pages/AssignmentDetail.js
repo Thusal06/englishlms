@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import { useAssignments } from '../contexts/AssignmentsContext';
 
 export default function AssignmentDetail() {
   const { assignmentId } = useParams();
   const { currentUser, logout } = useAuth();
+  const { updateAssignmentStatus, addSubmission } = useAssignments();
   const navigate = useNavigate();
   const [assignment, setAssignment] = useState(null);
   const [submission, setSubmission] = useState('');
@@ -541,9 +543,34 @@ export default function AssignmentDetail() {
       }
     }
 
-    // Mock submission process
+    // Prepare submission data
+    const submissionData = {
+      type: assignment.submissionType,
+      submittedAt: new Date().toISOString(),
+      studentEmail: currentUser?.email,
+      data: {}
+    };
+
+    // Add specific submission data based on type
+    if (assignment.submissionType === 'dragdrop' || assignment.submissionType === 'match') {
+      submissionData.data = { answers: ddAnswers, score: ddScore };
+    } else if (assignment.submissionType === 'quiz') {
+      submissionData.data = { answers: quizAnswers, score: quizScore };
+    } else if (assignment.submissionType === 'text') {
+      submissionData.data = { text: submission };
+    } else if (assignment.submissionType === 'file' || assignment.submissionType === 'video') {
+      submissionData.data = { files: files.map(f => ({ name: f.name, size: f.size, type: f.type })) };
+    }
+
+    // Update assignment status to completed with submission data
+    addSubmission(assignmentId, submissionData);
     setIsSubmitted(true);
-    alert('Assignment submitted successfully!');
+    
+    // Show success message and redirect
+    setTimeout(() => {
+      alert('🎉 Task completed successfully! Great work!');
+      navigate('/assignments');
+    }, 500);
   }
 
   const handleLogout = async () => {

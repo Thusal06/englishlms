@@ -84,6 +84,14 @@ export default function Home() {
               <p className="text-gray-500 text-sm">
                 Ready to begin your English learning journey?
               </p>
+              <div className="mt-6 pt-4 border-t border-gray-200">
+                <Link 
+                  to="/teacher-login" 
+                  className="text-sm text-purple-600 hover:text-purple-500 font-medium"
+                >
+                  🎓 Teacher Login
+                </Link>
+              </div>
             </>
           )}
         </div>

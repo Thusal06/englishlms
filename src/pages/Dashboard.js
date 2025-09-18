@@ -58,6 +58,26 @@ export default function Dashboard() {
           </p>
         </div>
 
+        {/* Admin Access */}
+        {currentUser?.email?.includes('teacher') || currentUser?.email?.includes('admin') ? (
+          <div className="mb-6">
+            <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg p-4 text-white">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold">Teacher Dashboard</h3>
+                  <p className="text-purple-100">Review student submissions and manage courses</p>
+                </div>
+                <Link 
+                  to="/admin" 
+                  className="bg-white text-purple-600 px-4 py-2 rounded font-medium hover:bg-purple-50 transition-colors"
+                >
+                  Open Admin Panel
+                </Link>
+              </div>
+            </div>
+          </div>
+        ) : null}
+
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="card">

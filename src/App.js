@@ -12,6 +12,8 @@ import CourseDetail from './pages/CourseDetail';
 import QuizDetail from './pages/QuizDetail';
 import AssignmentDetail from './pages/AssignmentDetail';
 import Assignments from './pages/Assignments';
+import AdminPanel from './pages/AdminPanel';
+import TeacherLogin from './pages/TeacherLogin';
 import Discussion from './pages/Discussion';
 import Notes from './pages/Notes';
 
@@ -26,6 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/teacher-login" element={<TeacherLogin />} />
             
             {/* Protected Routes */}
             <Route 
@@ -65,6 +68,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <Assignments />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin" 
+              element={
+                <ProtectedRoute>
+                  <AdminPanel />
                 </ProtectedRoute>
               } 
             />
