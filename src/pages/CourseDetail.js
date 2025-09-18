@@ -568,114 +568,197 @@ export default function CourseDetail() {
         },
         {
           id: 2,
-          title: 'Lesson 2 - Meeting Participation',
+          title: 'Lesson 2 - Participating in Stand-up Meetings',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <h3>What is a Stand-up Meeting?</h3>
+            <p>Stand-up meetings are short, daily team discussions (usually 10–15 minutes). They are common in workplaces, especially in software development and project-based environments. The main purpose is to share quick updates, identify challenges, and keep everyone aligned.</p>
+            <p>Each participant usually answers three key questions:</p>
+            <ul class="list-disc pl-6">
+              <li><strong>What did I do yesterday?</strong> <em>(Past Simple)</em> – Completed actions. Example: I finished writing the test cases.</li>
+              <li><strong>What am I doing today?</strong> <em>(Present Continuous)</em> – Ongoing work. Example: I am reviewing the new feature design.</li>
+              <li><strong>Are there any blockers?</strong> – Problems or issues that stop progress. Example: I cannot continue until I get approval from the manager.</li>
+            </ul>
+
+            <h3 class="mt-6">Purpose of a Stand-up Meeting</h3>
+            <ul class="list-disc pl-6">
+              <li><strong>Information Sharing</strong> – Everyone knows what the team is working on.</li>
+              <li><strong>Coordination</strong> – Identify overlaps and dependencies in tasks.</li>
+              <li><strong>Problem Solving</strong> – Expose blockers early so the team can fix them.</li>
+              <li><strong>Team Building</strong> – Encourages collaboration and responsibility.</li>
+            </ul>
+
+            <h3 class="mt-6">Key Principles for Effective Stand-up Participation</h3>
+            <h4 class="mt-3">1. Conciseness → Speak briefly, no long explanations.</h4>
+            <ul class="list-disc pl-6">
+              <li>Stand-ups are short (≈15 minutes total).</li>
+              <li>Each person speaks for ~30–60 seconds.</li>
+              <li>Avoid unnecessary background stories.</li>
+            </ul>
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 rounded-r">
+              <p><strong>Example:</strong> “Yesterday I worked on fixing the login issue.”</p>
+            </div>
+            <p><em>Why?</em> It saves time and keeps the meeting productive.</p>
+
+            <h4 class="mt-3">2. Clarity → Use simple, direct sentences.</h4>
+            <ul class="list-disc pl-6">
+              <li>Use short, complete sentences; avoid vague language.</li>
+              <li>Be specific: “I tested the checkout page.”</li>
+            </ul>
+            <p><em>Why?</em> Clear updates prevent confusion and help track progress.</p>
+
+            <h4 class="mt-3">3. Collaboration → Focus on team goals.</h4>
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-3 rounded-r">
+              <p><strong>Example:</strong> “I finished the report, so the design team can use the data.”</p>
+            </div>
+
+            <h4 class="mt-3">4. Politeness → Acknowledge others and respect time.</h4>
+            <ul class="list-disc pl-6">
+              <li>Wait your turn; don’t interrupt.</li>
+              <li>Use polite language for blockers: “I need help with …”.</li>
+              <li>Thank others and keep within time limits.</li>
+            </ul>
+
+            <h3 class="mt-6">Benefits</h3>
+            <ul class="list-disc pl-6">
+              <li>Builds professional English fluency.</li>
+              <li>Improves teamwork and responsibility.</li>
+              <li>Enhances problem-solving by sharing blockers.</li>
+            </ul>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'business-assignment-2',
-            title: 'Task 2: Meeting Language Practice',
-            description: 'Practice phrases and vocabulary for effective meeting participation',
-            dueDate: '2025-10-26'
-          }
+          tasks: [
+            { id: 'be-standup-task-1', title: 'Task 1: Match Stand-up Qs ↔ Answers', description: 'Match each stand-up question with the correct answers.', dueDate: '2025-11-01' },
+            { id: 'be-standup-task-2', title: 'Task 2: Verb Forms in Stand-ups', description: 'Complete sentences using Past Simple, Present Continuous, or Present Simple.', dueDate: '2025-11-02' },
+            { id: 'be-standup-task-3', title: 'Task 3: Vocabulary Matching', description: 'Match the word/phrase with its meaning.', dueDate: '2025-11-03' },
+            { id: 'be-standup-task-4', title: 'Task 4: Reading – True/False', description: 'Read the dialogue and mark statements True/False.', dueDate: '2025-11-04' }
+          ]
         },
         {
           id: 3,
           title: 'Lesson 3 - Delivering Technical Presentations',
           type: 'content',
           content: `
-            <h4>1. Clarity</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Use short, precise sentences.</li>
-              <li>Avoid jargon unless essential; define terms immediately.</li>
-              <li>Explain acronyms on first use (e.g., API = Application Programming Interface).</li>
-              <li>Repeat key points for emphasis.</li>
+            <h3>1. Clarity</h3>
+            <p><strong>Definition:</strong> Make your message easy to understand. Avoid unnecessary jargon; define technical terms immediately.</p>
+            <div class="bg-gray-50 border rounded p-3 my-3">
+              <p><strong>Example:</strong> “The system uses a REST API (Representational State Transfer Application Programming Interface). This allows applications to communicate efficiently over the internet.”</p>
+            </div>
+
+            <h3 class="mt-6">2. Structure</h3>
+            <p><strong>Definition:</strong> Organize ideas logically using linking words.</p>
+            <ul class="list-disc pl-6">
+              <li>Introduction → main points → conclusion</li>
+              <li>Use: first of all, next, finally</li>
             </ul>
-            <p class="mt-2"><strong>Example:</strong> "The system uses a REST API (Representational State Transfer Application Programming Interface) so applications can communicate efficiently over the internet."</p>
+            <div class="bg-gray-50 border rounded p-3 my-3">
+              <p><strong>Example:</strong> “First of all, I will describe the architecture. Then, I will explain the deployment process. Finally, I will summarize the advantages.”</p>
+            </div>
 
-            <h4 class="mt-6">2. Structure</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Plan: introduction → main points → conclusion.</li>
-              <li>Use linking words: first of all, next, finally.</li>
-              <li>Split content into clear sections.</li>
+            <h3 class="mt-6">3. Guidance</h3>
+            <p><strong>Definition:</strong> Signposting to orient the audience.</p>
+            <ul class="list-disc pl-6">
+              <li>“Now, I’d like to move on to …”</li>
+              <li>“It is important to note that …”</li>
+              <li>“So far, we have seen …”</li>
             </ul>
-            <p class="mt-2"><strong>Example:</strong> "First of all, I’ll describe the architecture. Next, I’ll explain deployment. Finally, I’ll summarize the advantages."</p>
+            <div class="bg-gray-50 border rounded p-3 my-3">
+              <p><strong>Example:</strong> “Now, let’s move on to the system testing phase. It is important to note that automated tests cover over 80% of the code.”</p>
+            </div>
 
-            <h4 class="mt-6">3. Guidance (Signposting)</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Introduce sections: "Now, I’d like to move on to…"</li>
-              <li>Highlight key points: "It’s important to note that…"</li>
-              <li>Summarize before moving on: "So far, we’ve seen…"</li>
+            <h3 class="mt-6">4. Support</h3>
+            <p><strong>Definition:</strong> Visual aids (slides, diagrams, charts) reinforce spoken content.</p>
+            <ul class="list-disc pl-6">
+              <li>Keep slides uncluttered; label diagrams clearly; avoid reading slides verbatim.</li>
             </ul>
-            <p class="mt-2"><strong>Example:</strong> "Now, let’s move on to testing. It’s important to note that automated tests cover over 80% of the code."</p>
+            <div class="bg-gray-50 border rounded p-3 my-3">
+              <p><strong>Example:</strong> Show a deployment pipeline flowchart while explaining steps.</p>
+            </div>
 
-            <h4 class="mt-6">4. Support (Visual Aids)</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Keep slides uncluttered; prefer bullet points, diagrams, and screenshots.</li>
-              <li>Label diagrams clearly.</li>
-              <li>Don’t read slides verbatim; use them as prompts.</li>
-              <li>Use animations sparingly to highlight steps.</li>
+            <h3 class="mt-6">5. Engagement</h3>
+            <p><strong>Definition:</strong> Keep the audience interested and invite interaction.</p>
+            <ul class="list-disc pl-6">
+              <li>Ask rhetorical questions, pause for emphasis, summarize takeaways, invite questions.</li>
             </ul>
-            <p class="mt-2"><strong>Example:</strong> Show a deployment flowchart while explaining each step.</p>
+            <div class="bg-gray-50 border rounded p-3 my-3">
+              <p><strong>Example:</strong> “To sum up, automating code review reduces errors significantly. How much time could your team save if most errors are caught before deployment?”</p>
+            </div>
 
-            <h4 class="mt-6">5. Engagement</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Ask rhetorical questions: "What happens if the server fails here?"</li>
-              <li>Pause to let key points sink in.</li>
-              <li>Summarize takeaways at the end of sections.</li>
-              <li>Invite questions at suitable moments.</li>
-            </ul>
-            <p class="mt-2"><strong>Example:</strong> "To sum up, automating code review reduces errors significantly."</p>
+            <h3 class="mt-6">Integrated Example – Short Technical Presentation</h3>
+            <p>“Good morning, everyone. Today, I’ll be talking about our automated testing framework. First of all, I will explain the architecture. Then, I will demonstrate a live test run. It is important to note that this framework reduces manual testing by 50%. Now, let’s move on to how we analyze the results using dashboards. Finally, I’ll summarize the benefits and answer your questions.”</p>
 
-            <h4 class="mt-6">Integrated Mini‑Presentation</h4>
-            <p>"Good morning. Today, I’ll cover our automated testing framework. First, the architecture. Next, a live test run. It’s important to note this reduces manual testing by 50%. Now, dashboards for results. Finally, I’ll summarize benefits and take questions."</p>
-
-            <h4 class="mt-6">Key Takeaways</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Clarity</strong> makes your message understandable.</li>
-              <li><strong>Structure</strong> organizes ideas logically.</li>
-              <li><strong>Guidance</strong> helps the audience follow your flow.</li>
-              <li><strong>Support</strong> with visuals reinforces key points.</li>
-              <li><strong>Engagement</strong> keeps attention and invites interaction.</li>
+            <h3 class="mt-6">Key Takeaways</h3>
+            <ul class="list-disc pl-6">
+              <li>Clarity ensures your message is understandable.</li>
+              <li>Structure and linking words organize content logically.</li>
+              <li>Guidance via signposting helps audience follow your flow.</li>
+              <li>Support with visual aids reinforces key points.</li>
+              <li>Engagement keeps your audience attentive and interactive.</li>
             </ul>
           `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'vocabulary-assignment-3',
-            title: 'Task 3: Scientific Vocabulary Quiz',
-            description: 'Complete exercises on scientific and technical terminology',
-            dueDate: '2025-10-17'
-          }
+          tasks: [
+            { id: 'be-presentations-task-1', title: 'Task 1: 3-minute Technical Presentation (Video)', description: 'Record and upload a 3-minute technical presentation.', dueDate: '2025-11-06' }
+          ]
         },
         {
           id: 4,
           title: 'Lesson 4 - Understanding Business Etiquette and Cultural Nuances',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <h3>Why This Matters</h3>
+            <p>In a global software engineering environment, understanding both business etiquette and cultural nuances is essential for effective communication and successful teamwork.</p>
+            <h4 class="mt-4">1. Punctuality and Time Perception</h4>
+            <div class="bg-gray-50 border rounded p-3 my-3">
+              <ul class="list-disc pl-6">
+                <li>“I will join the meeting promptly at 10 AM.”</li>
+                <li>“Please let me know if the meeting time changes.”</li>
+                <li>“I apologize for the delay due to technical difficulties.”</li>
+                <li>“Sorry for joining late; thank you for your patience.”</li>
+                <li>“The deadline is firm and must be met by Friday.”</li>
+                <li>“We will aim to complete this by Friday, though delays might occur.”</li>
+              </ul>
+            </div>
+            <p><em>Language Tip:</em> Use modal verbs like will, could, would to express commitment or polite requests.</p>
+            <h4 class="mt-4">2. Communication Style</h4>
+            <div class="bg-gray-50 border rounded p-3 my-3">
+              <p><strong>Direct & Low-context:</strong> “The report needs corrections before Friday.”</p>
+              <p><strong>Indirect & High-context:</strong> “It might be helpful to review the report again before Friday.”</p>
+              <p><strong>Polite Disagreement:</strong> “I understand your point; however …”</p>
+            </div>
+            <h4 class="mt-4">3. Email Etiquette and Politeness</h4>
+            <ul class="list-disc pl-6">
+              <li>Greetings: “Dear [Name],” / “Hello [Name], I hope you are well.”</li>
+              <li>Requests: “Could you please …” / “Would you mind …”</li>
+              <li>Thanks: “Thank you for your support.”</li>
+              <li>Closings: “Best regards,” / “Kind regards,”</li>
+            </ul>
+            <h4 class="mt-4">4. Meeting Behavior and Turn-Taking</h4>
+            <ul class="list-disc pl-6">
+              <li>Asking to speak: “May I add something here?”</li>
+              <li>Agreement: “I agree with your point.”</li>
+              <li>Disagreement: “I see it differently because …”</li>
+            </ul>
+            <h4 class="mt-4">5. Titles, Hierarchy, and Respect</h4>
+            <p>Begin formally and adjust based on cues (e.g., Mr./Dr. vs first names).</p>
+            <h4 class="mt-4">6. Approaching Conflict and Criticism</h4>
+            <p>Direct: “This report needs improvement …” Indirect: “There might be some areas to improve.”</p>
+            <h4 class="mt-4">7. Non-Verbal Communication</h4>
+            <ul class="list-disc pl-6">
+              <li>Eye contact norms vary; be mindful of tone and gestures.</li>
+              <li>Politeness: “Thank you for your understanding.” / “I appreciate your patience.”</li>
+            </ul>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'business-assignment-4',
-            title: 'Task 4: Business Report Writing',
-            description: 'Create professional business reports with proper structure',
-            dueDate: '2025-10-28'
-          }
-        },
-        {
-          id: 5,
-          title: 'Lesson 5 - Collaboration & Teamwork in Software Engineering',
-          type: 'content',
-          content: 'Content will be added here...',
-          duration: '1 day',
-          completed: false,
-          task: {
-            id: 'business-assignment-5',
-            title: 'Task 5: Customer Service Scenarios',
-            description: 'Practice handling customer service situations professionally',
-            dueDate: '2025-10-29'
-          }
+          tasks: [
+            { id: 'be-etiquette-task-1', title: 'Task 1: Etiquette – MCQ', description: 'Choose the best option for each question.', dueDate: '2025-11-08' },
+            { id: 'be-etiquette-task-2', title: 'Task 2: Etiquette – Fill in the Blanks', description: 'Complete each sentence with a suitable word from the box.', dueDate: '2025-11-09' },
+            { id: 'be-etiquette-task-3', title: 'Task 3: Phrase → Purpose (Match)', description: 'Match each phrase to its communicative purpose.', dueDate: '2025-11-10' },
+            { id: 'be-etiquette-task-4', title: 'Task 4: True or False', description: 'Determine whether each statement is true or false.', dueDate: '2025-11-11' }
+          ]
         },
         {
           id: 6,

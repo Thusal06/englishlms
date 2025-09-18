@@ -357,6 +357,220 @@ export default function AssignmentDetail() {
       ]
     }
     ,
+    // Business English - Lesson 2: Stand-up Meetings
+    'be-standup-task-1': {
+      id: 'be-standup-task-1',
+      title: 'Task 1: Match Stand-up Qs ↔ Answers',
+      description: 'Match the stand-up question (1–3) with the correct type of answer (a–f).',
+      instructions: [
+        'Drag each letter (a–f) onto the matching question.',
+        'Some questions have two valid answers; place both letters in order separated by a comma (use the drag-and-drop for each row).'
+      ],
+      dueDate: '2025-11-01',
+      maxScore: 3,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        {
+          id: 'suq1',
+          type: 'match',
+          prompt: 'Match the stand-up questions with appropriate answers',
+          items: [
+            'What did you do yesterday?',
+            'What are you doing today?',
+            'Do you have any blockers?'
+          ],
+          functionBank: [
+            { key: 'a', text: 'I am preparing the client presentation.' },
+            { key: 'b', text: 'I completed the testing for Module A.' },
+            { key: 'c', text: 'Yes, I’m waiting for data from the analytics team.' },
+            { key: 'd', text: 'I am reviewing yesterday’s meeting notes.' },
+            { key: 'e', text: 'No, I don’t have any blockers today.' },
+            { key: 'f', text: 'Yesterday, I finished writing the user manual.' }
+          ],
+          // Using first of each pair from the answer key (b/f), (a/d), (c/e)
+          answers: ['b', 'a', 'c']
+        }
+      ]
+    },
+    'be-standup-task-2': {
+      id: 'be-standup-task-2',
+      title: 'Task 2: Verb Forms in Stand-ups',
+      description: 'Complete the sentences with the correct verb form (Past Simple, Present Continuous, Present Simple).',
+      instructions: [
+        'Type the correct verb phrase into each blank.',
+        'Answers are case-insensitive; small variations like contractions are accepted where applicable.'
+      ],
+      dueDate: '2025-11-02',
+      maxScore: 10,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'su2q1', type: 'fill', prompt: 'Yesterday, I __________ (work) on fixing the login issue.', accept: ['worked'] },
+        { id: 'su2q2', type: 'fill', prompt: 'Today, I __________ (check) the system performance.', accept: ['am checking'] },
+        { id: 'su2q3', type: 'fill', prompt: 'I __________ (not / have) any blockers at the moment.', accept: ['do not have', "don't have"] },
+        { id: 'su2q4', type: 'fill', prompt: 'Yesterday, we __________ (complete) the draft report for the project.', accept: ['completed'] },
+        { id: 'su2q5', type: 'fill', prompt: 'Today, I __________ (prepare) slides for the client presentation.', accept: ['am preparing'] },
+        { id: 'su2q6', type: 'fill', prompt: 'I __________ (wait) for feedback from the design team.', accept: ['am waiting'] },
+        { id: 'su2q7', type: 'fill', prompt: 'Yesterday, my team __________ (update) the project timeline.', accept: ['updated'] },
+        { id: 'su2q8', type: 'fill', prompt: 'Right now, I __________ (review) the code changes from yesterday.', accept: ['am reviewing'] },
+        { id: 'su2q9', type: 'fill', prompt: 'At the moment, I __________ (not / face) any problems with my tasks.', accept: ['am not facing'] },
+        { id: 'su2q10', type: 'fill', prompt: 'Yesterday, I __________ (attend) a meeting with the manager.', accept: ['attended'] }
+      ]
+    },
+    'be-standup-task-3': {
+      id: 'be-standup-task-3',
+      title: 'Task 3: Vocabulary Matching',
+      description: 'Match the word/phrase with its meaning from the dialogue.',
+      instructions: [
+        'Drag the correct definition letter to each word.'
+      ],
+      dueDate: '2025-11-03',
+      maxScore: 6,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        {
+          id: 'su3m1',
+          type: 'match',
+          prompt: 'Match the items',
+          items: ['proposal', 'blocker', 'draft', 'performance', 'coordinate', 'confirm'],
+          functionBank: [
+            { key: 'a', text: 'An obstacle or problem that delays work' },
+            { key: 'b', text: 'The speed/quality at which something works' },
+            { key: 'c', text: 'An early version of a document' },
+            { key: 'd', text: 'A written plan or suggestion' },
+            { key: 'e', text: 'To work together with others to organize tasks' },
+            { key: 'f', text: 'To verify or approve something officially' }
+          ],
+          answers: ['d','a','c','b','e','f']
+        }
+      ]
+    },
+    'be-standup-task-4': {
+      id: 'be-standup-task-4',
+      title: 'Task 4: Reading – True/False',
+      description: 'Read the stand-up dialogue and mark statements as True or False.',
+      instructions: [
+        'Answer each statement based on the dialogue provided in the lesson.'
+      ],
+      dueDate: '2025-11-04',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'su4q1', type: 'truefalse', prompt: 'Sarah is facing a blocker today.', correct: false },
+        { id: 'su4q2', type: 'truefalse', prompt: 'Ravi worked on testing the system yesterday.', correct: false },
+        { id: 'su4q3', type: 'truefalse', prompt: 'Mina is discussing the user manual with the design team today.', correct: true },
+        { id: 'su4q4', type: 'truefalse', prompt: 'Alex is waiting for confirmation about the release date.', correct: true },
+        { id: 'su4q5', type: 'truefalse', prompt: 'The manager asks questions during the stand-up.', correct: false }
+      ]
+    },
+
+    // Business English - Lesson 4: Business Etiquette
+    'be-etiquette-task-1': {
+      id: 'be-etiquette-task-1',
+      title: 'Task 1: Etiquette – MCQ',
+      description: 'Choose the best option for each question.',
+      instructions: [
+        'Select one option per question.'
+      ],
+      dueDate: '2025-11-08',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'be1', type: 'mcq', prompt: 'Which phrase is appropriate to confirm your attendance at a meeting?', options: ['I think I might come at some point.','I will join the meeting promptly at 10 AM.','I’m not sure if I will be there.'], correctIndex: 1 },
+        { id: 'be2', type: 'mcq', prompt: 'In an indirect culture, how would you politely suggest a change?', options: ['Fix the report now.','It might be helpful to review the report again before Friday.','The report is wrong.'], correctIndex: 1 },
+        { id: 'be3', type: 'mcq', prompt: 'Which is a correct polite email closing?', options: ['See ya.','Best regards,','Bye bye.'], correctIndex: 1 },
+        { id: 'be4', type: 'mcq', prompt: 'How can you politely ask to speak in a meeting?', options: ['Let me talk now.','May I add something here?','Stop talking, I want to speak.'], correctIndex: 1 },
+        { id: 'be5', type: 'mcq', prompt: 'How to address a senior colleague in a hierarchical culture?', options: ['Hey, John.','Mr. Smith, could you please advise?','What’s up, boss?'], correctIndex: 1 }
+      ]
+    },
+    'be-etiquette-task-2': {
+      id: 'be-etiquette-task-2',
+      title: 'Task 2: Etiquette – Fill in the Blanks',
+      description: 'Complete the sentences using words from the box.',
+      instructions: [
+        'Use words: could, please, apologize, might, regard(s), appreciate',
+        'Type the single word needed; capitalization is flexible.'
+      ],
+      dueDate: '2025-11-09',
+      maxScore: 6,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'be6a', type: 'fill', prompt: 'I _______ for the delay due to technical issues.', accept: ['apologize','apologise'] },
+        { id: 'be6b', type: 'fill', prompt: '_______ you send me the updated file by Friday?', accept: ['could'] },
+        { id: 'be6c', type: 'fill', prompt: 'Thank you for your _______ and help.', accept: ['appreciation','appreciate'] },
+        { id: 'be6d', type: 'fill', prompt: 'We _______ consider another approach to solve the problem.', accept: ['might'] },
+        { id: 'be6e', type: 'fill', prompt: 'Best ________,', accept: ['regards','regard'] },
+        { id: 'be6f', type: 'fill', prompt: '_______ you let me know if you have any questions?', accept: ['could'] }
+      ]
+    },
+    'be-etiquette-task-3': {
+      id: 'be-etiquette-task-3',
+      title: 'Task 3: Phrase → Purpose (Match)',
+      description: 'Match each phrase to its communicative purpose.',
+      instructions: ['Drag the correct purpose letter (a–d) beside each phrase.'],
+      dueDate: '2025-11-10',
+      maxScore: 4,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        {
+          id: 'be7m',
+          type: 'match',
+          prompt: 'Match the phrase to its purpose',
+          items: [
+            '“I see it differently because…”',
+            '“Thank you for your understanding.”',
+            '“Please let me know if you need any clarification.”',
+            '“I agree with your point.”'
+          ],
+          functionBank: [
+            { key: 'a', text: 'Agreeing politely' },
+            { key: 'b', text: 'Polite disagreement' },
+            { key: 'c', text: 'Offering help or further communication' },
+            { key: 'd', text: 'Expressing gratitude' }
+          ],
+          answers: ['b','d','c','a']
+        }
+      ]
+    },
+    'be-etiquette-task-4': {
+      id: 'be-etiquette-task-4',
+      title: 'Task 4: True or False',
+      description: 'Decide if each statement is true or false.',
+      instructions: ['Answer based on the etiquette content.'],
+      dueDate: '2025-11-11',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'be8t1', type: 'truefalse', prompt: 'Interrupting during meetings is considered polite in all cultures.', correct: false },
+        { id: 'be8t2', type: 'truefalse', prompt: 'Direct cultures prefer explicit and clear communication.', correct: true },
+        { id: 'be8t3', type: 'truefalse', prompt: '“Would you mind…” is a rude way to ask for help.', correct: false },
+        { id: 'be8t4', type: 'truefalse', prompt: 'Using first names is acceptable in all cultures regardless of hierarchy.', correct: false },
+        { id: 'be8t5', type: 'truefalse', prompt: 'Eye contact always shows confidence and respect in every culture.', correct: false }
+      ]
+    },
+
+    // Business English - Lesson 3: Presentations (Video submission)
+    'be-presentations-task-1': {
+      id: 'be-presentations-task-1',
+      title: 'Task 1: 3-minute Technical Presentation (Video)',
+      description: 'Prepare and deliver a 3-minute short technical presentation on a topic of your choice. Record your presentation as a video and upload the file for submission.',
+      instructions: [
+        'Record a ~3-minute video presenting a technical topic of your choice.',
+        'Speak clearly, structure your talk (intro → main points → conclusion), and use signposting.',
+        'Drag and drop your video below or click to browse. Accepted formats: MP4, WEBM, MOV. Max ~200MB.'
+      ],
+      dueDate: '2025-11-06',
+      maxScore: 100,
+      submissionType: 'video',
+      status: 'not-started'
+    },
     // Articles Lesson - Task 1: Fill with a/an/the/(no article)
     'articles-task-1': {
       id: 'articles-task-1',
@@ -581,6 +795,38 @@ export default function AssignmentDetail() {
     setQuizAnswers({});
     setQuizScore(null);
     setQuizShowResults(false);
+  }
+
+  // Compute score for quiz-type assignments (supports mcq, fill, truefalse, and match inside quiz)
+  function computeQuizScore(assignment) {
+    const questions = assignment.questions || [];
+    let score = 0;
+    let max = 0;
+    questions.forEach((q) => {
+      if (q.type === 'mcq') {
+        max += 1;
+        const sel = quizAnswers[q.id];
+        if (typeof sel === 'number' && sel === q.correctIndex) score += 1;
+      } else if (q.type === 'fill') {
+        max += 1;
+        const val = (quizAnswers[q.id] || '').toString().trim().toLowerCase();
+        const accepts = (q.accept || []).map((a) => a.trim().toLowerCase());
+        if (val && accepts.includes(val)) score += 1;
+      } else if (q.type === 'truefalse') {
+        max += 1;
+        if (typeof quizAnswers[q.id] === 'boolean' && quizAnswers[q.id] === q.correct) score += 1;
+      } else if (q.type === 'match') {
+        // For match, count each pair as 1 point
+        const placed = quizAnswers[q.id] || {};
+        (q.items || []).forEach((_, idx) => {
+          max += 1;
+          const token = (placed[idx] || '').toString().trim().toLowerCase();
+          const correctKey = (q.answers[idx] || '').toString().trim().toLowerCase();
+          if (token && token === correctKey) score += 1;
+        });
+      }
+    });
+    return { score, max };
   }
 
   function handleSubmit(e) {
