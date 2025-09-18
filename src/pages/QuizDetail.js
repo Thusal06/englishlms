@@ -512,12 +512,20 @@ export default function QuizDetail() {
       timeLimit: 300, // 5 minutes
       type: 'audio-fill',
       audioSrc: '/quiz3.mpeg',
-      blanksCount: 10,
+      blanksCount: 9,
       // Template text with placeholders to render inputs below the audio
       prompt: `Hi team, thanks for joining. I wanted to give you a heads-up on the new project. We’ve had a few concerns about the project ____________, and there's a lot of ____________ on how we should approach the ____________. The backlog has grown significantly, and we're seeing some bottlenecks in the ____________. My guess is that the team is going to be a little ____________ to meet the deadlines. We also have to decide on the new software ____________. It’s a pretty big investment, and we have to get it right. I'm hoping to have a final decision on that by the end of the ____________. Please let me know your thoughts on this. The ____________ is that we need to address these issues ____________ to avoid any further delays. We have a lot of work to do, but I'm confident we can get it done.`,
       // Provide correct answers in order for scoring (case-insensitive). Placeholder values here.
       answers: [
-        // TODO: replace with the exact expected words, e.g. 'requirements', 'debate', 'strategy', ...
+        'scope',
+        'debate',
+        'sprint',
+        'development phase',
+        'under the gun',
+        'license',
+        'week',
+        'bottom line',
+        'promptly'
       ]
     }
   };
