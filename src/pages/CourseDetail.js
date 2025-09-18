@@ -73,6 +73,10 @@ export default function CourseDetail() {
           title: 'Lesson 4 - Linking Words',
           type: 'content',
           content: `
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+              <h3 class="text-lg font-semibold text-blue-800">Task: Linking Words Exercise</h3>
+              <p class="text-blue-700">Complete the following exercises to test your understanding of linking words.</p>
+            </div>
 
             <h4>What are linking words?</h4>
             <p>Linking words (connectors/transition words) connect ideas smoothly, ensure logical progression, and make your speech easier to follow. Using them effectively signals relationships between ideas, shows the flow of your argument, and enhances professionalism.</p>
@@ -123,10 +127,16 @@ export default function CourseDetail() {
             </div>
 
             <h4 class="mt-6">Tips for Using Linking Words Effectively</h4>
+            <ul class="list-disc pl-6 space-y-2 mt-2">
+              <li>Vary your connectors to avoid repetition</li>
+              <li>Use them to show relationships between ideas</li>
+              <li>Practice using them in your speaking and writing</li>
+              <li>Pay attention to punctuation when using linking words at the beginning of sentences</li>
+            </ul>
 
-            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
-              <h3 class="text-lg font-semibold text-blue-800">Task: Linking Words Exercise</h3>
-              <p class="text-blue-700">Complete the following exercises to test your understanding of linking words.</p>
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+              <h3 class="text-lg font-semibold text-yellow-800">Practice Exercises</h3>
+              <p class="text-yellow-700">Test your understanding with these exercises:</p>
               
               <div class="mt-4 space-y-6">
                 <div>
@@ -138,11 +148,20 @@ export default function CourseDetail() {
                     <p>c) Connectors</p>
                     <p>d) Pronouns</p>
                   </div>
+                  <div class="mt-2 p-2 bg-gray-50 rounded">
+                    <p class="text-sm text-gray-600">Answer: c) Connectors</p>
+                  </div>
                 </div>
 
                 <div>
                   <p class="font-medium">Q2. Fill in the Blank</p>
                   <p>The new system is faster. ______, it is more reliable.</p>
+                  <div class="mt-2">
+                    <input type="text" class="border rounded p-1 w-full max-w-md" placeholder="Type your answer here..." />
+                  </div>
+                  <div class="mt-2 p-2 bg-gray-50 rounded">
+                    <p class="text-sm text-gray-600">Possible answers: Moreover, Furthermore, Additionally, Also</p>
+                  </div>
                 </div>
 
                 <div>
@@ -154,6 +173,22 @@ export default function CourseDetail() {
                     <div>Finally, →</div>
                     <div>Therefore →</div>
                     <div>In conclusion →</div>
+                  </div>
+                  <div class="mt-2">
+                    <div class="flex items-center space-x-2 mb-2">
+                      <select class="border rounded p-1">
+                        <option value="">Select function</option>
+                        <option value="contrast">Contrast</option>
+                        <option value="example">Example</option>
+                        <option value="sequence">Sequence</option>
+                        <option value="result">Result</option>
+                        <option value="summary">Summary</option>
+                      </select>
+                      <span class="text-sm text-gray-500">Drag to match</span>
+                    </div>
+                  </div>
+                  <div class="mt-2 p-2 bg-gray-50 rounded">
+                    <p class="text-sm text-gray-600">Answers: However → Contrast, For example → Example, Finally → Sequence, Therefore → Result, In conclusion → Summary</p>
                   </div>
                   <div class="mt-2 ml-4">
                     <p>Functions:</p>
@@ -246,7 +281,13 @@ export default function CourseDetail() {
             <p><em>“First of all, I will explain the system architecture. Then, I will move on to the implementation details. Moreover, I will highlight the potential risks. Finally, I will summarise the benefits of our approach.”</em></p>
           `,
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'linking-words-assignment-1',
+            title: 'Task 1: Linking Words Practice',
+            description: 'Complete exercises on using linking words in different contexts',
+            dueDate: '2025-10-10'
+          }
         },
         {
           id: 5,
