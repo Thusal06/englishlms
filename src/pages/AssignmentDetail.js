@@ -360,6 +360,155 @@ export default function AssignmentDetail() {
       ]
     }
     ,
+    // Advanced Vocabulary - Lesson 3: Cross-Cultural Communication Phrases
+    'av-crosscultural-task-1': {
+      id: 'av-crosscultural-task-1',
+      title: 'Task 1: Match Phrase → Meaning',
+      description: 'Match each cross-cultural communication phrase to its meaning.',
+      instructions: ['Drag the correct letter (A–G) for each phrase.'],
+      dueDate: '2025-10-17',
+      maxScore: 7,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        {
+          id: 'cc1',
+          type: 'match',
+          prompt: 'Match Column A (phrases) to Column B (meanings).',
+          items: [
+            'Could you please clarify what you mean?',
+            'Let’s make sure we’re on the same page.',
+            'I understand your perspective, but in my culture we usually…',
+            'How is this usually handled in your team/country?',
+            'I appreciate your patience with me as I learn.',
+            'Would you prefer a more direct or detailed explanation?',
+            'Let’s find a middle ground that works for both of us.'
+          ],
+          functionBank: [
+            { key: 'A', text: 'Asking for cultural practices or norms' },
+            { key: 'B', text: 'Request for clarification' },
+            { key: 'C', text: 'Acknowledging differences respectfully' },
+            { key: 'D', text: 'Expressing gratitude while adapting' },
+            { key: 'E', text: 'Checking if everyone has the same understanding' },
+            { key: 'F', text: 'Offering flexibility in communication style' },
+            { key: 'G', text: 'Proposing compromise' }
+          ],
+          answers: ['B','E','C','A','D','F','G']
+        }
+      ]
+    },
+    // Advanced Vocabulary - Lesson 4: Customer Service Phrases (Video Role-play)
+    'av-customer-task-1': {
+      id: 'av-customer-task-1',
+      title: 'Task 1: Role-play Recording (Video)',
+      description: 'Choose a role and record a 3–5 minute interaction using at least five lesson phrases. Upload your recording.',
+      instructions: [
+        'Choose one role: customer/client or service representative.',
+        'Use at least five phrases from the lesson and demonstrate politeness and professionalism.',
+        'Record 3–5 minutes; accepted formats: MP4, WEBM, MOV (≤ 200MB).',
+        'Evaluation (10 marks): Use of phrases (4), Politeness (3), Clarity (2), Engagement (1).'
+      ],
+      dueDate: '2025-10-18',
+      maxScore: 10,
+      submissionType: 'video',
+      status: 'not-started'
+    },
+    // Advanced Vocabulary - Lesson 5: Collaboration & Teamwork
+    'av-collab-task-1': {
+      id: 'av-collab-task-1',
+      title: 'Task 1: Match Terms → Definitions',
+      description: 'Match the teamwork terms with their correct definitions.',
+      instructions: ['Drag the correct letter (A–E) to each term.'],
+      dueDate: '2025-10-19',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        {
+          id: 'ctm',
+          type: 'match',
+          prompt: 'Match the terms to their definitions.',
+          items: ['Sprint','Blocker','Code Review','Cross-Functional Team','Stand-up Meeting'],
+          functionBank: [
+            { key: 'A', text: 'Daily meeting to share progress and blockers' },
+            { key: 'B', text: 'Obstacle that prevents progress' },
+            { key: 'C', text: 'Short, focused time-boxed work period' },
+            { key: 'D', text: 'Reviewing peers’ code for quality' },
+            { key: 'E', text: 'Team made of members with different skill sets' }
+          ],
+          answers: ['C','B','D','E','A']
+        }
+      ]
+    },
+    'av-collab-task-2': {
+      id: 'av-collab-task-2',
+      title: 'Task 2: Fill in the Blanks',
+      description: 'Complete sentences using teamwork vocabulary.',
+      instructions: ['Type the word(s) that correctly complete each sentence.'],
+      dueDate: '2025-10-20',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'cf1', type: 'fill', prompt: 'In Agile, work is divided into short cycles called __________.', accept: ['sprints','sprint'] },
+        { id: 'cf2', type: 'fill', prompt: 'A __________ meeting helps the team stay aligned daily.', accept: ['stand-up meeting','stand up meeting','daily stand-up','daily stand up'] },
+        { id: 'cf3', type: 'fill', prompt: 'Sharing knowledge openly is essential for building team __________.', accept: ['synergy'] },
+        { id: 'cf4', type: 'fill', prompt: 'Tools like Jira and Trello are examples of __________ tools.', accept: ['collaboration'] },
+        { id: 'cf5', type: 'fill', prompt: 'When two developers work together at one computer, it is called __________ programming.', accept: ['pair'] }
+      ]
+    },
+    'av-collab-task-3': {
+      id: 'av-collab-task-3',
+      title: 'Task 3: Teamwork – MCQ',
+      description: 'Answer the following questions about teamwork practices.',
+      instructions: ['Select the best answer for each question.'],
+      dueDate: '2025-10-21',
+      maxScore: 2,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        {
+          id: 'cm1',
+          type: 'mcq',
+          prompt: 'Which of the following BEST represents teamwork?',
+          options: ['Working alone on tasks without communicating','Blaming others for bugs','Supporting peers and sharing knowledge','Ignoring blockers during stand-ups'],
+          correctIndex: 2
+        },
+        {
+          id: 'cm2',
+          type: 'mcq',
+          prompt: 'Which tool is MOST commonly used for task tracking in agile teamwork?',
+          options: ['VLC Media Player','Jira','Photoshop','Windows Media Player'],
+          correctIndex: 1
+        }
+      ]
+    },
+    // Advanced Vocabulary - Lesson 7: Persuasion Phrases
+    'av-persuasion-task-1': {
+      id: 'av-persuasion-task-1',
+      title: 'Task 1: Persuasion – MCQ + Fill',
+      description: 'Answer MCQs and complete sentences using appropriate persuasion phrases.',
+      instructions: ['Answer all questions. Use phrases from the lesson for fill-ins.'],
+      dueDate: '2025-10-25',
+      maxScore: 12,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        // Part A – MCQ (5 marks total as per prompt weight; here scored per question)
+        { id: 'pp1', type: 'mcq', prompt: 'Why is persuasion an important skill in technical and business contexts?', options: ['Because it allows professionals to give orders without explanation','Because it helps professionals influence decisions and gain support for ideas','Because it avoids communication in the workplace','Because it replaces technical knowledge'], correctIndex: 1 },
+        { id: 'pp2', type: 'mcq', prompt: 'Which are examples of persuasion in workplace situations?', options: ['(i) and (ii) only','(ii) and (iii) only','(i), (ii), and (iv) only','(i), (iii), and (iv) only'], correctIndex: 2 },
+        // Part B – Fill (sentences)
+        { id: 'ppb1', type: 'fill', prompt: 'A project manager to team: “________ we adopt cloud storage, as it offers stronger data security.”', accept: ['i strongly recommend','I strongly recommend'] },
+        { id: 'ppb2', type: 'fill', prompt: 'An engineer to management: “________ allocating funds for training on the new software tool.”', accept: ['it would be beneficial if','It would be beneficial if'] },
+        { id: 'ppb3', type: 'fill', prompt: 'An engineer to management: “________ it will improve efficiency in the long run.”', accept: ['i believe this is the best approach because','I believe this is the best approach because'] },
+        { id: 'ppb4', type: 'fill', prompt: 'A team leader to colleagues: “________ we develop a backup plan for the client presentation.”', accept: ['may i suggest','May I suggest'] },
+        { id: 'ppb5', type: 'fill', prompt: 'A team leader to colleagues: “________ we avoid any last-minute risks and impress the client.”', accept: ['to ensure success, we should','To ensure success, we should'] },
+        // Task 3 – MCQ
+        { id: 'pp3', type: 'mcq', prompt: 'Which email shows the BEST use of persuasion phrases?', options: ['“We are late on the project. You must approve overtime.”','“The project is behind schedule. I strongly recommend approving overtime because it will help us meet the deadline. This will enable us to deliver on time.”','“The project is late, but it’s not my fault.”','“The project is behind, and I hope someone fixes it.”'], correctIndex: 1 },
+        { id: 'pp4', type: 'mcq', prompt: 'Fill in the blanks: “________ we schedule short daily check-ins. We can quickly identify problems and prevent further delays.”', options: ['I’d appreciate your support on this / This will enable us to','May I suggest / This will enable us to','To ensure success, we should / I strongly recommend','I believe this is the best approach because / May I suggest'], correctIndex: 1 }
+      ]
+    }
+    ,
     // Business English - Lesson 2: Stand-up Meetings
     'be-standup-task-1': {
       id: 'be-standup-task-1',

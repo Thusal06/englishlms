@@ -481,43 +481,117 @@ export default function CourseDetail() {
           id: 3,
           title: 'Lesson 3 - Cross-Cultural Communication Phrases',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <p>In international workplaces, communication styles can vary depending on culture. Using the right phrases helps to show respect, avoid misunderstandings, and build strong relationships.</p>
+            <h4 class="mt-4">Common Phrases</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>“Could you please clarify what you mean?”</strong> – Used when you don’t fully understand someone.</li>
+              <li><strong>“Let’s make sure we’re on the same page.”</strong> – Ensures everyone has the same understanding.</li>
+              <li><strong>“I understand your perspective, but in my culture we usually…”</strong> – Polite way to explain cultural differences.</li>
+              <li><strong>“How is this usually handled in your team/country?”</strong> – Shows openness and curiosity.</li>
+              <li><strong>“I appreciate your patience with me as I learn.”</strong> – Builds rapport when adapting to new cultural settings.</li>
+              <li><strong>“Would you prefer a more direct or detailed explanation?”</strong> – Adjusts communication style based on cultural preference.</li>
+              <li><strong>“Let’s find a middle ground that works for both of us.”</strong> – Encourages compromise in cross-cultural settings.</li>
+            </ul>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'vocabulary-assignment-3b',
-            title: 'Task 3: Technical Vocabulary',
-            description: 'Master technical terms used in various industries',
-            dueDate: '2025-10-17'
-          }
+          tasks: [
+            { id: 'av-crosscultural-task-1', title: 'Task 1: Match Phrase → Meaning', description: 'Match each cross-cultural phrase to its meaning.', dueDate: '2025-10-17' }
+          ]
         },
         {
           id: 4,
           title: 'Lesson 4 - Customer Service and Client Interaction Phrases',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <p>Effective communication with customers and clients is crucial in technical and business environments. Using professional and polite phrases ensures issues are resolved smoothly, maintains a positive relationship, and builds trust.</p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>Respond to inquiries or complaints</li>
+              <li>Provide clear instructions or solutions</li>
+              <li>Handle difficult situations diplomatically</li>
+              <li>Maintain a professional tone under pressure</li>
+            </ul>
+
+            <h4 class="mt-4">Common Customer Service & Client Interaction Phrases</h4>
+            <h5 class="font-semibold mt-2">1. Greeting and Initiating Interaction</h5>
+            <ul class="list-disc pl-6">
+              <li>“Good morning, thank you for contacting [Company Name]. How may I assist you today?”</li>
+              <li>“Hello, this is [Your Name] from [Company]. How can I help you?”</li>
+            </ul>
+            <h5 class="font-semibold mt-3">2. Responding to Questions or Requests</h5>
+            <ul class="list-disc pl-6">
+              <li>“I’d be happy to help you with that.”</li>
+              <li>“Let me check the details for you.”</li>
+              <li>“Here’s what I can suggest…”</li>
+            </ul>
+            <h5 class="font-semibold mt-3">3. Handling Complaints or Issues</h5>
+            <ul class="list-disc pl-6">
+              <li>“I understand your concern and apologize for the inconvenience.”</li>
+              <li>“Thank you for bringing this to our attention; let’s see how we can resolve it.”</li>
+              <li>“I appreciate your patience while we fix this issue.”</li>
+            </ul>
+            <h5 class="font-semibold mt-3">4. Providing Solutions or Alternatives</h5>
+            <ul class="list-disc pl-6">
+              <li>“One option could be to…”</li>
+              <li>“Alternatively, we can…”</li>
+              <li>“To resolve this, I recommend…”</li>
+            </ul>
+            <h5 class="font-semibold mt-3">5. Closing the Interaction</h5>
+            <ul class="list-disc pl-6">
+              <li>“Thank you for your time. Please don’t hesitate to contact us if you need further assistance.”</li>
+              <li>“I’m glad I could help. Have a great day!”</li>
+            </ul>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-4 rounded-r">
+              <h5 class="font-semibold">Practical Tips</h5>
+              <ul class="list-disc pl-6 mt-1">
+                <li>Always maintain politeness and professionalism.</li>
+                <li>Listen actively and respond appropriately.</li>
+                <li>Use positive language to reassure the client.</li>
+                <li>Clarify details to avoid misunderstandings.</li>
+                <li>Adapt tone and language based on the client’s mood or context.</li>
+              </ul>
+            </div>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'vocabulary-assignment-4b',
-            title: 'Task 4: Idioms and Expressions',
-            description: 'Learn and practice common English idioms and expressions',
-            dueDate: '2025-10-18'
-          }
+          tasks: [
+            { id: 'av-customer-task-1', title: 'Task 1: Role-play Recording (Video)', description: 'Record a 3–5 minute role-play using at least five phrases from the lesson. Upload your recording.', dueDate: '2025-10-18' }
+          ]
         },
         {
           id: 5,
           title: 'Lesson 5 - Collaboration & Teamwork in Software Engineering',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <h4>Vocabulary & Concepts</h4>
+            <p>Collaboration and teamwork are essential in software engineering because software projects are rarely completed by one person alone. Engineers must coordinate tasks, share knowledge, and communicate effectively. The following vocabulary terms are commonly used in software engineering teamwork contexts:</p>
+            <ul class="list-disc pl-6 space-y-1 mt-2">
+              <li><strong>Collaboration</strong> – Working jointly with others to achieve a shared goal.</li>
+              <li><strong>Teamwork</strong> – The combined effort of individuals to complete tasks efficiently.</li>
+              <li><strong>Agile</strong> – A project management approach that emphasizes flexibility, teamwork, and quick iterations.</li>
+              <li><strong>Sprint</strong> – A short, time-boxed period where a development team completes a set of tasks.</li>
+              <li><strong>Scrum</strong> – A framework for managing work, based on teamwork, stand-ups, and sprints.</li>
+              <li><strong>Stand-up Meeting</strong> – A short daily meeting where team members share progress and blockers.</li>
+              <li><strong>Blocker</strong> – An obstacle that prevents a team member from completing their work.</li>
+              <li><strong>Collaboration Tools</strong> – Digital platforms such as Jira, Trello, GitHub, or Slack that help teams coordinate tasks.</li>
+              <li><strong>Knowledge Sharing</strong> – The practice of openly exchanging information and skills within a team.</li>
+              <li><strong>Code Review</strong> – A collaborative process where peers review each other’s code for quality and improvement.</li>
+              <li><strong>Pair Programming</strong> – Two developers working together on one workstation to solve a problem.</li>
+              <li><strong>Team Synergy</strong> – The combined effect of teamwork that produces better results than individuals working alone.</li>
+              <li><strong>Communication</strong> – The clear exchange of ideas and information within a team.</li>
+              <li><strong>Conflict Resolution</strong> – The process of resolving disagreements in a positive way.</li>
+              <li><strong>Cross-Functional Team</strong> – A group with different skills (developers, testers, designers) working together.</li>
+            </ul>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'vocabulary-assignment-5',
-            title: 'Task 5: Phrasal Verbs Practice',
-            description: 'Master common phrasal verbs and their meanings',
-            dueDate: '2025-10-19'
-          }
+          tasks: [
+            { id: 'av-collab-task-1', title: 'Task 1: Match Terms → Definitions', description: 'Match each teamwork term with its definition.', dueDate: '2025-10-19' },
+            { id: 'av-collab-task-2', title: 'Task 2: Fill in the Blanks', description: 'Complete the sentences with the correct teamwork vocabulary.', dueDate: '2025-10-20' },
+            { id: 'av-collab-task-3', title: 'Task 3: Teamwork – MCQ', description: 'Answer multiple-choice questions about teamwork practices.', dueDate: '2025-10-21' }
+          ]
         },
         {
           id: 6,
@@ -578,17 +652,67 @@ export default function CourseDetail() {
         },
         {
           id: 7,
-          title: 'Lesson 7 - Advanced Writing Techniques',
+          title: 'Lesson 7 - Persuasion Phrases',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <p>Persuasion is a vital skill in technical and business environments. Professionals often need to recommend solutions, convince stakeholders, and justify timelines or priorities while keeping collaboration and respect.</p>
+            <h4 class="mt-4">Common Persuasion Phrases</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h5 class="font-semibold">To introduce a suggestion</h5>
+                <ul class="list-disc pl-6">
+                  <li>“I recommend that we…”</li>
+                  <li>“It would be beneficial if we…”</li>
+                  <li>“One possible solution is to…”</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-semibold">To justify with evidence</h5>
+                <ul class="list-disc pl-6">
+                  <li>“The data shows that…”</li>
+                  <li>“Research indicates…”</li>
+                  <li>“Based on our results, it seems reasonable to…”</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-semibold">To emphasize importance</h5>
+                <ul class="list-disc pl-6">
+                  <li>“This approach is crucial because…”</li>
+                  <li>“It’s worth noting that…”</li>
+                  <li>“What makes this significant is…”</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-semibold">To invite agreement or feedback</h5>
+                <ul class="list-disc pl-6">
+                  <li>“Would you agree that…?”</li>
+                  <li>“Does this align with your perspective?”</li>
+                  <li>“How do you see this fitting into our plan?”</li>
+                </ul>
+              </div>
+            </div>
+
+            <h5 class="font-semibold mt-4">To offer alternatives politely</h5>
+            <ul class="list-disc pl-6">
+              <li>“An alternative could be…”</li>
+              <li>“If this doesn’t seem feasible, we might consider…”</li>
+              <li>“Another option worth exploring is…”</li>
+            </ul>
+
+            <div class="bg-green-50 border-l-4 border-green-400 p-4 my-4 rounded-r">
+              <h5 class="font-semibold">Key Takeaways</h5>
+              <ul class="list-disc pl-6 mt-1">
+                <li>Use persuasion phrases to propose solutions and justify ideas.</li>
+                <li>Support arguments with data and clear reasoning.</li>
+                <li>Combine assertiveness with politeness to maintain professionalism and collaboration.</li>
+              </ul>
+            </div>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'vocabulary-assignment-7',
-            title: 'Task 7: Advanced Writing Practice',
-            description: 'Apply advanced vocabulary in formal writing contexts',
-            dueDate: '2025-10-21'
-          }
+          tasks: [
+            { id: 'av-persuasion-task-1', title: 'Task 1: Persuasion – MCQ + Fill', description: 'Answer MCQs and complete sentences using persuasion phrases.', dueDate: '2025-10-25' }
+          ]
         }
       ]
     },
