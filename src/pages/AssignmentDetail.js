@@ -15,6 +15,7 @@ export default function AssignmentDetail() {
   const [ddAnswers, setDdAnswers] = useState({}); // {index: token}
   const [ddScore, setDdScore] = useState(null);
   const [ddShowResults, setDdShowResults] = useState(false);
+  const [ddTexts, setDdTexts] = useState({}); // optional free-text per sentence for certain tasks
 
   // Mock assignment data
   const assignmentData = {
@@ -137,7 +138,66 @@ export default function AssignmentDetail() {
           answer: 'backlog'
         }
       ]
+    },
+    'vocab-assignment-2': {
+      id: 'vocab-assignment-2',
+      title: 'Task 2: Workplace Jargon — Drag & Drop',
+      description: 'Finish each sentence using your own ideas, making sure to use the given word correctly by dragging it into the blank.',
+      instructions: [
+        'Drag each word from the word bank into the correct blank.',
+        'Each word is used exactly once.',
+        'Use the sentence ending as a guide to complete it naturally once the correct term is placed.',
+        'Submit to check your score.'
+      ],
+      dueDate: '2025-11-15',
+      maxScore: 10,
+      submissionType: 'dragdrop',
+      status: 'pending',
+      wordBank: [
+        'backlog',
+        'bandwidth',
+        'stand-up',
+        'back to the drawing board',
+        'onboarding',
+        'bottleneck',
+        'go-to-market',
+        'blow-by-blow',
+        'sprint',
+        'sync-up'
+      ],
+      sentences: [
+        { text: 'The __________ is full of pending bug fixes, so…', answer: 'backlog' },
+        { text: 'Our team doesn’t have enough __________ this week, which means…', answer: 'bandwidth' },
+        { text: 'During the daily __________, I mentioned that…', answer: 'stand-up' },
+        { text: 'The developers had to go __________ because…', answer: 'back to the drawing board' },
+        { text: 'The new hire’s __________ included…', answer: 'onboarding' },
+        { text: 'A major __________ in our project is…', answer: 'bottleneck' },
+        { text: 'The CEO presented the __________ plan to…', answer: 'go-to-market' },
+        { text: 'After the detailed __________ explanation, everyone understood…', answer: 'blow-by-blow' },
+        { text: 'In the last __________, our team managed to…', answer: 'sprint' },
+        { text: 'We had a quick __________ before the client meeting to…', answer: 'sync-up' }
+      ]
     }
+  };
+
+  function removePlaced(index) {
+    setDdAnswers((prev) => {
+      const copy = { ...prev };
+      delete copy[index];
+      return copy;
+    });
+  }
+
+  function resetDD() {
+    setDdAnswers({});
+    setDdScore(null);
+    setDdShowResults(false);
+    setIsSubmitted(false);
+    setDdTexts({});
+  }
+
+  const handleTextChange = (index, value) => {
+    setDdTexts((prev) => ({ ...prev, [index]: value }));
   };
 
   useEffect(() => {
@@ -160,7 +220,25 @@ export default function AssignmentDetail() {
     setFiles(selectedFiles);
   };
 
-  const handleSubmit = (e) => {
+  // Drag & Drop helpers (function declarations to avoid hoisting/definition issues)
+  function handleDragStart(e, token) {
+    // use a consistent key for set/get
+    e.dataTransfer.setData('token', token);
+  }
+
+  function handleDrop(e, index) {
+    e.preventDefault();
+    const token = e.dataTransfer.getData('token');
+    if (token) {
+      setDdAnswers((prev) => ({ ...prev, [index]: token }));
+    }
+  }
+
+  function handleDragOver(e) {
+    e.preventDefault();
+  }
+
+  function handleSubmit(e) {
     e.preventDefault();
     // Interactive drag & drop submission
     if (assignment.submissionType === 'dragdrop') {
@@ -195,7 +273,7 @@ export default function AssignmentDetail() {
     // Mock submission process
     setIsSubmitted(true);
     alert('Assignment submitted successfully!');
-  };
+  }
 
   const handleLogout = async () => {
     try {
@@ -402,6 +480,20 @@ export default function AssignmentDetail() {
                             ) : (
                               <span className="text-red-600">Correct answer: {s.answer}</span>
                             )}
+                          </div>
+                        )}
+
+                        {/* Optional free-text completion for vocab-assignment-2 */}
+                        {assignment.id === 'vocab-assignment-2' && (
+                          <div className="mt-3">
+                            <label className="block text-xs text-gray-500 mb-1">Complete the sentence in your own words</label>
+                            <input
+                              type="text"
+                              className="input-field"
+                              placeholder="... finish your idea here"
+                              value={ddTexts[index] || ''}
+                              onChange={(e) => handleTextChange(index, e.target.value)}
+                            />
                           </div>
                         )}
                       </div>
