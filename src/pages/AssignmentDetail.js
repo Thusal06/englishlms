@@ -581,9 +581,6 @@ export default function AssignmentDetail() {
     );
   }
 
-  const daysUntilDue = getDaysUntilDue(assignment.dueDate);
-  const isOverdue = daysUntilDue < 0;
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
