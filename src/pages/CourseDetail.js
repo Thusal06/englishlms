@@ -1,14 +1,39 @@
 // Course detail page with PDF content viewer and lesson management
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import { useAssignments } from '../contexts/AssignmentsContext';
 
 export default function CourseDetail() {
   const { courseId } = useParams();
-  const { currentUser, logout } = useAuth();
+  const { currentUser } = useAuth();
+  const { addAssignment } = useAssignments();
+  const navigate = useNavigate();
   const [course, setCourse] = useState(null);
   const [selectedLesson, setSelectedLesson] = useState(null);
   const [progress, setProgress] = useState(0);
+
+  // Add task to assignments when component mounts
+  useEffect(() => {
+    if (course && course.lessons) {
+      course.lessons.forEach(lesson => {
+        if (lesson.task) {
+          addAssignment({
+            id: lesson.task.id,
+            title: lesson.task.title,
+            description: lesson.task.description,
+            courseId: course.id,
+            courseName: course.title,
+            lessonId: lesson.id,
+            lessonName: lesson.title,
+            dueDate: lesson.task.dueDate || new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+            status: 'pending',
+            createdAt: new Date().toISOString()
+          });
+        }
+      });
+    }
+  }, [course, addAssignment]);
 
   // Mock course data - in a real app, this would come from Firebase/database
   const courseData = {
@@ -585,30 +610,45 @@ export default function CourseDetail() {
           `,
           duration: '1 day',
           completed: false,
-          tasks: [
-            {
-              id: 'business-assignment-1',
-              title: 'Task 1: Match Negotiation Phrases',
-              description: 'Match negotiation phrases to their functions using drag-and-drop',
-              dueDate: '2025-11-05'
-            },
-            {
-              id: 'business-assignment-2',
-              title: 'Task 2: Complete the Dialogue',
-              description: 'Fill in negotiation dialogue blanks with appropriate phrases',
-              dueDate: '2025-11-10'
-            }
-          ]
+          task: {
+            id: 'business-assignment-1',
+            title: 'Task 1: Match Negotiation Phrases',
+            description: 'Match negotiation phrases to their functions using drag-and-drop',
+            dueDate: '2025-11-05'
+          }
+        },
+        {
+          id: 7,
+          title: 'Lesson 7 - Business Writing',
+          type: 'content',
+          content: 'Content will be added here...',
+          duration: '1 day',
+          completed: false
         }
       ]
     }
   };
 
+  // Load course data when component mounts or courseId changes
   useEffect(() => {
     const courseInfo = courseData[courseId];
     if (courseInfo) {
       setCourse(courseInfo);
-      setSelectedLesson(courseInfo.lessons[0]);
+      
+      // Check for URL hash to select a specific lesson
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const lesson = courseInfo.lessons.find(l => l.id.toString() === hash);
+        if (lesson) {
+          setSelectedLesson(lesson);
+          return;
+        }
+      }
+      
+      // Set the first lesson as selected by default if no hash
+      if (courseInfo.lessons && courseInfo.lessons.length > 0) {
+        setSelectedLesson(courseInfo.lessons[0]);
+      }
       
       // Calculate progress
       const completedLessons = courseInfo.lessons.filter(lesson => lesson.completed).length;
