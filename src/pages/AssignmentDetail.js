@@ -11,6 +11,10 @@ export default function AssignmentDetail() {
   const [submission, setSubmission] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [files, setFiles] = useState([]);
+  // Drag & Drop state for interactive assignments
+  const [ddAnswers, setDdAnswers] = useState({}); // {index: token}
+  const [ddScore, setDdScore] = useState(null);
+  const [ddShowResults, setDdShowResults] = useState(false);
 
   // Mock assignment data
   const assignmentData = {
@@ -59,6 +63,80 @@ export default function AssignmentDetail() {
       maxScore: 25,
       submissionType: 'text',
       status: 'not-started'
+    },
+    'vocab-assignment-1': {
+      id: 'vocab-assignment-1',
+      title: 'Task 1: Workplace Jargon — Drag & Drop',
+      description: 'Complete each sentence with the correct word from the box by dragging it into the blank.',
+      instructions: [
+        'Drag each word from the word bank into the correct blank.',
+        'Each word is used exactly once.',
+        'Click a placed word to remove it back to the bank if needed.',
+        'Submit to check your score.'
+      ],
+      dueDate: '2025-10-31',
+      maxScore: 11,
+      submissionType: 'dragdrop',
+      status: 'pending',
+      wordBank: [
+        'bottleneck',
+        'bandwidth',
+        'blow-by-blow',
+        'stand-up',
+        'back to the drawing board',
+        'onboarding',
+        'go-to-market',
+        'sprint',
+        'black economy',
+        'sync-up',
+        'backlog'
+      ],
+      sentences: [
+        {
+          text: 'The testing phase has become a __________, slowing down the release schedule.',
+          answer: 'bottleneck'
+        },
+        {
+          text: 'We don’t have the __________ to take on an additional project this month.',
+          answer: 'bandwidth'
+        },
+        {
+          text: 'The product manager explained the new feature development in a __________ manner.',
+          answer: 'blow-by-blow'
+        },
+        {
+          text: 'The team met for their morning __________ to share updates and blockers.',
+          answer: 'stand-up'
+        },
+        {
+          text: 'After the client rejected the proposal, it was __________.',
+          answer: 'back to the drawing board'
+        },
+        {
+          text: 'Every new engineer goes through a two-week __________ process before joining their team.',
+          answer: 'onboarding'
+        },
+        {
+          text: 'The marketing team is preparing a __________ strategy for the new mobile app.',
+          answer: 'go-to-market'
+        },
+        {
+          text: 'Tasks that were not completed in the last __________ will be carried over.',
+          answer: 'sprint'
+        },
+        {
+          text: 'The finance department warns that illegal freelance work may contribute to the __________.',
+          answer: 'black economy'
+        },
+        {
+          text: 'Let’s have a quick __________ call to finalize the release plan.',
+          answer: 'sync-up'
+        },
+        {
+          text: 'The project manager checked the __________ to prioritize which tasks should be tackled first.',
+          answer: 'backlog'
+        }
+      ]
     }
   };
 
@@ -84,7 +162,26 @@ export default function AssignmentDetail() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    // Interactive drag & drop submission
+    if (assignment.submissionType === 'dragdrop') {
+      const total = assignment.sentences.length;
+      const filled = Object.keys(ddAnswers).length;
+      if (filled < total) {
+        alert(`Please fill all blanks (${filled}/${total}) before submitting.`);
+        return;
+      }
+      let score = 0;
+      assignment.sentences.forEach((s, idx) => {
+        if ((ddAnswers[idx] || '').trim().toLowerCase() === s.answer.trim().toLowerCase()) {
+          score += 1;
+        }
+      });
+      setDdScore(score);
+      setDdShowResults(true);
+      setIsSubmitted(true);
+      return;
+    }
+
     if (assignment.submissionType === 'text' && submission.trim().length < 50) {
       alert('Please write at least 50 characters for your submission.');
       return;
@@ -218,8 +315,120 @@ export default function AssignmentDetail() {
           </div>
         </div>
 
-        {/* Submission Section */}
-        {!isSubmitted ? (
+        {/* Interactive Drag & Drop UI */}
+        {assignment.submissionType === 'dragdrop' && (
+          <div className="card mb-8">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Task 1</h3>
+            <p className="text-gray-600 mb-4">Complete each sentence with the correct word from the box.</p>
+
+            {/* Word Bank */}
+            <div className="border rounded-lg p-4 bg-gray-50 mb-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                {assignment.wordBank.map((token, idx) => {
+                  const used = Object.values(ddAnswers).includes(token);
+                  return (
+                    <div
+                      key={idx}
+                      draggable={!used}
+                      onDragStart={(e) => handleDragStart(e, token)}
+                      className={`px-3 py-2 rounded border bg-white text-sm text-gray-800 shadow-sm select-none ${
+                        used ? 'opacity-40 cursor-not-allowed' : 'cursor-move hover:bg-primary-50'
+                      }`}
+                      title={used ? 'Already used' : 'Drag to a blank'}
+                    >
+                      {token}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Sentences */}
+            <div className="space-y-4">
+              {assignment.sentences.map((s, index) => {
+                const placed = ddAnswers[index];
+                const isCorrect = ddShowResults && placed && placed.trim().toLowerCase() === s.answer.trim().toLowerCase();
+                const isWrong = ddShowResults && placed && !isCorrect;
+                return (
+                  <div key={index} className="text-gray-800">
+                    <div className="flex items-start">
+                      <span className="mr-2 text-gray-500">{index + 1}.</span>
+                      <div className="flex-1">
+                        {s.text.split('__________').length > 1 ? (
+                          <div className="flex flex-wrap items-center">
+                            <span>{s.text.split('__________')[0]}</span>
+                            <div
+                              onDrop={(e) => handleDrop(e, index)}
+                              onDragOver={handleDragOver}
+                              className={`min-w-[140px] inline-flex items-center justify-between px-3 py-2 border-2 rounded-md mx-2 bg-white ${
+                                ddShowResults ? (isCorrect ? 'border-green-400' : 'border-red-400') : 'border-dashed border-gray-300'
+                              }`}
+                            >
+                              {placed ? (
+                                <button type="button" onClick={() => removePlaced(index)} className="text-sm text-gray-800">
+                                  {placed}
+                                </button>
+                              ) : (
+                                <span className="text-sm text-gray-400">Drop word here</span>
+                              )}
+                            </div>
+                            <span>{s.text.split('__________')[1]}</span>
+                          </div>
+                        ) : (
+                          <div className="flex flex-wrap items-center">
+                            <span>{s.text.replace('_____', '')}</span>
+                            <div
+                              onDrop={(e) => handleDrop(e, index)}
+                              onDragOver={handleDragOver}
+                              className={`min-w-[140px] inline-flex items-center justify-between px-3 py-2 border-2 rounded-md mx-2 bg-white ${
+                                ddShowResults ? (isCorrect ? 'border-green-400' : 'border-red-400') : 'border-dashed border-gray-300'
+                              }`}
+                            >
+                              {placed ? (
+                                <button type="button" onClick={() => removePlaced(index)} className="text-sm text-gray-800">
+                                  {placed}
+                                </button>
+                              ) : (
+                                <span className="text-sm text-gray-400">Drop word here</span>
+                              )}
+                            </div>
+                          </div>
+                        )}
+
+                        {ddShowResults && (
+                          <div className="mt-1 text-sm">
+                            {isCorrect ? (
+                              <span className="text-green-600">Correct</span>
+                            ) : (
+                              <span className="text-red-600">Correct answer: {s.answer}</span>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Actions */}
+            <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-200">
+              <button type="button" onClick={resetDD} className="btn-secondary">Reset</button>
+              <form onSubmit={handleSubmit}>
+                <button type="submit" className="btn-primary">Submit</button>
+              </form>
+            </div>
+
+            {ddShowResults && (
+              <div className="mt-6 p-4 rounded bg-gray-50 border">
+                <p className="font-semibold text-gray-800">Score: {ddScore} / {assignment.maxScore}</p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Submission Section (Text/File) */}
+        {assignment.submissionType !== 'dragdrop' && !isSubmitted ? (
           <div className="card">
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Submit Your Work</h3>
             
@@ -310,7 +519,7 @@ export default function AssignmentDetail() {
               </div>
             </form>
           </div>
-        ) : (
+        ) : assignment.submissionType !== 'dragdrop' ? (
           <div className="card text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
@@ -330,7 +539,7 @@ export default function AssignmentDetail() {
               </button>
             </div>
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );
