@@ -7,12 +7,23 @@ export function AssignmentsProvider({ children }) {
   const { currentUser } = useAuth();
   const [assignments, setAssignments] = useState([]);
   const [loading, setLoading] = useState(true);
+  // Bump this when assignment schema/ids change to invalidate old cached states
+  const STORAGE_VERSION = 'v2-2025-09-19';
 
   // Load assignments from localStorage on initial load
   useEffect(() => {
     if (currentUser) {
-      const savedAssignments = JSON.parse(localStorage.getItem(`assignments_${currentUser.uid}`)) || [];
-      setAssignments(savedAssignments);
+      const versionKey = `assignments_version_${currentUser.uid}`;
+      const storedVersion = localStorage.getItem(versionKey);
+      if (storedVersion !== STORAGE_VERSION) {
+        // Invalidate old cache to avoid stale "completed" statuses or schema mismatches
+        localStorage.removeItem(`assignments_${currentUser.uid}`);
+        localStorage.setItem(versionKey, STORAGE_VERSION);
+        setAssignments([]);
+      } else {
+        const savedAssignments = JSON.parse(localStorage.getItem(`assignments_${currentUser.uid}`)) || [];
+        setAssignments(savedAssignments);
+      }
     }
     setLoading(false);
   }, [currentUser]);
@@ -21,6 +32,7 @@ export function AssignmentsProvider({ children }) {
   useEffect(() => {
     if (currentUser && !loading) {
       localStorage.setItem(`assignments_${currentUser.uid}`, JSON.stringify(assignments));
+      localStorage.setItem(`assignments_version_${currentUser.uid}`, STORAGE_VERSION);
     }
   }, [assignments, currentUser, loading]);
 
@@ -72,6 +84,13 @@ export function AssignmentsProvider({ children }) {
     return assignments.filter(a => a.status === 'completed');
   };
 
+  // Admin/maintenance: clear all cached assignments for current user
+  const resetAllAssignments = () => {
+    if (!currentUser) return;
+    localStorage.removeItem(`assignments_${currentUser.uid}`);
+    setAssignments([]);
+  };
+
   return (
     <AssignmentsContext.Provider 
       value={{
@@ -82,7 +101,8 @@ export function AssignmentsProvider({ children }) {
         getCourseAssignments,
         getPendingAssignments,
         getCompletedAssignments,
-        loading
+        loading,
+        resetAllAssignments
       }}
     >
       {children}
