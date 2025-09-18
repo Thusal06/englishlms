@@ -13,11 +13,11 @@ export default function TeacherLogin() {
 
   // Mock teacher credentials
   const teacherCredentials = [
-    { email: 'teacher@englishlms.com', password: 'teacher123' },
-    { email: 'admin@englishlms.com', password: 'admin123' },
-    { email: 'sarah.johnson@englishlms.com', password: 'teacher123' },
-    { email: 'michael.chen@englishlms.com', password: 'teacher123' },
-    { email: 'jennifer.williams@englishlms.com', password: 'teacher123' }
+    { email: 'teacher@techlish.com', password: 'teacher123' },
+    { email: 'admin@techlish.com', password: 'admin123' },
+    { email: 'sarah.johnson@techlish.com', password: 'teacher123' },
+    { email: 'michael.chen@techlish.com', password: 'teacher123' },
+    { email: 'jennifer.williams@techlish.com', password: 'teacher123' }
   ];
 
   async function handleSubmit(e) {
@@ -87,7 +87,7 @@ export default function TeacherLogin() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="input-field"
-                  placeholder="teacher@englishlms.com"
+                  placeholder="teacher@techlish.com"
                 />
               </div>
             </div>
@@ -135,9 +135,9 @@ export default function TeacherLogin() {
             <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4">
               <h4 className="text-sm font-medium text-blue-900 mb-2">Test Teacher Accounts:</h4>
               <div className="text-xs text-blue-800 space-y-1">
-                <div><strong>Email:</strong> teacher@englishlms.com <strong>Password:</strong> teacher123</div>
-                <div><strong>Email:</strong> admin@englishlms.com <strong>Password:</strong> admin123</div>
-                <div><strong>Email:</strong> sarah.johnson@englishlms.com <strong>Password:</strong> teacher123</div>
+                <div><strong>Email:</strong> teacher@techlish.com <strong>Password:</strong> teacher123</div>
+                <div><strong>Email:</strong> admin@techlish.com <strong>Password:</strong> admin123</div>
+                <div><strong>Email:</strong> sarah.johnson@techlish.com <strong>Password:</strong> teacher123</div>
               </div>
             </div>
           </div>

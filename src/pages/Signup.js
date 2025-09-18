@@ -58,10 +58,12 @@ export default function Signup() {
         <div className="text-center mb-8">
           <Link to="/" className="inline-block mb-6">
             <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-              English LMS
+              Techlish
             </h1>
           </Link>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">Create Your Account</h2>
+          <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
+            Create your Techlish account
+          </h2>
           <p className="text-gray-600">Join us and start your English learning journey</p>
         </div>
 

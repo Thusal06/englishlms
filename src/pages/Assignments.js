@@ -16,7 +16,7 @@ export default function Assignments() {
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">My Assignments</h1>
+          <h1 className="text-3xl font-bold text-gray-900">My Tasks</h1>
           <Link 
             to="/dashboard" 
             className="btn-secondary"
@@ -36,7 +36,7 @@ export default function Assignments() {
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
               }`}
             >
-              All Assignments
+              All Tasks
               <span className="ml-2 bg-gray-100 text-gray-900 text-xs font-medium px-2 py-0.5 rounded-full">
                 {assignments.length}
               </span>

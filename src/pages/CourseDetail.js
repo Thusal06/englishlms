@@ -887,7 +887,7 @@ export default function CourseDetail() {
                 </svg>
               </Link>
               <h1 className="text-xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-                English LMS
+                Techlish
               </h1>
             </div>
             
@@ -984,39 +984,6 @@ export default function CourseDetail() {
                       {selectedLesson.title}
                     </h2>
                     <p className="text-gray-600">Duration: {selectedLesson.duration}</p>
-                    
-                    {/* Show lesson tasks */}
-                    {selectedLesson.task && (
-                      <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                        <h4 className="text-sm font-semibold text-blue-900 mb-2">Lesson Task</h4>
-                        <Link
-                          to={`/assignment/${selectedLesson.task.id}`}
-                          className="text-blue-700 hover:text-blue-800 font-medium text-sm"
-                        >
-                          {selectedLesson.task.title} →
-                        </Link>
-                        <p className="text-xs text-blue-600 mt-1">Due: {selectedLesson.task.dueDate}</p>
-                      </div>
-                    )}
-                    
-                    {selectedLesson.tasks && selectedLesson.tasks.length > 0 && (
-                      <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded-lg">
-                        <h4 className="text-sm font-semibold text-green-900 mb-2">Lesson Tasks</h4>
-                        <div className="space-y-2">
-                          {selectedLesson.tasks.map((task) => (
-                            <div key={task.id}>
-                              <Link
-                                to={`/assignment/${task.id}`}
-                                className="text-green-700 hover:text-green-800 font-medium text-sm"
-                              >
-                                {task.title} →
-                              </Link>
-                              <p className="text-xs text-green-600">Due: {task.dueDate}</p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
                   </div>
                   {!selectedLesson.completed && (
                     <button
@@ -1049,6 +1016,25 @@ export default function CourseDetail() {
                     ) : (
                       <div className="prose prose-lg max-w-none">
                         <div dangerouslySetInnerHTML={{ __html: selectedLesson.content }} />
+                        
+                        {/* Task section at the end of lesson content */}
+                        {selectedLesson.task && (
+                          <div className="not-prose mt-8 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+                            <h3 className="text-lg font-semibold text-blue-800 mb-2">
+                              📝 Task {selectedLesson.id}: {selectedLesson.task.title.replace(/^Task \d+: /, '')}
+                            </h3>
+                            <p className="text-blue-700 mb-4">{selectedLesson.task.description}</p>
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm text-blue-600">Due: {selectedLesson.task.dueDate}</span>
+                              <Link
+                                to={`/assignment/${selectedLesson.task.id}`}
+                                className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+                              >
+                                Start Task
+                              </Link>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>

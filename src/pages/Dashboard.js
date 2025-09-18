@@ -29,7 +29,7 @@ export default function Dashboard() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-                English LMS
+                Techlish
               </h1>
             </div>
             
@@ -102,7 +102,7 @@ export default function Dashboard() {
                 </svg>
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium text-gray-600">Pending Assignments</p>
+                <p className="text-sm font-medium text-gray-600">Pending Tasks</p>
                 <p className="text-2xl font-bold text-gray-900">{pendingAssignments.length}</p>
               </div>
             </div>
@@ -170,7 +170,7 @@ export default function Dashboard() {
           <div className="lg:col-span-1">
             <div className="card">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-semibold text-gray-900">Recent Assignments</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Recent Tasks</h3>
                 <Link to="/assignments" className="text-primary-600 hover:text-primary-700 text-sm font-medium">
                   View All
                 </Link>
@@ -184,8 +184,8 @@ export default function Dashboard() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
                     </div>
-                    <h4 className="font-medium text-gray-600 mb-1">No Assignments Yet</h4>
-                    <p className="text-sm text-gray-500">Start a course to unlock assignments</p>
+                    <h4 className="text-sm font-medium text-gray-700 mb-1">No Tasks Yet</h4>
+                    <p className="text-xs text-gray-500">Complete lessons to unlock tasks</p>
                   </div>
                 ) : (
                   pendingAssignments.slice(0, 3).map((assignment) => (

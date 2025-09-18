@@ -35,10 +35,12 @@ export default function Login() {
         <div className="text-center mb-8">
           <Link to="/" className="inline-block mb-6">
             <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-              English LMS
+              Techlish
             </h1>
           </Link>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">Welcome Back</h2>
+          <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
+            Sign in to Techlish
+          </h2>
           <p className="text-gray-600">Sign in to continue your learning journey</p>
         </div>
 

@@ -12,11 +12,11 @@ export default function Home() {
         {/* Hero Section */}
         <div className="mb-12">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Welcome to{' '}
-            <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-              English LMS
-            </span>
-          </h1>
+          Master English with
+          <span className="block bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+            Techlish
+          </span>
+        </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Your comprehensive learning management system for mastering the English language. 
             Access courses, assignments, and quizzes all in one place.

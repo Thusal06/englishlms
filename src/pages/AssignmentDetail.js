@@ -621,7 +621,7 @@ export default function AssignmentDetail() {
                 </svg>
               </Link>
               <h1 className="text-xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-                English LMS
+                Techlish
               </h1>
             </div>
             
