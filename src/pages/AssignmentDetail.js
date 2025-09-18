@@ -403,10 +403,17 @@ export default function AssignmentDetail() {
     const assignmentInfo = assignmentData[assignmentId];
     if (assignmentInfo) {
       setAssignment(assignmentInfo);
-      // Check if already submitted (mock data)
-      if (assignmentInfo.status === 'submitted') {
-        setIsSubmitted(true);
-      }
+      // Reset all states when loading a new assignment
+      setIsSubmitted(false);
+      setDdAnswers({});
+      setDdScore(null);
+      setDdShowResults(false);
+      setQuizAnswers({});
+      setQuizScore(null);
+      setQuizShowResults(false);
+      setSubmission('');
+      setFiles([]);
+      setDdTexts({});
     }
   }, [assignmentId]);
 
@@ -548,20 +555,18 @@ export default function AssignmentDetail() {
     }
   };
 
-  const getDaysUntilDue = (dueDate) => {
-    const due = new Date(dueDate);
-    const now = new Date();
-    const diffTime = due - now;
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    return diffDays;
-  };
-
   const getStatusColor = (status) => {
     switch (status) {
-      case 'submitted': return 'text-green-600 bg-green-100';
-      case 'in-progress': return 'text-yellow-600 bg-yellow-100';
-      case 'pending': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-600 bg-gray-100';
+      case 'completed':
+        return 'bg-green-100 text-green-800';
+      case 'in-progress':
+        return 'bg-yellow-100 text-yellow-800';
+      case 'overdue':
+        return 'bg-red-100 text-red-800';
+      case 'not-started':
+        return 'bg-gray-100 text-gray-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
     }
   };
 
@@ -632,11 +637,6 @@ export default function AssignmentDetail() {
             </div>
             
             <div className="text-right">
-              <div className={`text-lg font-semibold mb-1 ${
-                isOverdue ? 'text-red-600' : daysUntilDue <= 1 ? 'text-yellow-600' : 'text-green-600'
-              }`}>
-                {isOverdue ? 'Overdue' : daysUntilDue === 0 ? 'Due Today' : `${daysUntilDue} days left`}
-              </div>
               <div className="text-sm text-gray-500">Due: {assignment.dueDate}</div>
             </div>
           </div>
