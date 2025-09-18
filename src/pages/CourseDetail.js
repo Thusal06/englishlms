@@ -986,18 +986,78 @@ export default function CourseDetail() {
           ]
         },
         {
-          id: 6,
-          title: 'Lesson 6 - Cross-Cultural Communication',
+          id: 5,
+          title: 'Lesson 5 - Teamwork and leadership communication',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <div class="bg-gray-50 border rounded p-4">
+              <p>Good teamwork and leadership depend on <strong>clear, respectful, and motivating communication</strong>.</p>
+              <ul class="list-disc pl-6 mt-2 space-y-1">
+                <li><strong>Encourage collaboration</strong> → Use inclusive language like “Let’s work on this together.”</li>
+                <li><strong>Delegate tasks clearly</strong> → Assign roles and responsibilities without confusion.</li>
+                <li><strong>Motivate your team</strong> → Recognize effort and achievements to build confidence.</li>
+                <li><strong>Invite input and feedback</strong> → Value everyone’s ideas and promote open discussion.</li>
+                <li><strong>Keep the team positive and focused</strong> → Guide conversations toward solutions instead of problems.</li>
+              </ul>
+              <p class="mt-3">Strong communication builds trust, improves efficiency, and helps a team achieve common goals.</p>
+            </div>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'business-assignment-6',
-            title: 'Task 6: Cross-Cultural Communication',
-            description: 'Practice communicating effectively across different cultures',
-            dueDate: '2025-10-30'
-          }
+          tasks: [
+            { id: 'be-teamwork-task-1', title: 'Task 1: Leadership Communication – Complete the Sentences', description: 'Choose the correct letter (A–E) to complete each sentence.', dueDate: '2025-11-16' },
+            { id: 'be-teamwork-task-2', title: 'Task 2: Phrase → Purpose (Leadership)', description: 'Match the leadership communication phrase to the correct purpose.', dueDate: '2025-11-17' }
+          ]
+        },
+        {
+          id: 6,
+          title: 'Lesson 6 - Report Writing',
+          type: 'content',
+          content: `
+            <p>In the software industry, report writing is an essential business communication skill. Reports document work clearly and professionally for managers, clients, and stakeholders, supporting decision‑making, planning, and accountability.</p>
+            <h4 class="mt-4">Purpose of Report Writing</h4>
+            <ul class="list-disc pl-6">
+              <li>Present project progress and performance updates.</li>
+              <li>Document testing results or bug‑tracking logs.</li>
+              <li>Recommend solutions for technical or organisational issues.</li>
+              <li>Record research, feasibility studies, or case analyses.</li>
+            </ul>
+            <p class="mt-2">Unlike informal communication, reports follow a structured format that makes information easy to follow.</p>
+            <h4 class="mt-4">Structure of a Business/Technical Report</h4>
+            <ul class="list-disc pl-6">
+              <li><strong>Title Page/Heading</strong> – Identifies the report.</li>
+              <li><strong>Introduction</strong> – Purpose, scope, and objectives.</li>
+              <li><strong>Background/Problem Statement</strong> – Necessary context.</li>
+              <li><strong>Findings/Analysis</strong> – Facts, data, test results, observations.</li>
+              <li><strong>Discussion</strong> – Interpret results and implications.</li>
+              <li><strong>Recommendations/Conclusion</strong> – Solutions or next steps.</li>
+            </ul>
+            <h4 class="mt-4">Qualities of an Effective Report</h4>
+            <ul class="list-disc pl-6">
+              <li><strong>Clarity</strong> – Simple, direct language.</li>
+              <li><strong>Concise</strong> – Short, relevant sentences.</li>
+              <li><strong>Objectivity</strong> – Evidence‑based conclusions.</li>
+              <li><strong>Organisation</strong> – Logical sequence with headings.</li>
+              <li><strong>Professional Tone</strong> – Formal and polite style.</li>
+            </ul>
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-4 rounded-r">
+              <h5 class="font-semibold">Importance for Software Engineers</h5>
+              <ul class="list-disc pl-6 mt-1">
+                <li>Clear updates across technical and non‑technical teams.</li>
+                <li>Testing/debugging processes documented for future reference.</li>
+                <li>Managers and clients can trust and act on the information.</li>
+                <li>Professional credibility through well‑structured documentation.</li>
+              </ul>
+              <p class="mt-2">Good report writing is as critical as good coding—both contribute to project success.</p>
+            </div>
+          `,
+          duration: '1 day',
+          completed: false,
+          tasks: [
+            { id: 'be-reportwriting-task-1', title: 'Task 1: Report Writing – MCQ', description: 'Select the correct answers about report writing.', dueDate: '2025-11-22' },
+            { id: 'be-reportwriting-task-2', title: 'Task 2: Report Writing – Fill in the Blanks', description: 'Complete the sentences with the correct terms.', dueDate: '2025-11-23' },
+            { id: 'be-reportwriting-task-3', title: 'Task 3: Report Writing – True/False', description: 'Decide if each statement is true or false.', dueDate: '2025-11-24' }
+          ]
         },
         {
           id: 7,
