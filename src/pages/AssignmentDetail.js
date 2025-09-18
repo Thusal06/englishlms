@@ -1346,6 +1346,51 @@ export default function AssignmentDetail() {
       return;
     }
 
+    if (assignment.submissionType === 'quiz') {
+      // Validate all questions answered
+      const questions = assignment.questions || [];
+      for (const q of questions) {
+        if (q.type === 'mcq') {
+          if (typeof quizAnswers[q.id] !== 'number') {
+            alert('Please answer all multiple choice questions before submitting.');
+            return;
+          }
+        } else if (q.type === 'fill') {
+          const val = (quizAnswers[q.id] || '').toString().trim();
+          if (!val) {
+            alert('Please complete all fill-in-the-blank questions before submitting.');
+            return;
+          }
+        } else if (q.type === 'truefalse') {
+          if (typeof quizAnswers[q.id] !== 'boolean') {
+            alert('Please answer all True/False questions before submitting.');
+            return;
+          }
+        } else if (q.type === 'match') {
+          const placed = quizAnswers[q.id] || {};
+          const total = (q.items || []).length;
+          if (Object.keys(placed).length < total) {
+            alert('Please complete all matching items before submitting.');
+            return;
+          }
+        }
+      }
+
+      const { score, max } = computeQuizScore(assignment);
+      setQuizScore(score);
+      setQuizShowResults(true);
+
+      const submissionData = {
+        type: 'quiz',
+        submittedAt: new Date().toISOString(),
+        studentEmail: currentUser?.email,
+        data: { answers: quizAnswers, score, max }
+      };
+      addSubmission(assignmentId, submissionData);
+      setIsSubmitted(true);
+      return;
+    }
+
     if (assignment.submissionType === 'text' && submission.trim().length < 50) {
       alert('Please write at least 50 characters for your submission.');
       return;
