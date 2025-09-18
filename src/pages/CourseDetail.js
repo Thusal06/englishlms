@@ -127,12 +127,32 @@ export default function CourseDetail() {
             </div>
 
             <h4 class="mt-6">Tips for Using Linking Words Effectively</h4>
-            <ul class="list-disc pl-6 space-y-2 mt-2">
-              <li>Vary your connectors to avoid repetition</li>
-              <li>Use them to show relationships between ideas</li>
-              <li>Practice using them in your speaking and writing</li>
-              <li>Pay attention to punctuation when using linking words at the beginning of sentences</li>
-            </ul>
+            <div class="space-y-4 mt-4">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <p class="font-medium text-gray-800">Vary your connectors:</p>
+                <p class="mt-1 text-gray-700">Avoid repeating the same words too often; it makes your presentation more engaging.</p>
+              </div>
+              
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <p class="font-medium text-gray-800">Position carefully:</p>
+                <p class="mt-1 text-gray-700">Most linking words are best placed at the beginning of a sentence or clause for clarity.</p>
+              </div>
+              
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <p class="font-medium text-gray-800">Match function to context:</p>
+                <p class="mt-1 text-gray-700">Ensure the connector correctly reflects the relationship between ideas (e.g., don't use "however" when adding information).</p>
+              </div>
+              
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <p class="font-medium text-gray-800">Combine with intonation:</p>
+                <p class="mt-1 text-gray-700">Pause slightly when introducing a linking word to signal a transition to the audience.</p>
+              </div>
+              
+              <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-4 rounded-r">
+                <h5 class="font-semibold text-blue-800 mb-2">Example of Integrated Use</h5>
+                <p class="text-blue-900 italic">"First of all, I will explain the system architecture. Then, I will move on to the implementation details. Moreover, I will highlight the potential risks. Finally, I will summarise the benefits of our approach."</p>
+              </div>
+            </div>
 
             <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
               <h3 class="text-lg font-semibold text-yellow-800">Practice Exercises</h3>
