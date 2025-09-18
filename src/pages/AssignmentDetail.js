@@ -708,6 +708,59 @@ export default function AssignmentDetail() {
       ]
     },
 
+    // Business English - Lesson 6: Report Writing
+    'be-reportwriting-task-1': {
+      id: 'be-reportwriting-task-1',
+      title: 'Task 1: Report Writing – MCQ',
+      description: 'Select the correct answers about report writing.',
+      instructions: ['Select one answer for each question.'],
+      dueDate: '2025-11-22',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'rw1', type: 'mcq', prompt: 'The main purpose of a technical report is:', options: ['To entertain the reader','To provide structured information for decision-making','To tell personal stories','To replace coding'], correctIndex: 1 },
+        { id: 'rw2', type: 'mcq', prompt: 'Which section of a report explains why the report was written?', options: ['Introduction','Findings','Recommendations','Title page'], correctIndex: 0 },
+        { id: 'rw3', type: 'mcq', prompt: 'Which of the following is NOT a feature of effective report writing?', options: ['Clarity','Objectivity','Professional tone','Storytelling with emotions'], correctIndex: 3 },
+        { id: 'rw4', type: 'mcq', prompt: 'For a software engineer, which is the BEST example of report writing?', options: ['A project bug report with findings and recommendations','A casual text message to a colleague','A creative short story','A personal blog post'], correctIndex: 0 },
+        { id: 'rw5', type: 'mcq', prompt: 'Which section of a report usually suggests future action?', options: ['Introduction','Findings/Analysis','Recommendations/Conclusion','Background'], correctIndex: 2 }
+      ]
+    },
+    'be-reportwriting-task-2': {
+      id: 'be-reportwriting-task-2',
+      title: 'Task 2: Report Writing – Fill in the Blanks',
+      description: 'Complete the sentences with the correct terms.',
+      instructions: ['Type the exact term (case-insensitive). Variants accepted where noted.'],
+      dueDate: '2025-11-23',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'rwf1', type: 'fill', prompt: 'The ________ provides data, facts, and results from research or testing.', accept: ['findings','findings/analysis','analysis','findings and analysis'] },
+        { id: 'rwf2', type: 'fill', prompt: 'The ________ suggests practical solutions or next steps.', accept: ['recommendations','conclusion','recommendations/conclusion'] },
+        { id: 'rwf3', type: 'fill', prompt: 'A good report should always maintain a ________ and respectful tone.', accept: ['professional'] },
+        { id: 'rwf4', type: 'fill', prompt: 'The ________ gives context to the issue being reported.', accept: ['background','problem statement','background/problem statement'] },
+        { id: 'rwf5', type: 'fill', prompt: 'Reports should be written with ________ to ensure non-technical readers understand.', accept: ['clarity'] }
+      ]
+    },
+    'be-reportwriting-task-3': {
+      id: 'be-reportwriting-task-3',
+      title: 'Task 3: Report Writing – True/False',
+      description: 'Mark each statement as True or False.',
+      instructions: ['Select True or False for each item.'],
+      dueDate: '2025-11-24',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'rwt1', type: 'truefalse', prompt: 'Reports should use headings and a logical flow.', correct: true },
+        { id: 'rwt2', type: 'truefalse', prompt: 'Reports should include personal opinions without evidence.', correct: false },
+        { id: 'rwt3', type: 'truefalse', prompt: 'A software testing report is an example of business/technical reporting.', correct: true },
+        { id: 'rwt4', type: 'truefalse', prompt: 'Conciseness means using long, detailed paragraphs.', correct: false },
+        { id: 'rwt5', type: 'truefalse', prompt: 'Recommendations are optional in all reports.', correct: false }
+      ]
+    },
+
     // Business English - Lesson 1: Writing clear and concise emails
     'be-email-task-1': {
       id: 'be-email-task-1',
