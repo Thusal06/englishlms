@@ -105,65 +105,52 @@ export default function CourseDetail() {
           title: 'Lesson 1 - Workplace Jargon',
           type: 'content',
           content: `
-            <h3>Workplace Jargon</h3>
-            <p>Workplace jargon refers to the special words and expressions used in professional environments. Knowing these terms helps software engineers and other professionals communicate effectively in meetings, projects, and team discussions.</p>
-            <ol>
+            <ul class="space-y-3">
               <li>
-                <strong>Backlog</strong><br/>
-                A list of all the work that a team needs to complete, including features, bug fixes, and other tasks, prioritized for development.<br/>
-                <em>Example:</em> “We’ll pick the next task from the backlog.”
+                <p><strong>Backlog:</strong> A list of all the work a team needs to complete (features, bug fixes, tasks), prioritized for development.</p>
+                <p><em>Example:</em> “We’ll pick the next task from the backlog.”</p>
               </li>
               <li>
-                <strong>Bandwidth</strong><br/>
-                Refers to a team’s or individual’s capacity to take on new work.<br/>
-                <em>Example:</em> “We don’t have the bandwidth to add that feature this sprint.”
+                <p><strong>Bandwidth:</strong> A team’s or individual’s capacity to take on new work.</p>
+                <p><em>Example:</em> “We don’t have the bandwidth to add that feature this sprint.”</p>
               </li>
               <li>
-                <strong>Black Economy</strong><br/>
-                Economic activity that is unrecorded and untaxed by the government, often linked to informal or illegal transactions.<br/>
-                <em>Example:</em> “Some freelance jobs done without invoices contribute to the black economy.”
+                <p><strong>Black economy:</strong> Unrecorded and untaxed economic activity, often informal or illegal.</p>
+                <p><em>Example:</em> “Some freelance jobs done without invoices contribute to the black economy.”</p>
               </li>
               <li>
-                <strong>Blow-by-blow</strong><br/>
-                A detailed, step-by-step account of an event or process.<br/>
-                <em>Example:</em> “The team lead gave us a blow-by-blow explanation of the release issue.”
+                <p><strong>Blow-by-blow:</strong> A detailed, step-by-step account of an event or process.</p>
+                <p><em>Example:</em> “The team lead gave us a blow-by-blow explanation of the release issue.”</p>
               </li>
               <li>
-                <strong>Bottleneck</strong><br/>
-                A point where the flow of work slows or halts due to constraints.<br/>
-                <em>Example:</em> “Code reviews are creating a bottleneck in our process.”
+                <p><strong>Bottleneck:</strong> A point where the flow of work slows or halts due to constraints.</p>
+                <p><em>Example:</em> “Code reviews are creating a bottleneck in our process.”</p>
               </li>
               <li>
-                <strong>Go-to-Market (GTM)</strong><br/>
-                The strategy a company uses to launch a new product or service, covering marketing, sales, distribution, and pricing.<br/>
-                <em>Example:</em> “The go-to-market plan for our app targets small businesses first.”
+                <p><strong>Go‑to‑market (GTM):</strong> The strategy to launch a new product or service (marketing, sales, distribution, pricing).</p>
+                <p><em>Example:</em> “The go‑to‑market plan for our app targets small businesses first.”</p>
               </li>
               <li>
-                <strong>Onboarding</strong><br/>
-                The process of welcoming and integrating a new employee into the company and team.<br/>
-                <em>Example:</em> “The onboarding program includes training sessions and mentorship.”
+                <p><strong>Onboarding:</strong> The process of welcoming and integrating a new employee into the company and team.</p>
+                <p><em>Example:</em> “The onboarding program includes training sessions and mentorship.”</p>
               </li>
               <li>
-                <strong>Stand-up</strong><br/>
-                A short, daily team meeting where members share updates, plans, and blockers.<br/>
-                <em>Example:</em> “During today’s stand-up, I’ll update on the bug fix progress.”
+                <p><strong>Stand‑up:</strong> A short, daily team meeting where members share updates, plans, and blockers.</p>
+                <p><em>Example:</em> “During today’s stand‑up, I’ll update on the bug fix progress.”</p>
               </li>
               <li>
-                <strong>Sprint</strong><br/>
-                A short, fixed period (usually 1–4 weeks) in which a team completes a set of tasks from the backlog.<br/>
-                <em>Example:</em> “This sprint focuses on developing the payment feature.”
+                <p><strong>Sprint:</strong> A short, fixed period (usually 1–4 weeks) for completing selected tasks from the backlog.</p>
+                <p><em>Example:</em> “This sprint focuses on developing the payment feature.”</p>
               </li>
               <li>
-                <strong>Sync-up</strong><br/>
-                A meeting or discussion to align the team on project status, progress, or plans.<br/>
-                <em>Example:</em> “Let’s have a quick sync-up before the client call.”
+                <p><strong>Sync‑up:</strong> A quick meeting to align on status, progress, or plans.</p>
+                <p><em>Example:</em> “Let’s have a quick sync‑up before the client call.”</p>
               </li>
               <li>
-                <strong>Back to the Drawing Board</strong><br/>
-                An expression meaning to start over after a failed or flawed attempt.<br/>
-                <em>Example:</em> “The prototype didn’t work, so it’s back to the drawing board.”
+                <p><strong>Back to the drawing board:</strong> Start over after a failed or flawed attempt.</p>
+                <p><em>Example:</em> “The prototype didn’t work, so it’s back to the drawing board.”</p>
               </li>
-            </ol>
+            </ul>
           `,
           duration: '35 min',
           completed: false
@@ -205,60 +192,48 @@ export default function CourseDetail() {
           title: 'Lesson 6 - Problem-Solving & Troubleshooting Vocabulary',
           type: 'content',
           content: `
-            <h3>Problem-Solving & Troubleshooting Vocabulary</h3>
-            <p>Problem-solving and troubleshooting are essential skills in software engineering. These words and phrases help professionals identify issues, analyze causes, and propose solutions effectively.</p>
-            <ol>
+            <ul class="space-y-3">
               <li>
-                <strong>Bug</strong><br/>
-                An error or flaw in software that causes unexpected or incorrect results.<br/>
-                <em>Example:</em> “We need to fix this login bug before the next release.”
+                <p><strong>Bug:</strong> An error or flaw in software that causes unexpected or incorrect results.</p>
+                <p><em>Example:</em> “We need to fix this login bug before the next release.”</p>
               </li>
               <li>
-                <strong>Debugging</strong><br/>
-                The process of finding and fixing bugs in a program.<br/>
-                <em>Example:</em> “She spent the afternoon debugging the payment module.”
+                <p><strong>Debugging:</strong> The process of finding and fixing bugs in a program.</p>
+                <p><em>Example:</em> “She spent the afternoon debugging the payment module.”</p>
               </li>
               <li>
-                <strong>Root Cause</strong><br/>
-                The main underlying reason for a problem or issue.<br/>
-                <em>Example:</em> “The root cause of the crash was a memory leak.”
+                <p><strong>Root cause:</strong> The main underlying reason for a problem or issue.</p>
+                <p><em>Example:</em> “The root cause of the crash was a memory leak.”</p>
               </li>
               <li>
-                <strong>Workaround</strong><br/>
-                A temporary solution to bypass a problem until a permanent fix is applied.<br/>
-                <em>Example:</em> “As a workaround, restart the server every two hours.”
+                <p><strong>Workaround:</strong> A temporary solution to bypass a problem until a permanent fix is applied.</p>
+                <p><em>Example:</em> “As a workaround, restart the server every two hours.”</p>
               </li>
               <li>
-                <strong>Patch</strong><br/>
-                A small update designed to fix bugs or vulnerabilities in software.<br/>
-                <em>Example:</em> “The security team released a patch for the critical vulnerability.”
+                <p><strong>Patch:</strong> A small update designed to fix bugs or vulnerabilities in software.</p>
+                <p><em>Example:</em> “The security team released a patch for the critical vulnerability.”</p>
               </li>
               <li>
-                <strong>Escalate</strong><br/>
-                To transfer a problem to a higher level of support or authority when it cannot be resolved at the current level.<br/>
-                <em>Example:</em> “If the issue persists, we’ll escalate it to the senior developer.”
+                <p><strong>Escalate:</strong> Transfer a problem to a higher level of support or authority when it can’t be resolved at the current level.</p>
+                <p><em>Example:</em> “If the issue persists, we’ll escalate it to the senior developer.”</p>
               </li>
               <li>
-                <strong>Troubleshoot</strong><br/>
-                To systematically identify and solve problems, often using a step-by-step process.<br/>
-                <em>Example:</em> “Let’s troubleshoot the network connection before calling IT.”
+                <p><strong>Troubleshoot:</strong> Systematically identify and solve problems using a step‑by‑step process.</p>
+                <p><em>Example:</em> “Let’s troubleshoot the network connection before calling IT.”</p>
               </li>
               <li>
-                <strong>Rollback</strong><br/>
-                Reverting a system, application, or codebase to a previous stable version.<br/>
-                <em>Example:</em> “We had to rollback the update because of unexpected errors.”
+                <p><strong>Rollback:</strong> Revert a system, application, or codebase to a previous stable version.</p>
+                <p><em>Example:</em> “We had to rollback the update because of unexpected errors.”</p>
               </li>
               <li>
-                <strong>System Crash</strong><br/>
-                When a computer or application stops functioning completely, often requiring a restart.<br/>
-                <em>Example:</em> “The server had a system crash during peak hours.”
+                <p><strong>System crash:</strong> When a computer or application stops functioning completely and often requires a restart.</p>
+                <p><em>Example:</em> “The server had a system crash during peak hours.”</p>
               </li>
               <li>
-                <strong>Hotfix</strong><br/>
-                An immediate and urgent software update designed to solve a specific critical problem.<br/>
-                <em>Example:</em> “The team deployed a hotfix to resolve the login issue overnight.”
+                <p><strong>Hotfix:</strong> An immediate, urgent software update that solves a specific critical problem.</p>
+                <p><em>Example:</em> “The team deployed a hotfix to resolve the login issue overnight.”</p>
               </li>
-            </ol>
+            </ul>
           `,
           duration: '40 min',
           completed: false
