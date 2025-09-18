@@ -393,6 +393,118 @@ export default function QuizDetail() {
         }
       ]
     },
+    'quiz-4': {
+      id: 'quiz-4',
+      title: 'Stand-ups, Clarification, Collaboration',
+      description: 'Mix of multi-select and single-select on agile and communication best practices.',
+      timeLimit: 300,
+      questions: [
+        // 1. Multi-select (A, C, E)
+        {
+          id: 1,
+          type: 'multi',
+          question: 'In a daily stand-up meeting, which of the following are considered best practices?',
+          options: [
+            'Keeping updates concise (1–2 minutes)',
+            'Giving a detailed technical demo of your work',
+            'Sharing blockers that prevent progress',
+            'Discussing long-term company strategy',
+            'Actively listening to teammates’ updates'
+          ],
+          correctAnswers: [0, 2, 4]
+        },
+        // 2. Multi-select (A, B, D)
+        {
+          id: 2,
+          type: 'multi',
+          question: 'Which of the following are examples of clarification techniques used in software engineering communication?',
+          options: [
+            '“Could you explain that again, please?”',
+            '“Just to confirm, we’re deploying on Friday, right?”',
+            '“I’ll handle this task alone without telling anyone.”',
+            '“Can you give me an example of how this API works?”',
+            '“I think I understood, no need to check.”'
+          ],
+          correctAnswers: [0, 1, 3]
+        },
+        // 3. Multi-select (A, B, D, E)
+        {
+          id: 3,
+          type: 'multi',
+          question: 'Effective collaboration and teamwork in a software project involves which of the following?',
+          options: [
+            'Sharing knowledge openly with the team',
+            'Using version control tools like Git',
+            'Blaming others when bugs appear',
+            'Respecting diverse perspectives',
+            'Coordinating tasks using agile boards (e.g., Jira, Trello)'
+          ],
+          correctAnswers: [0, 1, 3, 4]
+        },
+        // 4. Multi-select (A, B, D)
+        {
+          id: 4,
+          type: 'multi',
+          question: 'During a stand-up, a teammate says something unclear. Which responses show good communication skills?',
+          options: [
+            '“Sorry, I didn’t catch that—could you repeat it?”',
+            '“Just to clarify, are you saying the bug appears only on mobile?”',
+            'Staying silent even though you’re confused',
+            '“Can you show an example scenario so I can better understand?”',
+            'Ignoring it and waiting until the sprint ends'
+          ],
+          correctAnswers: [0, 1, 3]
+        },
+        // 5. Single-select (B)
+        {
+          id: 5,
+          question: 'In a daily stand-up meeting, the main purpose is:',
+          options: [
+            'To solve technical problems in detail',
+            'To update the team on progress and blockers',
+            'To review company policies',
+            'To finalize long-term project budgets'
+          ],
+          correctAnswer: 1
+        },
+        // 6. Single-select (C)
+        {
+          id: 6,
+          question: 'Which of the following is an example of a clarification technique?',
+          options: [
+            '“Let’s move this discussion to the next sprint.”',
+            '“I’ll just continue without asking.”',
+            '“Can you give me an example of how that error occurs?”',
+            '“I’ll assign myself this task silently.”'
+          ],
+          correctAnswer: 2
+        },
+        // 7. Single-select (B)
+        {
+          id: 7,
+          question: 'A key aspect of effective collaboration in a software team is:',
+          options: [
+            'Avoiding feedback to prevent conflict',
+            'Sharing knowledge and supporting teammates',
+            'Working in isolation for faster results',
+            'Ignoring others’ coding styles'
+          ],
+          correctAnswer: 1
+        },
+        // 8. Single-select (B)
+        {
+          id: 8,
+          question: 'If you didn’t understand a teammate’s explanation during a stand-up, the best response is:',
+          options: [
+            'Stay quiet to save time',
+            'Ask for clarification politely',
+            'Pretend you understood and continue',
+            'Wait until the sprint ends to ask'
+          ],
+          correctAnswer: 1
+        }
+      ]
+    },
     'quiz-3': {
       id: 'quiz-3',
       title: 'Audio Fill-in-the-Blanks',
@@ -445,6 +557,17 @@ export default function QuizDetail() {
     });
   };
 
+  const handleMultiToggle = (questionId, answerIndex) => {
+    const prev = Array.isArray(selectedAnswers[questionId]) ? selectedAnswers[questionId] : [];
+    let next;
+    if (prev.includes(answerIndex)) {
+      next = prev.filter((i) => i !== answerIndex);
+    } else {
+      next = [...prev, answerIndex].sort((a, b) => a - b);
+    }
+    setSelectedAnswers({ ...selectedAnswers, [questionId]: next });
+  };
+
   const handleNextQuestion = () => {
     if (currentQuestion < quiz.questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
@@ -474,14 +597,20 @@ export default function QuizDetail() {
       return;
     }
 
-    // MCQ scoring
-    let correctAnswers = 0;
+    // MCQ + Multi-select scoring
+    let correctCount = 0;
     quiz.questions.forEach(question => {
-      if (selectedAnswers[question.id] === question.correctAnswer) {
-        correctAnswers++;
+      if (question.type === 'multi') {
+        const picked = Array.isArray(selectedAnswers[question.id]) ? selectedAnswers[question.id] : [];
+        const expected = Array.isArray(question.correctAnswers) ? question.correctAnswers : [];
+        const a = [...picked].sort().join(',');
+        const b = [...expected].sort().join(',');
+        if (a === b && expected.length > 0) correctCount++;
+      } else {
+        if (selectedAnswers[question.id] === question.correctAnswer) correctCount++;
       }
     });
-    setScore(correctAnswers);
+    setScore(correctCount);
     setShowResults(true);
   };
 
@@ -608,8 +737,16 @@ export default function QuizDetail() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Review Your Answers</h3>
                 <div className="space-y-4">
                   {quiz.questions.map((question, index) => {
+                    const isMulti = question.type === 'multi';
                     const userAnswer = selectedAnswers[question.id];
-                    const isCorrect = userAnswer === question.correctAnswer;
+                    let isCorrect = false;
+                    if (isMulti) {
+                      const picked = Array.isArray(userAnswer) ? userAnswer : [];
+                      const expected = Array.isArray(question.correctAnswers) ? question.correctAnswers : [];
+                      isCorrect = [...picked].sort().join(',') === [...expected].sort().join(',') && expected.length > 0;
+                    } else {
+                      isCorrect = userAnswer === question.correctAnswer;
+                    }
                     return (
                       <div key={question.id} className={`p-4 rounded-lg border-2 ${isCorrect ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'}`}>
                         <div className="flex items-start justify-between mb-2">
@@ -618,9 +755,17 @@ export default function QuizDetail() {
                             {isCorrect ? 'Correct' : 'Incorrect'}
                           </div>
                         </div>
-                        <div className="text-sm text-gray-600 mb-2"><strong>Your answer:</strong> {userAnswer !== undefined ? question.options[userAnswer] : 'Not answered'}</div>
+                        <div className="text-sm text-gray-600 mb-2">
+                          <strong>Your answer:</strong> {isMulti
+                            ? (Array.isArray(userAnswer) && userAnswer.length ? userAnswer.map(i => question.options[i]).join(', ') : 'Not answered')
+                            : (userAnswer !== undefined ? question.options[userAnswer] : 'Not answered')}
+                        </div>
                         {!isCorrect && (
-                          <div className="text-sm text-gray-600 mb-2"><strong>Correct answer:</strong> {question.options[question.correctAnswer]}</div>
+                          <div className="text-sm text-gray-600 mb-2">
+                            <strong>Correct answer:</strong> {isMulti
+                              ? (Array.isArray(question.correctAnswers) ? question.correctAnswers.map(i => question.options[i]).join(', ') : '')
+                              : question.options[question.correctAnswer]}
+                          </div>
                         )}
                         <div className="text-sm text-gray-700"><strong>Explanation:</strong> {question.explanation}</div>
                       </div>
@@ -704,20 +849,29 @@ export default function QuizDetail() {
           <div className="card mb-8">
             <h2 className="text-xl font-semibold text-gray-900 mb-6">{currentQ.question}</h2>
             <div className="space-y-3">
-              {currentQ.options.map((option, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleAnswerSelect(currentQ.id, index)}
-                  className={`w-full text-left p-4 rounded-lg border-2 transition-colors duration-200 ${selectedAnswers[currentQ.id] === index ? 'border-primary-500 bg-primary-50' : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'}`}
-                >
-                  <div className="flex items-center">
-                    <div className={`w-6 h-6 rounded-full border-2 mr-3 flex items-center justify-center ${selectedAnswers[currentQ.id] === index ? 'border-primary-500 bg-primary-500' : 'border-gray-300'}`}>
-                      {selectedAnswers[currentQ.id] === index && (<div className="w-2 h-2 bg-white rounded-full"></div>)}
+              {currentQ.options.map((option, index) => {
+                const isMulti = currentQ.type === 'multi';
+                const picked = isMulti
+                  ? (Array.isArray(selectedAnswers[currentQ.id]) && selectedAnswers[currentQ.id].includes(index))
+                  : selectedAnswers[currentQ.id] === index;
+                return (
+                  <button
+                    key={index}
+                    onClick={() => (isMulti ? handleMultiToggle(currentQ.id, index) : handleAnswerSelect(currentQ.id, index))}
+                    className={`w-full text-left p-4 rounded-lg border-2 transition-colors duration-200 ${picked ? 'border-primary-500 bg-primary-50' : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'}`}
+                  >
+                    <div className="flex items-center">
+                      <div className={`mr-3 flex items-center justify-center ${isMulti ? 'w-5 h-5 border-2 rounded-sm' : 'w-6 h-6 rounded-full border-2'} ${picked ? 'border-primary-500 bg-primary-500' : 'border-gray-300'}`}>
+                        {!isMulti && picked && (<div className="w-2 h-2 bg-white rounded-full"></div>)}
+                        {isMulti && picked && (
+                          <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
+                        )}
+                      </div>
+                      <span className="text-gray-900">{option}</span>
                     </div>
-                    <span className="text-gray-900">{option}</span>
-                  </div>
-                </button>
-              ))}
+                  </button>
+                );
+              })}
             </div>
           </div>
         ) : (

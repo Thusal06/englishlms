@@ -246,6 +246,17 @@ export default function Dashboard() {
                     </Link>
                   </div>
                 </div>
+
+                <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                  <h4 className="font-medium text-gray-900 mb-1">Quiz 4: Stand-ups & Collaboration</h4>
+                  <p className="text-sm text-gray-600 mb-2">Multi-select and single-select on agile best practices (5 min)</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-gray-600">8 Questions</span>
+                    <Link to="/quiz/quiz-4" className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
+                      Start Quiz
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
