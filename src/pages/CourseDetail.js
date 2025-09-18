@@ -98,6 +98,118 @@ export default function CourseDetail() {
             </div>
 
             <h4 class="mt-6">Tips for Using Linking Words Effectively</h4>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+              <h3 class="text-lg font-semibold text-blue-800">Task: Linking Words Exercise</h3>
+              <p class="text-blue-700">Complete the following exercises to test your understanding of linking words.</p>
+              
+              <div class="mt-4 space-y-6">
+                <div>
+                  <p class="font-medium">Q1. Multiple Choice</p>
+                  <p>Linking words are also known as:</p>
+                  <div class="ml-4 space-y-1">
+                    <p>a) Verbs</p>
+                    <p>b) Adjectives</p>
+                    <p>c) Connectors</p>
+                    <p>d) Pronouns</p>
+                  </div>
+                </div>
+
+                <div>
+                  <p class="font-medium">Q2. Fill in the Blank</p>
+                  <p>The new system is faster. ______, it is more reliable.</p>
+                </div>
+
+                <div>
+                  <p class="font-medium">Q3. Matching</p>
+                  <p>Match the linking word with its correct function:</p>
+                  <div class="grid grid-cols-2 gap-2 mt-2">
+                    <div>However, →</div>
+                    <div>For example, →</div>
+                    <div>Finally, →</div>
+                    <div>Therefore →</div>
+                    <div>In conclusion →</div>
+                  </div>
+                  <div class="mt-2 ml-4">
+                    <p>Functions:</p>
+                    <p>a) Summarising</p>
+                    <p>b) Cause & effect</p>
+                    <p>c) Giving examples</p>
+                    <p>d) Sequencing</p>
+                    <p>e) Contrasting ideas</p>
+                  </div>
+                </div>
+
+                <div>
+                  <p class="font-medium">Q4. True / False</p>
+                  <p>"Linking words should always be placed at the end of a sentence."</p>
+                </div>
+
+                <div>
+                  <p class="font-medium">Q5. Multiple Choice</p>
+                  <p>Which category does the word "consequently" belong to?</p>
+                  <div class="ml-4 space-y-1">
+                    <p>a) Adding information</p>
+                    <p>b) Sequencing</p>
+                    <p>c) Cause & effect</p>
+                    <p>d) Summarising</p>
+                  </div>
+                </div>
+
+                <div>
+                  <p class="font-medium">Q6. Fill in the Blank</p>
+                  <p>Several platforms, ______ Google Meet and Zoom, support online collaboration.</p>
+                </div>
+
+                <div>
+                  <p class="font-medium">Q7. Multiple Choice</p>
+                  <p>Which sequence of connectors is best for organising a presentation?</p>
+                  <div class="ml-4 space-y-1">
+                    <p>a) Then – However – But – Anyway</p>
+                    <p>b) First of all – Next – Moreover – Finally</p>
+                    <p>c) Finally – Next – Moreover – First of all</p>
+                    <p>d) However – Moreover – For example – In short</p>
+                  </div>
+                </div>
+
+                <div>
+                  <p class="font-medium">Q8. True / False</p>
+                  <p>Using varied connectors makes a presentation more engaging.</p>
+                </div>
+
+                <div>
+                  <p class="font-medium">Q9. Fill in the Blank</p>
+                  <p>The team missed the deadline. ______, the project was delayed.</p>
+                </div>
+
+                <div>
+                  <p class="font-medium">Q10. Multiple Choice</p>
+                  <p>Which of the following is not a summarising connector?</p>
+                  <div class="ml-4 space-y-1">
+                    <p>a) In conclusion</p>
+                    <p>b) To sum up</p>
+                    <p>c) Overall</p>
+                    <p>d) On the other hand</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 p-4 bg-white border rounded">
+                <h4 class="font-semibold text-gray-700 mb-2">Answer Key:</h4>
+                <ol class="list-decimal pl-5 space-y-1 text-sm">
+                  <li>c) Connectors</li>
+                  <li>Moreover / Furthermore</li>
+                  <li>1 → e) Contrasting ideas, 2 → c) Giving examples, 3 → d) Sequencing, 4 → b) Cause & effect, 5 → a) Summarising</li>
+                  <li>False</li>
+                  <li>c) Cause & effect</li>
+                  <li>such as</li>
+                  <li>b) First of all – Next – Moreover – Finally</li>
+                  <li>True</li>
+                  <li>As a result / Therefore</li>
+                  <li>d) On the other hand</li>
+                </ol>
+              </div>
+            </div>
             <ul class="list-disc pl-6 space-y-2">
               <li><strong>Vary your connectors:</strong> Avoid repeating the same words too often; it keeps your presentation engaging.</li>
               <li><strong>Position carefully:</strong> Many linking words work best at the beginning of a sentence or clause for clarity.</li>
@@ -134,79 +246,6 @@ export default function CourseDetail() {
           content: 'Content will be added here...',
           duration: '1 day',
           completed: false
-        },
-        {
-          id: 4,
-          title: 'Lesson 4 - Linking Words',
-          type: 'content',
-          content: `
-            <h4>What are linking words?</h4>
-            <p>Linking words (connectors/transition words) connect ideas smoothly, ensure logical progression, and make your speech easier to follow. Using them effectively signals relationships between ideas, shows the flow of your argument, and enhances professionalism.</p>
-
-            <h4 class="mt-4">Categories of Linking Words and Their Functions</h4>
-            <div class="overflow-x-auto mt-2">
-              <table class="min-w-full border border-gray-300 text-sm">
-                <thead>
-                  <tr class="bg-gray-50">
-                    <th class="border border-gray-300 px-3 py-2 text-left">Function</th>
-                    <th class="border border-gray-300 px-3 py-2 text-left">Linking Words</th>
-                    <th class="border border-gray-300 px-3 py-2 text-left">Example in a Technical Presentation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="border border-gray-300 px-3 py-2 align-top">Adding Information</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top">furthermore, moreover, in addition, also</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"The new software reduces processing time. Moreover, it improves data security."</em></td>
-                  </tr>
-                  <tr class="bg-gray-50">
-                    <td class="border border-gray-300 px-3 py-2 align-top">Contrasting Ideas</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top">however, on the other hand, whereas, although, in contrast</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"The old system was fast. However, it was prone to errors."</em></td>
-                  </tr>
-                  <tr>
-                    <td class="border border-gray-300 px-3 py-2 align-top">Giving Examples</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top">for example, such as, in particular, to illustrate</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"Several tools, for example Jenkins and Travis CI, can automate testing."</em></td>
-                  </tr>
-                  <tr class="bg-gray-50">
-                    <td class="border border-gray-300 px-3 py-2 align-top">Sequencing / Ordering</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top">first of all, then, next, finally, subsequently</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"First of all, I will explain the architecture. Then, I will demonstrate the deployment process. Finally, I will summarise the advantages."</em></td>
-                  </tr>
-                  <tr>
-                    <td class="border border-gray-300 px-3 py-2 align-top">Cause and Effect</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top">therefore, as a result, consequently, thus</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"The system failed to integrate properly. As a result, we had to postpone the release."</em></td>
-                  </tr>
-                  <tr class="bg-gray-50">
-                    <td class="border border-gray-300 px-3 py-2 align-top">Summarising / Concluding</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top">in conclusion, to sum up, overall, in short</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top"><em>"In conclusion, the new approach increases efficiency and reduces errors."</em></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <h4 class="mt-6">Tips for Using Linking Words Effectively</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Vary your connectors:</strong> Avoid repeating the same words too often; it keeps your presentation engaging.</li>
-              <li><strong>Position carefully:</strong> Many linking words work best at the beginning of a sentence or clause for clarity.</li>
-              <li><strong>Match function to context:</strong> Ensure the connector reflects the relationship between ideas (e.g., don't use "however" when adding information).</li>
-              <li><strong>Combine with intonation:</strong> Pause slightly when introducing a linking word to signal a transition.</li>
-            </ul>
-
-            <h4 class="mt-6">Example of Integrated Use</h4>
-            <p><em>"First of all, I will explain the system architecture. Then, I will move on to the implementation details. Moreover, I will highlight the potential risks. Finally, I will summarise the benefits of our approach."</em></p>
-          `,
-          duration: '1 day',
-          completed: false,
-          task: {
-            id: 'grammar-assignment-1',
-            title: 'Task 1: Linking Words Quiz',
-            description: 'Interactive quiz on linking words and connectors',
-            dueDate: '2025-10-05'
-          }
         }
       ]
     },
