@@ -215,33 +215,33 @@ export default function Dashboard() {
               
               <div className="space-y-4">
                 <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
-                  <h4 className="font-medium text-gray-900 mb-1">Present Perfect Tense</h4>
-                  <p className="text-sm text-gray-600 mb-2">Test your understanding of present perfect</p>
+                  <h4 className="font-medium text-gray-900 mb-1">Quiz 1: Polite Communication & Grammar</h4>
+                  <p className="text-sm text-gray-600 mb-2">Polite disagreement, requests, hedging, articles, reported speech</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-600">15 Questions</span>
-                    <Link to="/quiz/present-perfect" className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
+                    <Link to="/quiz/quiz-1" className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
                       Start Quiz
                     </Link>
                   </div>
                 </div>
 
                 <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
-                  <h4 className="font-medium text-gray-900 mb-1">Phrasal Verbs</h4>
-                  <p className="text-sm text-gray-600 mb-2">Common phrasal verbs in English</p>
+                  <h4 className="font-medium text-gray-900 mb-1">Quiz 2: Negotiation & Workplace Jargon</h4>
+                  <p className="text-sm text-gray-600 mb-2">Negotiation phrases and workplace terminology</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-600">20 Questions</span>
-                    <Link to="/quiz/phrasal-verbs" className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
+                    <span className="text-xs text-gray-600">10 Questions</span>
+                    <Link to="/quiz/quiz-2" className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
                       Start Quiz
                     </Link>
                   </div>
                 </div>
 
                 <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
-                  <h4 className="font-medium text-gray-900 mb-1">Articles (a, an, the)</h4>
-                  <p className="text-sm text-gray-600 mb-2">Usage of English articles</p>
+                  <h4 className="font-medium text-gray-900 mb-1">Quiz 3: Audio Fill-in-the-Blanks</h4>
+                  <p className="text-sm text-gray-600 mb-2">Listen up to 3 times, then fill in the blanks (5 min)</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-600">12 Questions</span>
-                    <Link to="/quiz/articles" className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
+                    <span className="text-xs text-gray-600">1 Audio • Fill-in</span>
+                    <Link to="/quiz/quiz-3" className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
                       Start Quiz
                     </Link>
                   </div>
