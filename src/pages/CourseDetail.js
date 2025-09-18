@@ -31,6 +31,22 @@ export default function CourseDetail() {
             createdAt: new Date().toISOString()
           });
         }
+        if (lesson.tasks && lesson.tasks.length > 0) {
+          lesson.tasks.forEach((t) => {
+            addAssignment({
+              id: t.id,
+              title: t.title,
+              description: t.description,
+              courseId: course.id,
+              courseName: course.title,
+              lessonId: lesson.id,
+              lessonName: lesson.title,
+              dueDate: t.dueDate || new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+              status: 'pending',
+              createdAt: new Date().toISOString()
+            });
+          });
+        }
       });
     }
   }, [course, addAssignment]);
@@ -46,17 +62,76 @@ export default function CourseDetail() {
       lessons: [
         {
           id: 1,
-          title: 'Lesson 1 - Introduction to Parts of Speech',
+          title: 'Lesson 1 - Articles',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <h3>What Are Articles?</h3>
+            <p>Articles are small words placed before nouns to define whether the noun is specific or general. The three articles in English are:</p>
+            <ul class="list-disc pl-6">
+              <li><strong>a</strong> (indefinite article)</li>
+              <li><strong>an</strong> (indefinite article, used before vowel sounds)</li>
+              <li><strong>the</strong> (definite article)</li>
+            </ul>
+
+            <h4 class="mt-4">Using Articles Correctly</h4>
+            <h5 class="mt-2 font-semibold">1. The Indefinite Articles: 'a' and 'an'</h5>
+            <p>Use 'a' before words beginning with a consonant sound.</p>
+            <p><em>Example:</em> a bug, a server, a feature</p>
+            <p class="mt-2">Use 'an' before words beginning with a vowel sound.</p>
+            <p><em>Example:</em> an error, an update, an interface</p>
+            <p class="mt-2">When to Use 'a' or 'an':</p>
+            <ul class="list-disc pl-6">
+              <li>When mentioning something for the first time or something nonspecific.</li>
+              <li>When referring to one item or unit (singular countable noun).</li>
+            </ul>
+
+            <h5 class="mt-4 font-semibold">2. The Definite Article: 'the'</h5>
+            <p>Use 'the' when referring to something specific or previously mentioned or when both speaker and listener know what is being discussed.</p>
+            <p><em>Example:</em> “I found an error in the report.” → “The error is on page 5.”</p>
+            <p>Use before unique things or when the noun is clear from context. <em>“Please restart the server.”</em></p>
+
+            <h5 class="mt-4 font-semibold">3. Zero Article (No Article)</h5>
+            <p>No article is used before plural or uncountable nouns when talking about things in general.</p>
+            <p><em>Examples:</em> “We fixed bugs yesterday.” “Software development requires testing.”</p>
+
+            <h4 class="mt-6">Common Mistakes in Using Articles</h4>
+            <ul class="list-disc pl-6">
+              <li>Using <em>a</em> or <em>an</em> with uncountable nouns (e.g., information, advice).</li>
+              <li>Omitting <em>the</em> when the noun is already specified or known.</li>
+              <li>Using <em>the</em> unnecessarily before general, plural, or uncountable nouns.</li>
+            </ul>
+
+            <h4 class="mt-6">Examples</h4>
+            <ul class="list-disc pl-6">
+              <li>There is <strong>a</strong> bug in the system.</li>
+              <li>I need <strong>an</strong> update on the project status.</li>
+              <li>Did you check <strong>the</strong> server logs?</li>
+              <li><strong>Bugs</strong> need to be fixed before release.</li>
+              <li><strong>Information</strong> is stored securely.</li>
+            </ul>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'grammar-assignment-1',
-            title: 'Task 1: Parts of Speech Practice',
-            description: 'Identify and categorize different parts of speech in sentences',
-            dueDate: '2025-10-05'
-          }
+          tasks: [
+            {
+              id: 'articles-task-1',
+              title: 'Task 1: Articles – Fill the Blanks',
+              description: 'Fill each blank with a, an, the, or leave it blank if no article is needed.',
+              dueDate: '2025-10-05'
+            },
+            {
+              id: 'articles-task-2',
+              title: 'Task 2: Articles – Paragraph Completion',
+              description: 'Complete the engineer’s report with correct articles.',
+              dueDate: '2025-10-06'
+            },
+            {
+              id: 'articles-task-3',
+              title: 'Task 3: Articles – Choose the Correct Option',
+              description: 'Choose the correct article to complete each sentence.',
+              dueDate: '2025-10-07'
+            }
+          ]
         },
         {
           id: 2,
@@ -74,17 +149,39 @@ export default function CourseDetail() {
         },
         {
           id: 3,
-          title: 'Lesson 3 - Verbs and Tenses',
+          title: 'Lesson 3 - Modal Verbs',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <h3>Modal Verbs</h3>
+            <p>Modal verbs are special auxiliary verbs that express possibility, ability, permission, necessity, or obligation. They are always followed by the base form of a verb (without “to”).</p>
+            <h4 class="mt-4">Common Modal Verbs</h4>
+            <ul class="list-disc pl-6">
+              <li><strong>Can / Could</strong> → ability, possibility, permission</li>
+              <li><strong>May / Might</strong> → possibility, permission</li>
+              <li><strong>Must</strong> → necessity, strong obligation, deduction</li>
+              <li><strong>Shall / Should</strong> → advice, suggestions, mild obligation</li>
+              <li><strong>Will / Would</strong> → future, willingness, polite requests</li>
+              <li><strong>Have to / Ought to</strong> → necessity, duty</li>
+            </ul>
+            <h4 class="mt-4">Examples</h4>
+            <ul class="list-disc pl-6">
+              <li>Ability: She <em>can</em> code in Java.</li>
+              <li>Possibility: This bug <em>might</em> cause delays.</li>
+              <li>Obligation: You <em>must</em> submit the report by tomorrow.</li>
+              <li>Advice: We <em>should</em> test this feature before release.</li>
+              <li>Permission: You <em>may</em> leave early today.</li>
+            </ul>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'grammar-assignment-3',
-            title: 'Task 3: Verb Tenses Practice',
-            description: 'Complete exercises on past, present, and future tenses',
-            dueDate: '2025-10-07'
-          }
+          tasks: [
+            {
+              id: 'modal-verbs-task-1',
+              title: 'Task 1: Modal Verbs – Fill the Blanks',
+              description: 'Fill in the blanks with the correct modal verb based on context.',
+              dueDate: '2025-10-09'
+            }
+          ]
         },
         {
           id: 4,
@@ -897,6 +994,20 @@ export default function CourseDetail() {
                                 Start Task
                               </Link>
                             </div>
+                          </div>
+                        )}
+                        {selectedLesson.tasks && selectedLesson.tasks.length > 0 && (
+                          <div className="not-prose mt-8 space-y-4">
+                            {selectedLesson.tasks.map((t, idx) => (
+                              <div key={t.id} className="p-4 bg-green-50 border-l-4 border-green-400 rounded-r-lg">
+                                <h3 className="text-lg font-semibold text-green-800 mb-2">📝 Task {idx + 1}: {t.title.replace(/^Task \d+: /, '')}</h3>
+                                <p className="text-green-700 mb-2">{t.description}</p>
+                                <div className="flex items-center justify-between">
+                                  <span className="text-sm text-green-700">Due: {t.dueDate}</span>
+                                  <Link to={`/assignment/${t.id}`} className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors">Start Task</Link>
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         )}
                       </div>

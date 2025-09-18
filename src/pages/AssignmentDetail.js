@@ -356,6 +356,108 @@ export default function AssignmentDetail() {
         { text: 'We had a quick __________ before the client meeting to…', answer: 'sync-up' }
       ]
     }
+    ,
+    // Articles Lesson - Task 1: Fill with a/an/the/(no article)
+    'articles-task-1': {
+      id: 'articles-task-1',
+      title: 'Task 1: Articles – Fill the Blanks',
+      description: 'Fill each blank with a, an, the, or type "no article" if none is needed.',
+      instructions: [
+        'Type exactly one of: a, an, the, or no article (for zero article).',
+        'Answers are case-insensitive.',
+        'Submit to see your score.'
+      ],
+      dueDate: '2025-10-05',
+      maxScore: 8,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'q1', type: 'fill', prompt: 'We found ___ error in the login module.', accept: ['an'] },
+        { id: 'q2', type: 'fill', prompt: 'Please restart ___ server after the update.', accept: ['the'] },
+        { id: 'q3', type: 'fill', prompt: '___ bugs reported yesterday are still unresolved.', accept: ['the'] },
+        { id: 'q4', type: 'fill', prompt: 'I need ___ update on the testing status.', accept: ['an'] },
+        { id: 'q5', type: 'fill', prompt: '___ information in the document is confidential.', accept: ['the'] },
+        { id: 'q6', type: 'fill', prompt: 'He is ___ analyst for this project.', accept: ['an'] },
+        { id: 'q7', type: 'fill', prompt: '___ software development requires thorough testing.', accept: ['no article'] },
+        { id: 'q8', type: 'fill', prompt: 'Could you review ___ interface design?', accept: ['the'] }
+      ]
+    }
+    ,
+    // Articles Lesson - Task 2: Paragraph completion (articles only)
+    'articles-task-2': {
+      id: 'articles-task-2',
+      title: 'Task 2: Articles – Paragraph Completion',
+      description: 'Complete the engineer’s report by filling in the correct articles.',
+      instructions: [
+        'Type one of: a, an, the, or no article for each blank.',
+        'Answers are case-insensitive.',
+        'Submit to see your score.'
+      ],
+      dueDate: '2025-10-06',
+      maxScore: 14,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'p1', type: 'fill', prompt: 'Today, we discussed ___ new feature that will improve user experience.', accept: ['a'] },
+        { id: 'p2', type: 'fill', prompt: '___ feature requires ___ interface redesign and ___ update to ___ backend server. (first blank)', accept: ['the'] },
+        { id: 'p3', type: 'fill', prompt: 'The feature requires ___ interface redesign and ___ update to ___ backend server. (second blank)', accept: ['an'] },
+        { id: 'p4', type: 'fill', prompt: 'The feature requires an interface redesign and ___ update to ___ backend server. (third blank)', accept: ['an'] },
+        { id: 'p5', type: 'fill', prompt: 'The feature requires an interface redesign and an update to ___ backend server. (fourth blank)', accept: ['the'] },
+        { id: 'p6', type: 'fill', prompt: 'We identified ___ bug in ___ login module. (first blank)', accept: ['a'] },
+        { id: 'p7', type: 'fill', prompt: 'We identified a bug in ___ login module. (second blank)', accept: ['the'] },
+        { id: 'p8', type: 'fill', prompt: '... and agreed that ___ urgent fix is needed.', accept: ['an'] },
+        { id: 'p9', type: 'fill', prompt: 'Additionally, ___ documentation for ___ API should be written before ___ release. (first blank)', accept: ['the'] },
+        { id: 'p10', type: 'fill', prompt: 'Additionally, the documentation for ___ API should be written before ___ release. (second blank)', accept: ['the'] },
+        { id: 'p11', type: 'fill', prompt: 'Additionally, the documentation for the API should be written before ___ release. (third blank)', accept: ['the'] },
+        { id: 'p12', type: 'fill', prompt: 'Finally, ___ team highlighted ___ importance of ___ thorough testing during ___ development phase. (first blank)', accept: ['the'] },
+        { id: 'p13', type: 'fill', prompt: 'Finally, the team highlighted ___ importance of ___ thorough testing during ___ development phase. (second blank)', accept: ['the'] },
+        { id: 'p14', type: 'fill', prompt: 'Finally, the team highlighted the importance of ___ thorough testing during ___ development phase. (third blank)', accept: ['no article'] }
+      ]
+    }
+    ,
+    // Articles Lesson - Task 3: MCQ selection
+    'articles-task-3': {
+      id: 'articles-task-3',
+      title: 'Task 3: Articles – Choose the Correct Option',
+      description: 'Choose the correct article to complete each sentence.',
+      instructions: [
+        'Select one option for each item.',
+        'Submit to see your score.'
+      ],
+      dueDate: '2025-10-07',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'm1', type: 'mcq', prompt: 'We encountered ___ unexpected error during deployment.', options: ['a','an','the','no article'], correctIndex: 1 },
+        { id: 'm2', type: 'mcq', prompt: '___ team is working on the user authentication feature now.', options: ['a','an','the','no article'], correctIndex: 2 },
+        { id: 'm3', type: 'mcq', prompt: 'Most ___ software engineers prefer agile methodologies.', options: ['a','an','the','no article'], correctIndex: 3 },
+        { id: 'm4', type: 'mcq', prompt: 'I attended ___ meeting where the release date was discussed.', options: ['a','an','the','no article'], correctIndex: 0 },
+        { id: 'm5', type: 'mcq', prompt: '___ data collected from users helps improve the product.', options: ['a','an','the','no article'], correctIndex: 2 }
+      ]
+    }
+    ,
+    // Modal Verbs Lesson - Task 1: Fill the blanks
+    'modal-verbs-task-1': {
+      id: 'modal-verbs-task-1',
+      title: 'Task 1: Modal Verbs – Fill the Blanks',
+      description: 'Fill in the blanks with the correct modal verb based on context.',
+      instructions: [
+        'Type the correct modal verb for each sentence (e.g., must, can, might, would, should).',
+        'Answers are case-insensitive.'
+      ],
+      dueDate: '2025-10-09',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'mv1', type: 'fill', prompt: 'You ______ attend the meeting; it’s mandatory.', accept: ['must'] },
+        { id: 'mv2', type: 'fill', prompt: 'He ______ solve this coding issue; he’s very skilled.', accept: ['can'] },
+        { id: 'mv3', type: 'fill', prompt: 'We ______ need to push the release if the bug isn’t fixed.', accept: ['might'] },
+        { id: 'mv4', type: 'fill', prompt: '______ you please share the project update with the client?', accept: ['would'] },
+        { id: 'mv5', type: 'fill', prompt: 'The team ______ finish this sprint by Friday if everyone contributes.', accept: ['should'] }
+      ]
+    }
   };
 
   // Video drag-and-drop helpers
