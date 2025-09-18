@@ -43,7 +43,6 @@ export default function CourseDetail() {
       description: 'Master the fundamentals of English grammar with comprehensive lessons and exercises',
       duration: '7 days',
       level: 'Beginner',
-      instructor: 'Dr. Sarah Johnson',
       lessons: [
         {
           id: 1,
@@ -342,7 +341,6 @@ export default function CourseDetail() {
       description: 'Expand your English vocabulary with advanced words and expressions',
       duration: '7 days',
       level: 'Advanced',
-      instructor: 'Prof. Michael Chen',
       lessons: [
         {
           id: 1,
@@ -511,7 +509,6 @@ export default function CourseDetail() {
       description: 'Professional English communication skills for the workplace',
       duration: '7 days',
       level: 'Intermediate',
-      instructor: 'Ms. Jennifer Williams',
       lessons: [
         {
           id: 1,
@@ -794,7 +791,6 @@ export default function CourseDetail() {
               <h1 className="text-3xl font-bold text-gray-900 mb-2">{course.title}</h1>
               <p className="text-gray-600 mb-4">{course.description}</p>
               <div className="flex items-center space-x-6 text-sm text-gray-500">
-                <span>👨‍🏫 {course.instructor}</span>
                 <span>⏱️ {course.duration}</span>
                 <span>📊 {course.level}</span>
               </div>
