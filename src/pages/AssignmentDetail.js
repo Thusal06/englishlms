@@ -360,6 +360,102 @@ export default function AssignmentDetail() {
       ]
     }
     ,
+    // Grammar Lesson 7 - Clarification Techniques
+    'grammar-clarification-task-a': {
+      id: 'grammar-clarification-task-a',
+      title: 'Task A: Match Technique → Example',
+      description: 'Match each clarification technique with the correct example sentence.',
+      instructions: ['Drag the correct letter (A–F) to each technique.'],
+      dueDate: '2025-11-26',
+      maxScore: 6,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        {
+          id: 'g7a',
+          type: 'match',
+          prompt: 'Match the technique with the example',
+          items: [
+            'Indirect Question',
+            'Paraphrasing to Confirm',
+            'Softening Phrase',
+            'Asking for Examples',
+            'Checking Key Details',
+            'Summarizing'
+          ],
+          functionBank: [
+            { key: 'a', text: 'So, the plan is to release the patch on Friday after testing, correct?' },
+            { key: 'b', text: 'I’m sorry, I didn’t quite catch the version number you mentioned.' },
+            { key: 'c', text: 'Could you show me an example of the error message users are seeing?' },
+            { key: 'd', text: 'Just to confirm, we are deploying on AWS, not Azure?' },
+            { key: 'e', text: 'If I understand correctly, you want us to refactor the code before adding new features, right?' },
+            { key: 'f', text: 'Could you explain what you mean by “scaling the architecture”?' }
+          ],
+          // Expected mapping by item index -> key
+          answers: ['f','e','b','c','d','a']
+        }
+      ]
+    },
+    'grammar-clarification-task-b': {
+      id: 'grammar-clarification-task-b',
+      title: 'Task B: Fill in the Clarification Phrase',
+      description: 'Complete the sentences with a suitable clarification phrase from the list.',
+      instructions: ['Answers are case-insensitive.'],
+      dueDate: '2025-11-27',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'g7b1', type: 'fill', prompt: 'I’m not sure I understood. __________ that again, please?', accept: ['could you explain','Could you explain'] },
+        { id: 'g7b2', type: 'fill', prompt: 'Just to confirm, __________ the sprint demo on Thursday?', accept: ['is the','Is the'] },
+        { id: 'g7b3', type: 'fill', prompt: '__________ give me an example of a user scenario for this feature?', accept: ['can you','Can you'] },
+        { id: 'g7b4', type: 'fill', prompt: 'So, you’re saying the bug only appears when users __________ multiple tabs, right?', accept: ['open','Open'] },
+        { id: 'g7b5', type: 'fill', prompt: 'I’m sorry, I __________ catch the last point about the GitHub branch.', accept: ['didn’t','did not','Didn’t','Did not'] }
+      ]
+    },
+    'grammar-clarification-task-c': {
+      id: 'grammar-clarification-task-c',
+      title: 'Task C: Vocabulary Match',
+      description: 'Match the term with its meaning from the reading.',
+      instructions: ['Drag the correct letter (a–d) to each term.'],
+      dueDate: '2025-11-28',
+      maxScore: 4,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        {
+          id: 'g7c',
+          type: 'match',
+          prompt: 'Match the word/phrase with its meaning',
+          items: ['Deployment pipeline','Logs','Permission-related error','Root cause'],
+          functionBank: [
+            { key: 'a', text: 'Messages that record how a system or software runs.' },
+            { key: 'b', text: 'The fundamental reason behind a problem.' },
+            { key: 'c', text: 'The sequence of automated steps to release software.' },
+            { key: 'd', text: 'An error caused by lack of access rights.' }
+          ],
+          answers: ['c','a','d','b']
+        }
+      ]
+    },
+    'grammar-clarification-task-d': {
+      id: 'grammar-clarification-task-d',
+      title: 'Task D: Complete with the Correct Word',
+      description: 'Fill in the blanks with the correct word from the box.',
+      instructions: ['Word bank: logs, inconsistent, sprint, clarify, blockers'],
+      dueDate: '2025-11-29',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'g7d1', type: 'fill', prompt: 'The QA team asked the developer to __________ what “slow” meant in the report.', accept: ['clarify'] },
+        { id: 'g7d2', type: 'fill', prompt: 'The developer explained that the API was __________ because it sometimes returned errors.', accept: ['inconsistent'] },
+        { id: 'g7d3', type: 'fill', prompt: 'In the meeting, the manager asked if anyone had any __________.', accept: ['blockers'] },
+        { id: 'g7d4', type: 'fill', prompt: 'The team checked the error __________ to understand the failure.', accept: ['logs'] },
+        { id: 'g7d5', type: 'fill', prompt: 'Ravi wanted to know if the task deadline was this week or this __________.', accept: ['sprint'] }
+      ]
+    }
+    ,
     // Advanced Vocabulary - Lesson 3: Cross-Cultural Communication Phrases
     'av-crosscultural-task-1': {
       id: 'av-crosscultural-task-1',

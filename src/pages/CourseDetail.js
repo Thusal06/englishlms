@@ -416,15 +416,66 @@ export default function CourseDetail() {
           id: 7,
           title: 'Lesson 7 - Clarification Techniques',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <p>In software projects, clear communication is just as important as writing clean code. Misunderstandings can lead to bugs, delays, or wrong deliveries. That’s why clarification techniques are essential.</p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>Avoid errors in requirements or tasks.</li>
+              <li>Save time by confirming details immediately.</li>
+              <li>Ensure teamwork by showing respect and active listening.</li>
+              <li>Build professionalism in client and cross-team discussions.</li>
+            </ul>
+
+            <h4 class="mt-4">Key Techniques in Software Communication</h4>
+            <h5 class="font-semibold mt-2">Indirect Questions</h5>
+            <p>Used when asking for more explanation politely.</p>
+            <ul class="list-disc pl-6">
+              <li>“Could you explain what you mean by ‘optimizing the API’?”</li>
+              <li>“Would you mind going over the error handling process again?”</li>
+            </ul>
+
+            <h5 class="font-semibold mt-3">Paraphrasing to Confirm</h5>
+            <p>Restating in your own words to check understanding.</p>
+            <ul class="list-disc pl-6">
+              <li>“So, you mean the login bug only happens in Firefox, right?”</li>
+              <li>“If I understand correctly, we should deploy to staging first, then to production?”</li>
+            </ul>
+
+            <h5 class="font-semibold mt-3">Softening Phrases</h5>
+            <p>Make requests polite and less direct, useful in team settings.</p>
+            <ul class="list-disc pl-6">
+              <li>“I’m sorry, I didn’t quite catch the last part about the database migration.”</li>
+              <li>“Could you please repeat the file path?”</li>
+            </ul>
+
+            <h5 class="font-semibold mt-3">Asking for Examples</h5>
+            <p>Clarify by requesting real cases or sample data.</p>
+            <ul class="list-disc pl-6">
+              <li>“Could you give me an example of the kind of input that causes this bug?”</li>
+              <li>“Can you show me how the client wants the dashboard to look?”</li>
+            </ul>
+
+            <h5 class="font-semibold mt-3">Checking Key Details</h5>
+            <p>Confirm technical facts like deadlines, version numbers, or configurations.</p>
+            <ul class="list-disc pl-6">
+              <li>“Just to confirm, we are using Java 17 for this project, correct?”</li>
+              <li>“Did you say the deadline is Friday evening or Monday morning?”</li>
+            </ul>
+
+            <h5 class="font-semibold mt-3">Summarizing</h5>
+            <p>Summarize the key point to make sure the team is aligned.</p>
+            <ul class="list-disc pl-6">
+              <li>“So, the plan is: fix the login bug, update the test cases, and then push to GitHub, correct?”</li>
+              <li>“To summarize, the next sprint will focus on API performance, right?”</li>
+            </ul>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'grammar-assignment-7',
-            title: 'Task 7: Complex Sentences Exercise',
-            description: 'Create and analyze complex sentence patterns',
-            dueDate: '2025-10-13'
-          }
+          tasks: [
+            { id: 'grammar-clarification-task-a', title: 'Task A: Match Technique → Example', description: 'Match each clarification technique with the correct example sentence.', dueDate: '2025-11-26' },
+            { id: 'grammar-clarification-task-b', title: 'Task B: Fill in the Clarification Phrase', description: 'Complete the sentences with a suitable clarification phrase.', dueDate: '2025-11-27' },
+            { id: 'grammar-clarification-task-c', title: 'Task C: Vocabulary Match', description: 'Match the term with its meaning from the reading.', dueDate: '2025-11-28' },
+            { id: 'grammar-clarification-task-d', title: 'Task D: Complete with the Correct Word', description: 'Fill in the blanks with the correct word from the box.', dueDate: '2025-11-29' }
+          ]
         }
       ]
     },
@@ -509,20 +560,7 @@ export default function CourseDetail() {
             dueDate: '2025-10-16'
           }
         },
-        {
-          id: 2,
-          title: 'Lesson 2 - Business English Terms',
-          type: 'content',
-          content: 'Content will be added here...',
-          duration: '1 day',
-          completed: false,
-          task: {
-            id: 'vocabulary-assignment-2b',
-            title: 'Task 2: Business English Terms',
-            description: 'Practice using business terminology in professional contexts',
-            dueDate: '2025-10-16'
-          }
-        },
+        
         {
           id: 3,
           title: 'Lesson 3 - Cross-Cultural Communication Phrases',
