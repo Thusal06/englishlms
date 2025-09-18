@@ -294,68 +294,58 @@ export default function CourseDetail() {
             <h3>Delivering Technical Presentations</h3>
 
             <h4>1. Clarity</h4>
-            <p><strong>Definition:</strong> Clarity is about making your message easy to understand. In technical presentations, using simple English and avoiding unnecessary jargon is crucial. When technical terms are necessary, define them immediately.</p>
-            <p><strong>Practical Tips:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
+            <ul class="list-disc pl-6 space-y-2">
               <li>Use short, precise sentences.</li>
-              <li>Avoid idiomatic expressions unless the audience is familiar.</li>
+              <li>Avoid jargon unless essential; define terms immediately.</li>
               <li>Explain acronyms on first use (e.g., API = Application Programming Interface).</li>
               <li>Repeat key points for emphasis.</li>
             </ul>
-            <p><strong>Example:</strong> "The system uses a REST API, which stands for Representational State Transfer Application Programming Interface. This allows different applications to communicate efficiently over the internet."</p>
+            <p class="mt-2"><strong>Example:</strong> "The system uses a REST API (Representational State Transfer Application Programming Interface) so applications can communicate efficiently over the internet."</p>
 
             <h4 class="mt-6">2. Structure</h4>
-            <p><strong>Definition:</strong> Structure refers to the logical sequencing of ideas in a presentation. Linking words and clear organization make it easier for the audience to follow your argument.</p>
-            <p><strong>Practical Tips:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-              <li>Start with an introduction → main content → conclusion.</li>
-              <li>Use linking words to show progression: first of all, next, finally.</li>
-              <li>Divide content into manageable sections.</li>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Plan: introduction → main points → conclusion.</li>
+              <li>Use linking words: first of all, next, finally.</li>
+              <li>Split content into clear sections.</li>
             </ul>
-            <p><strong>Example:</strong> "First of all, I will describe the software architecture. Then, I will explain the deployment process. Finally, I will summarize the advantages."</p>
+            <p class="mt-2"><strong>Example:</strong> "First of all, I’ll describe the architecture. Next, I’ll explain deployment. Finally, I’ll summarize the advantages."</p>
 
-            <h4 class="mt-6">3. Guidance</h4>
-            <p><strong>Definition:</strong> Guidance involves orienting your audience throughout the presentation. Signposting phrases help listeners understand where they are in the talk and what to expect next.</p>
-            <p><strong>Practical Tips:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-              <li>Introduce each section clearly: "Now, I’d like to move on to…"</li>
-              <li>Highlight key points: "It is important to note that…"</li>
-              <li>Summarize sections briefly: "So far, we have seen…"</li>
+            <h4 class="mt-6">3. Guidance (Signposting)</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Introduce sections: "Now, I’d like to move on to…"</li>
+              <li>Highlight key points: "It’s important to note that…"</li>
+              <li>Summarize before moving on: "So far, we’ve seen…"</li>
             </ul>
-            <p><strong>Example:</strong> "Now, let’s move on to the system testing phase. It is important to note that automated tests cover over 80% of the code."</p>
+            <p class="mt-2"><strong>Example:</strong> "Now, let’s move on to testing. It’s important to note that automated tests cover over 80% of the code."</p>
 
-            <h4 class="mt-6">4. Support</h4>
-            <p><strong>Definition:</strong> Support involves using visual aids such as slides, diagrams, charts, and screenshots to reinforce spoken content. Visuals help simplify complex technical ideas and maintain audience attention.</p>
-            <p><strong>Practical Tips:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-              <li>Keep slides uncluttered: use bullet points, diagrams, and screenshots.</li>
+            <h4 class="mt-6">4. Support (Visual Aids)</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Keep slides uncluttered; prefer bullet points, diagrams, and screenshots.</li>
               <li>Label diagrams clearly.</li>
-              <li>Avoid reading slides verbatim; use them as guidance.</li>
-              <li>Use animations sparingly to highlight key points.</li>
+              <li>Don’t read slides verbatim; use them as prompts.</li>
+              <li>Use animations sparingly to highlight steps.</li>
             </ul>
-            <p><strong>Example:</strong> Slide showing a flowchart of deployment pipeline while explaining the steps verbally.</p>
+            <p class="mt-2"><strong>Example:</strong> Show a deployment flowchart while explaining each step.</p>
 
             <h4 class="mt-6">5. Engagement</h4>
-            <p><strong>Definition:</strong> Engagement is about keeping the audience interested and encouraging interaction. This helps your presentation feel dynamic and memorable.</p>
-            <p><strong>Practical Tips:</strong></p>
-            <ul class="list-disc pl-6 space-y-1">
-              <li>Ask rhetorical questions: "What would happen if the server fails at this stage?"</li>
-              <li>Pause for the audience to reflect on important points.</li>
-              <li>Summarize critical takeaways at the end of each section.</li>
-              <li>Encourage questions at appropriate moments.</li>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Ask rhetorical questions: "What happens if the server fails here?"</li>
+              <li>Pause to let key points sink in.</li>
+              <li>Summarize takeaways at the end of sections.</li>
+              <li>Invite questions at suitable moments.</li>
             </ul>
-            <p><strong>Example:</strong> "To sum up, automating code review reduces errors significantly. Think about it—how much time could your team save if most errors are caught before deployment?"</p>
+            <p class="mt-2"><strong>Example:</strong> "To sum up, automating code review reduces errors significantly."</p>
 
-            <h4 class="mt-6">Integrated Example – Short Technical Presentation</h4>
-            <p>"Good morning, everyone. Today, I’ll be talking about our automated testing framework. First of all, I will explain the architecture. Then, I will demonstrate a live test run. It is important to note that this framework reduces manual testing by 50%. Now, let’s move on to how we analyze the results using dashboards. Finally, I’ll summarize the benefits and answer your questions."</p>
+            <h4 class="mt-6">Integrated Mini‑Presentation</h4>
+            <p>"Good morning. Today, I’ll cover our automated testing framework. First, the architecture. Next, a live test run. It’s important to note this reduces manual testing by 50%. Now, dashboards for results. Finally, I’ll summarize benefits and take questions."</p>
 
             <h4 class="mt-6">Key Takeaways</h4>
-            <ul class="list-disc pl-6 space-y-1">
-              <li><strong>Clarity</strong> ensures your message is understandable.</li>
-              <li><strong>Structure</strong> and linking words organize your content logically.</li>
-              <li><strong>Guidance</strong> via signposting helps the audience follow your flow.</li>
-              <li><strong>Support</strong> with visual aids reinforces key points.</li>
-              <li><strong>Engagement</strong> keeps your audience attentive and interactive.</li>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Clarity</strong> makes your message understandable.</li>
+              <li><strong>Structure</strong> organizes ideas logically.</li>
+              <li><strong>Guidance</strong> helps the audience follow your flow.</li>
+              <li><strong>Support</strong> with visuals reinforces key points.</li>
+              <li><strong>Engagement</strong> keeps attention and invites interaction.</li>
             </ul>
           `,
           duration: '50 min',
@@ -391,55 +381,55 @@ export default function CourseDetail() {
           type: 'content',
           content: `
             <h3>Negotiation</h3>
-            <p>Negotiation is a key skill in the workplace, especially for software engineers working with clients, vendors, or cross-functional teams. Using the right phrases helps you express ideas clearly, propose solutions, and reach agreements professionally.</p>
+            <p>Use clear, professional language to propose solutions, align expectations, and reach agreements.</p>
 
-            <h4>1. Opening the Negotiation</h4>
-            <ul class="list-disc pl-6 space-y-1">
-              <li>“Let’s discuss how we can work this out.” – polite way to start a negotiation.</li>
-              <li>“I’d like to explore possible solutions.” – shows willingness to collaborate.</li>
-              <li>“Can we review the requirements together?” – focuses on facts and shared understanding.</li>
+            <h4>1. Opening</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>“Let’s discuss how we can work this out.”</li>
+              <li>“I’d like to explore possible solutions.”</li>
+              <li>“Can we review the requirements together?”</li>
             </ul>
 
-            <h4 class="mt-4">2. Making Proposals</h4>
-            <ul class="list-disc pl-6 space-y-1">
-              <li>“What if we tried this approach instead?” – suggests an alternative.</li>
-              <li>“We could consider adjusting the timeline to…” – proposes a compromise.</li>
-              <li>“One option might be to…” – introduces possible solutions without sounding forceful.</li>
+            <h4 class="mt-4">2. Proposals</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>“What if we tried this approach instead?”</li>
+              <li>“We could consider adjusting the timeline to…”</li>
+              <li>“One option might be to…”</li>
             </ul>
 
-            <h4 class="mt-4">3. Expressing Agreement or Partial Agreement</h4>
-            <ul class="list-disc pl-6 space-y-1">
-              <li>“That sounds reasonable, but…” – agrees in principle while adding conditions.</li>
-              <li>“I can work with that if we…” – shows willingness to accept with modifications.</li>
-              <li>“We’re aligned on X, now let’s look at Y.” – confirms agreement on some points while continuing the discussion.</li>
+            <h4 class="mt-4">3. Agreement (Full/Partial)</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>“That sounds reasonable, but …”</li>
+              <li>“I can work with that if we …”</li>
+              <li>“We’re aligned on X; now let’s look at Y.”</li>
             </ul>
 
-            <h4 class="mt-4">4. Expressing Disagreement Politely</h4>
-            <ul class="list-disc pl-6 space-y-1">
-              <li>“I’m not sure that will work because…” – provides reasoning without confrontation.</li>
-              <li>“I understand your point, but we might face challenges with…” – acknowledges the other party’s view while explaining your concerns.</li>
-              <li>“That could be difficult to implement due to…” – focuses on objective limitations.</li>
+            <h4 class="mt-4">4. Polite Disagreement</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>“I’m not sure that will work because …”</li>
+              <li>“I understand your point, but we might face challenges with …”</li>
+              <li>“That could be difficult to implement due to …”</li>
             </ul>
 
-            <h4 class="mt-4">5. Clarifying and Summarizing</h4>
-            <ul class="list-disc pl-6 space-y-1">
-              <li>“Just to clarify, you’re suggesting…?” – confirms understanding.</li>
-              <li>“So, if I understand correctly, we agree on…” – summarizes agreement points.</li>
-              <li>“Let’s make sure we’re on the same page regarding…” – ensures alignment.</li>
+            <h4 class="mt-4">5. Clarifying / Summarizing</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>“Just to clarify, you’re suggesting … ?”</li>
+              <li>“If I understand correctly, we agree on …”</li>
+              <li>“Let’s make sure we’re on the same page regarding …”</li>
             </ul>
 
-            <h4 class="mt-4">6. Closing the Negotiation</h4>
-            <ul class="list-disc pl-6 space-y-1">
-              <li>“Can we agree to move forward with this plan?” – formal closing question.</li>
-              <li>“Let’s document the agreed points and proceed.” – ensures clarity and follow-up.</li>
-              <li>“I think we have a workable solution.” – signals resolution and consensus.</li>
+            <h4 class="mt-4">6. Closing</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>“Can we agree to move forward with this plan?”</li>
+              <li>“Let’s document the agreed points and proceed.”</li>
+              <li>“I think we have a workable solution.”</li>
             </ul>
 
             <h4 class="mt-4">Tips for Software Engineers</h4>
-            <ul class="list-disc pl-6 space-y-1">
-              <li>Use neutral, professional language; avoid emotional or confrontational words.</li>
-              <li>Focus on solutions and facts, not personalities.</li>
-              <li>Combine negotiation phrases with technical explanations when discussing project timelines, features, or resources.</li>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Use neutral, professional language; avoid emotional phrasing.</li>
+              <li>Focus on facts and solutions, not personalities.</li>
+              <li>Pair phrases with technical rationale when discussing timelines, features, or resources.</li>
             </ul>
           `,
           duration: '45 min',

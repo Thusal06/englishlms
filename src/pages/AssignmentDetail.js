@@ -49,7 +49,7 @@ export default function AssignmentDetail() {
       dueDate: '2025-10-20',
       maxScore: 4,
       submissionType: 'dragdrop',
-      status: 'pending',
+      status: 'not-started',
       wordBank: [
         'I understand your point, but we might face challenges with…',
         'What if we tried this approach instead?',
@@ -92,7 +92,7 @@ export default function AssignmentDetail() {
       dueDate: '2025-10-10',
       maxScore: 6,
       submissionType: 'match',
-      status: 'pending',
+      status: 'not-started',
       phrases: [
         '“Let’s discuss how we can work this out.”',
         '“What if we tried this approach instead?”',
