@@ -293,7 +293,7 @@ export default function CourseDetail() {
         },
         {
           id: 5,
-          title: 'Lesson 5 - Sentence Structure',
+          title: 'Lesson 5 - Reported Speech',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
@@ -307,7 +307,7 @@ export default function CourseDetail() {
         },
         {
           id: 6,
-          title: 'Lesson 6 - Punctuation and Capitalization',
+          title: 'Lesson 6 - Asking Questions Professionally',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
@@ -321,7 +321,7 @@ export default function CourseDetail() {
         },
         {
           id: 7,
-          title: 'Lesson 7 - Complex Sentence Patterns',
+          title: 'Lesson 7 - Clarification Techniques',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
@@ -380,7 +380,7 @@ export default function CourseDetail() {
         },
         {
           id: 2,
-          title: 'Lesson 2 - Workplace Jargon',
+          title: 'Lesson 2 - Hedgings',
           type: 'content',
           content: `
             <ul class="space-y-3">
@@ -432,7 +432,7 @@ export default function CourseDetail() {
         },
         {
           id: 3,
-          title: 'Lesson 3 - Technical Vocabulary',
+          title: 'Lesson 3 - Cross-Cultural Communication Phrases',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
@@ -446,7 +446,7 @@ export default function CourseDetail() {
         },
         {
           id: 4,
-          title: 'Lesson 4 - Idioms and Expressions',
+          title: 'Lesson 4 - Customer Service and Client Interaction Phrases',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
@@ -460,7 +460,7 @@ export default function CourseDetail() {
         },
         {
           id: 5,
-          title: 'Lesson 5 - Phrasal Verbs',
+          title: 'Lesson 5 - Collaboration & Teamwork in Software Engineering',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
@@ -651,7 +651,7 @@ export default function CourseDetail() {
         },
         {
           id: 4,
-          title: 'Lesson 4 - Report Writing',
+          title: 'Lesson 4 - Understanding Business Etiquette and Cultural Nuances',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
@@ -665,7 +665,7 @@ export default function CourseDetail() {
         },
         {
           id: 5,
-          title: 'Lesson 5 - Customer Service Communication',
+          title: 'Lesson 5 - Collaboration & Teamwork in Software Engineering',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
