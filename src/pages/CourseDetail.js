@@ -23,56 +23,56 @@ export default function CourseDetail() {
         {
           id: 1,
           title: 'Lesson 1 - Introduction to Parts of Speech',
-          type: 'pdf',
-          content: '/pdfs/lesson1-parts-of-speech.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '45 min',
-          completed: true
+          completed: false
         },
         {
           id: 2,
           title: 'Lesson 2 - Nouns and Pronouns',
-          type: 'pdf',
-          content: '/pdfs/lesson2-nouns-pronouns.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '50 min',
-          completed: true
+          completed: false
         },
         {
           id: 3,
           title: 'Lesson 3 - Verbs and Tenses',
-          type: 'pdf',
-          content: '/pdfs/lesson3-verbs-tenses.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '60 min',
           completed: false
         },
         {
           id: 4,
           title: 'Lesson 4 - Adjectives and Adverbs',
-          type: 'pdf',
-          content: '/pdfs/lesson4-adjectives-adverbs.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '40 min',
           completed: false
         },
         {
           id: 5,
           title: 'Lesson 5 - Sentence Structure',
-          type: 'pdf',
-          content: '/pdfs/lesson5-sentence-structure.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '55 min',
           completed: false
         },
         {
           id: 6,
           title: 'Lesson 6 - Punctuation and Capitalization',
-          type: 'pdf',
-          content: '/pdfs/lesson6-punctuation.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '45 min',
           completed: false
         },
         {
           id: 7,
           title: 'Lesson 7 - Complex Sentence Patterns',
-          type: 'pdf',
-          content: '/pdfs/lesson7-complex-sentences.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '50 min',
           completed: false
         }
@@ -103,56 +103,56 @@ export default function CourseDetail() {
         {
           id: 1,
           title: 'Lesson 1 - Academic Vocabulary',
-          type: 'pdf',
-          content: '/pdfs/vocab1-academic.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '35 min',
           completed: false
         },
         {
           id: 2,
           title: 'Lesson 2 - Business English Terms',
-          type: 'pdf',
-          content: '/pdfs/vocab2-business.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '40 min',
           completed: false
         },
         {
           id: 3,
           title: 'Lesson 3 - Scientific and Technical Vocabulary',
-          type: 'pdf',
-          content: '/pdfs/vocab3-scientific.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '45 min',
           completed: false
         },
         {
           id: 4,
           title: 'Lesson 4 - Idiomatic Expressions',
-          type: 'pdf',
-          content: '/pdfs/vocab4-idioms.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '50 min',
           completed: false
         },
         {
           id: 5,
           title: 'Lesson 5 - Phrasal Verbs and Collocations',
-          type: 'pdf',
-          content: '/pdfs/vocab5-phrasal-verbs.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '55 min',
           completed: false
         },
         {
           id: 6,
           title: 'Lesson 6 - Advanced Synonyms and Antonyms',
-          type: 'pdf',
-          content: '/pdfs/vocab6-synonyms.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '40 min',
           completed: false
         },
         {
           id: 7,
           title: 'Lesson 7 - Context-Based Vocabulary Usage',
-          type: 'pdf',
-          content: '/pdfs/vocab7-context.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '45 min',
           completed: false
         }
@@ -183,58 +183,58 @@ export default function CourseDetail() {
         {
           id: 1,
           title: 'Lesson 1 - Professional Email Writing',
-          type: 'pdf',
-          content: '/pdfs/business1-emails.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '40 min',
-          completed: true
+          completed: false
         },
         {
           id: 2,
           title: 'Lesson 2 - Meeting and Presentation Skills',
-          type: 'pdf',
-          content: '/pdfs/business2-meetings.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '45 min',
-          completed: true
+          completed: false
         },
         {
           id: 3,
           title: 'Lesson 3 - Negotiation Language',
-          type: 'pdf',
-          content: '/pdfs/business3-negotiation.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '50 min',
-          completed: true
+          completed: false
         },
         {
           id: 4,
           title: 'Lesson 4 - Report Writing',
-          type: 'pdf',
-          content: '/pdfs/business4-reports.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '55 min',
-          completed: true
+          completed: false
         },
         {
           id: 5,
           title: 'Lesson 5 - Customer Service Communication',
-          type: 'pdf',
-          content: '/pdfs/business5-customer-service.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '45 min',
-          completed: true
+          completed: false
         },
         {
           id: 6,
           title: 'Lesson 6 - Cross-Cultural Communication',
-          type: 'pdf',
-          content: '/pdfs/business6-cross-cultural.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '50 min',
-          completed: true
+          completed: false
         },
         {
           id: 7,
           title: 'Lesson 7 - Leadership Communication',
-          type: 'pdf',
-          content: '/pdfs/business7-leadership.pdf',
+          type: 'content',
+          content: 'Content will be added here...',
           duration: '45 min',
-          completed: true
+          completed: false
         }
       ],
       assignments: [
@@ -453,33 +453,29 @@ export default function CourseDetail() {
                   )}
                 </div>
 
-                {/* PDF Viewer */}
-                <div className="bg-gray-100 rounded-lg p-8 text-center">
-                  <div className="mb-4">
-                    <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
-                    </svg>
-                    <h3 className="text-lg font-medium text-gray-900 mb-2">PDF Content</h3>
-                    <p className="text-gray-600 mb-4">
-                      This lesson contains PDF material: {selectedLesson.content}
-                    </p>
-                  </div>
-                  
-                  {/* PDF Placeholder - In a real app, you'd use a PDF viewer like react-pdf */}
-                  <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-8 mb-4">
-                    <p className="text-gray-500 mb-4">
-                      📄 PDF Viewer would be embedded here
-                    </p>
-                    <p className="text-sm text-gray-400 mb-4">
-                      File: {selectedLesson.content}
-                    </p>
-                    <button className="btn-primary">
-                      Download PDF
-                    </button>
-                  </div>
-
-                  <div className="text-sm text-gray-500">
-                    <p>💡 <strong>Note:</strong> In a production environment, this would display the actual PDF content using a library like react-pdf or PDF.js</p>
+                {/* Lesson Content */}
+                <div className="bg-white rounded-lg border border-gray-200">
+                  <div className="p-6">
+                    {selectedLesson.content === 'Content will be added here...' ? (
+                      <div className="text-center py-12">
+                        <div className="text-gray-400 mb-4">
+                          <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                        </div>
+                        <h3 className="text-lg font-medium text-gray-900 mb-2">Lesson Content</h3>
+                        <p className="text-gray-600 mb-4">
+                          Content for this lesson will be added soon.
+                        </p>
+                        <div className="text-sm text-gray-500">
+                          <p>📝 This area will display the lesson content including text, tables, and other educational materials.</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="prose prose-lg max-w-none">
+                        <div dangerouslySetInnerHTML={{ __html: selectedLesson.content }} />
+                      </div>
+                    )}
                   </div>
                 </div>
 

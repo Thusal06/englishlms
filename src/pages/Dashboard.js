@@ -79,7 +79,7 @@ export default function Dashboard() {
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">Pending Assignments</p>
-                <p className="text-2xl font-bold text-gray-900">6</p>
+                <p className="text-2xl font-bold text-gray-900">0</p>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function Dashboard() {
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">Completed Quizzes</p>
-                <p className="text-2xl font-bold text-gray-900">12</p>
+                <p className="text-2xl font-bold text-gray-900">0</p>
               </div>
             </div>
           </div>
@@ -116,8 +116,8 @@ export default function Dashboard() {
                   <h4 className="font-medium text-gray-900 mb-1">English Grammar Fundamentals</h4>
                   <p className="text-sm text-gray-600 mb-2">Master the basics of English grammar</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-primary-600 bg-primary-100 px-2 py-1 rounded">In Progress</span>
-                    <span className="text-xs text-gray-500">75% Complete</span>
+                    <span className="text-xs text-primary-600 bg-primary-100 px-2 py-1 rounded">Not Started</span>
+                    <span className="text-xs text-gray-500">0% Complete</span>
                   </div>
                 </Link>
 
@@ -134,8 +134,8 @@ export default function Dashboard() {
                   <h4 className="font-medium text-gray-900 mb-1">Business English</h4>
                   <p className="text-sm text-gray-600 mb-2">Professional English communication</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-green-600 bg-green-100 px-2 py-1 rounded">Completed</span>
-                    <span className="text-xs text-gray-500">100% Complete</span>
+                    <span className="text-xs text-accent-600 bg-accent-100 px-2 py-1 rounded">New</span>
+                    <span className="text-xs text-gray-500">0% Complete</span>
                   </div>
                 </Link>
               </div>
@@ -153,32 +153,15 @@ export default function Dashboard() {
               </div>
               
               <div className="space-y-4">
-                <Link to="/assignment/grammar-assignment-1" className="block p-4 bg-red-50 border-l-4 border-red-400 rounded-r-lg hover:bg-red-100 transition-colors duration-200">
-                  <h4 className="font-medium text-gray-900 mb-1">Grammar Practice Assignment 1</h4>
-                  <p className="text-sm text-gray-600 mb-2">Complete exercises on parts of speech and sentence structure</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-red-600 font-medium">Due Jan 15</span>
-                    <span className="text-xs text-gray-500">Not Started</span>
+                <div className="p-4 bg-gray-50 rounded-lg text-center">
+                  <div className="text-gray-400 mb-2">
+                    <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
                   </div>
-                </Link>
-
-                <Link to="/assignment/vocab-assignment-1" className="block p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg hover:bg-yellow-100 transition-colors duration-200">
-                  <h4 className="font-medium text-gray-900 mb-1">Vocabulary Building Assignment 1</h4>
-                  <p className="text-sm text-gray-600 mb-2">Create sentences using advanced vocabulary words</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-yellow-600 font-medium">Due Jan 18</span>
-                    <span className="text-xs text-gray-500">In Progress</span>
-                  </div>
-                </Link>
-
-                <Link to="/assignment/business-assignment-1" className="block p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg hover:bg-blue-100 transition-colors duration-200">
-                  <h4 className="font-medium text-gray-900 mb-1">Business Communication Assignment 1</h4>
-                  <p className="text-sm text-gray-600 mb-2">Write professional emails and meeting minutes</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-blue-600 font-medium">Due Jan 20</span>
-                    <span className="text-xs text-gray-500">Not Started</span>
-                  </div>
-                </Link>
+                  <h4 className="font-medium text-gray-600 mb-1">No Assignments Yet</h4>
+                  <p className="text-sm text-gray-500">Start a course to unlock assignments</p>
+                </div>
               </div>
             </div>
           </div>
@@ -216,14 +199,14 @@ export default function Dashboard() {
                   </div>
                 </div>
 
-                <div className="p-4 bg-green-50 rounded-lg">
+                <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
                   <h4 className="font-medium text-gray-900 mb-1">Articles (a, an, the)</h4>
                   <p className="text-sm text-gray-600 mb-2">Usage of English articles</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-green-600 font-medium">Completed: 85%</span>
-                    <button className="text-xs bg-green-600 text-white px-3 py-1 rounded">
-                      Review
-                    </button>
+                    <span className="text-xs text-gray-600">12 Questions</span>
+                    <Link to="/quiz/articles" className="text-xs bg-primary-600 text-white px-3 py-1 rounded hover:bg-primary-700 transition-colors">
+                      Start Quiz
+                    </Link>
                   </div>
                 </div>
               </div>
