@@ -9,6 +9,17 @@ export default function AdminPanel() {
   const [activeTab, setActiveTab] = useState('submissions');
   const [submissions, setSubmissions] = useState([]);
   const [students, setStudents] = useState([]);
+  const [teacherUser, setTeacherUser] = useState(null);
+
+  // Check for teacher authentication
+  useEffect(() => {
+    const storedTeacher = localStorage.getItem('teacherUser');
+    if (storedTeacher) {
+      setTeacherUser(JSON.parse(storedTeacher));
+    } else if (!currentUser) {
+      navigate('/teacher-login');
+    }
+  }, [currentUser, navigate]);
 
   // Mock data for student submissions
   const mockSubmissions = [
@@ -109,7 +120,11 @@ export default function AdminPanel() {
 
   const handleLogout = async () => {
     try {
-      await logout();
+      // Clear teacher session
+      localStorage.removeItem('teacherUser');
+      if (currentUser) {
+        await logout();
+      }
       navigate('/');
     } catch (error) {
       console.error('Failed to log out:', error);

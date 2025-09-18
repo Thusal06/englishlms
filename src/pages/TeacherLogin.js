@@ -36,8 +36,18 @@ export default function TeacherLogin() {
         throw new Error('Invalid teacher credentials');
       }
 
-      // Mock login for teacher
-      await login(email, password);
+      // Create a mock user object for teacher login
+      const mockUser = {
+        uid: `teacher-${Date.now()}`,
+        email: email,
+        displayName: email.split('@')[0],
+        isTeacher: true
+      };
+      
+      // Store teacher session in localStorage
+      localStorage.setItem('teacherUser', JSON.stringify(mockUser));
+      
+      // Navigate to admin panel
       navigate('/admin');
     } catch (error) {
       setError('Failed to log in as teacher. Please check your credentials.');

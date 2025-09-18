@@ -1386,9 +1386,6 @@ export default function AssignmentDetail() {
     setDdTexts({});
   }
 
-  function handleTextChange(index, value) {
-    setDdTexts((prev) => ({ ...prev, [index]: value }));
-  }
 
   // Video drag-drop handlers
   function handleVideoDragOver(e) {
