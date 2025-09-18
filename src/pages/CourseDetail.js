@@ -135,17 +135,64 @@ export default function CourseDetail() {
         },
         {
           id: 2,
-          title: 'Lesson 2 - Nouns and Pronouns',
+          title: 'Lesson 2 - Tenses',
           type: 'content',
-          content: 'Content will be added here...',
+          content: `
+            <h3>Lesson 2 - Tenses</h3>
+            <h4 class="mt-4">Past Tense</h4>
+            <div class="bg-gray-50 border rounded p-4 mb-4">
+              <ul class="list-disc pl-6">
+                <li><strong>Use:</strong> To talk about actions that happened and finished in the past.</li>
+                <li><strong>Form:</strong> Subject + Verb (past form) + Object.</li>
+              </ul>
+              <div class="mt-2">
+                <p class="text-gray-800"><em>Examples:</em></p>
+                <ul class="list-disc pl-6">
+                  <li>She <strong>completed</strong> the project yesterday.</li>
+                  <li>They <strong>attended</strong> the meeting last week.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4>Simple Present Tense</h4>
+            <div class="bg-gray-50 border rounded p-4 mb-4">
+              <ul class="list-disc pl-6">
+                <li><strong>Use:</strong> To describe habits, facts, routines, and general truths.</li>
+                <li><strong>Form:</strong> Subject + Verb (base form / -s for he, she, it) + Object.</li>
+              </ul>
+              <div class="mt-2">
+                <p class="text-gray-800"><em>Examples:</em></p>
+                <ul class="list-disc pl-6">
+                  <li>He <strong>writes</strong> emails every morning.</li>
+                  <li>The system <strong>runs</strong> smoothly.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4>Future Tense</h4>
+            <div class="bg-gray-50 border rounded p-4 mb-4">
+              <ul class="list-disc pl-6">
+                <li><strong>Use:</strong> To talk about actions that will happen in the future.</li>
+                <li><strong>Form:</strong> Subject + will + Verb (base form) + Object.</li>
+              </ul>
+              <div class="mt-2">
+                <p class="text-gray-800"><em>Examples:</em></p>
+                <ul class="list-disc pl-6">
+                  <li>They <strong>will organize</strong> a workshop next week.</li>
+                  <li>I <strong>will join</strong> the call tomorrow.</li>
+                </ul>
+              </div>
+            </div>
+          `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'grammar-assignment-2',
-            title: 'Task 2: Nouns and Pronouns Exercise',
-            description: 'Practice using different types of nouns and pronouns correctly',
-            dueDate: '2025-10-06'
-          }
+          tasks: [
+            { id: 'grammar-tenses-task-1', title: 'Task 1: Past Tense – Word Bank Fill', description: 'Fill in the blanks with the correct past tense form from the box.', dueDate: '2025-11-20' },
+            { id: 'grammar-tenses-task-2', title: 'Task 2: Past Tense – Write the Form', description: 'Type the correct past tense of the given verbs.', dueDate: '2025-11-21' },
+            { id: 'grammar-tenses-task-3', title: 'Task 3: Future Tense – Rearrange Words', description: 'Rearrange the words to make correct future tense sentences.', dueDate: '2025-11-22' },
+            { id: 'grammar-tenses-task-4', title: 'Task 4: Future Tense – Will + Verb', description: 'Fill in the blanks with the correct future tense form (will + verb).', dueDate: '2025-11-23' },
+            { id: 'grammar-tenses-task-5', title: 'Task 5: Present Simple – Choose the Form', description: 'Choose the correct present simple verb form.', dueDate: '2025-11-24' }
+          ]
         },
         {
           id: 3,

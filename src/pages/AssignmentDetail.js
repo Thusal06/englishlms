@@ -809,6 +809,120 @@ export default function AssignmentDetail() {
       ]
     }
     ,
+    // Grammar Lesson 2 - Tenses
+    'grammar-tenses-task-1': {
+      id: 'grammar-tenses-task-1',
+      title: 'Task 1: Past Tense – Word Bank Fill',
+      description: 'Fill in the blanks with the correct past tense form from the box.',
+      instructions: [
+        'Drag the correct past tense verb from the word bank into each sentence.',
+        'Each word is used exactly once.'
+      ],
+      dueDate: '2025-11-20',
+      maxScore: 10,
+      submissionType: 'dragdrop',
+      status: 'not-started',
+      wordBank: ['fixed','deployed','forgot','attended','tested','reported','analyzed','wrote','prepared','finished'],
+      sentences: [
+        { text: 'Yesterday, the team ______ (fix) a major bug in the application.', answer: 'fixed' },
+        { text: 'We ______ (deploy) the new version of the software last night.', answer: 'deployed' },
+        { text: 'The developer ______ (forget) to commit his changes to GitHub.', answer: 'forgot' },
+        { text: 'I ______ (attend) a meeting with the project manager yesterday.', answer: 'attended' },
+        { text: 'They ______ (test) the program before releasing it.', answer: 'tested' },
+        { text: 'Our client ______ (report) an error in the payment module.', answer: 'reported' },
+        { text: 'We ______ (analyze) the system logs to find the issue.', answer: 'analyzed' },
+        { text: 'She ______ (write) clean and efficient code for the project.', answer: 'wrote' },
+        { text: 'The QA team ______ (prepare) a detailed bug report.', answer: 'prepared' },
+        { text: 'We ______ (finish) the sprint successfully last Friday.', answer: 'finished' }
+      ]
+    },
+    'grammar-tenses-task-2': {
+      id: 'grammar-tenses-task-2',
+      title: 'Task 2: Past Tense – Write the Form',
+      description: 'Type the correct past tense of the given verbs.',
+      instructions: ['Type the exact past tense form. Case-insensitive.'],
+      dueDate: '2025-11-21',
+      maxScore: 8,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'pt1', type: 'fill', prompt: 'Yesterday, I ______ (review) the code before the merge.', accept: ['reviewed'] },
+        { id: 'pt2', type: 'fill', prompt: 'She ______ (check) the database for errors.', accept: ['checked'] },
+        { id: 'pt3', type: 'fill', prompt: 'The team ______ (have) a stand-up meeting in the morning.', accept: ['had'] },
+        { id: 'pt4', type: 'fill', prompt: 'We ______ (see) unexpected results after the update.', accept: ['saw'] },
+        { id: 'pt5', type: 'fill', prompt: 'He ______ (run) several test cases on the new module.', accept: ['ran'] },
+        { id: 'pt6', type: 'fill', prompt: 'I ______ (find) a critical bug in the login system.', accept: ['found'] },
+        { id: 'pt7', type: 'fill', prompt: 'They ______ (go) through the client’s requirements carefully.', accept: ['went'] },
+        { id: 'pt8', type: 'fill', prompt: 'The intern ______ (learn) a new programming language last month.', accept: ['learned','learnt'] }
+      ]
+    },
+    'grammar-tenses-task-3': {
+      id: 'grammar-tenses-task-3',
+      title: 'Task 3: Future Tense – Rearrange Words',
+      description: 'Rearrange the words to make correct future tense sentences (will + base verb).',
+      instructions: ['Type the full correct sentence.'],
+      dueDate: '2025-11-22',
+      maxScore: 10,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'ft1', type: 'fill', prompt: 'deploy / tomorrow / we / new version / the / will', accept: ['we will deploy the new version tomorrow.','we will deploy the new version tomorrow'] },
+        { id: 'ft2', type: 'fill', prompt: 'will / errors / fix / she / reported / the', accept: ['she will fix the reported errors.','she will fix the reported errors'] },
+        { id: 'ft3', type: 'fill', prompt: 'client / requirements / share / the / will / new', accept: ['the client will share new requirements.','the client will share new requirements'] },
+        { id: 'ft4', type: 'fill', prompt: 'logs / will / analyze / the team / system', accept: ['the team will analyze the system logs.','the team will analyze the system logs'] },
+        { id: 'ft5', type: 'fill', prompt: 'will / QA / run / test cases / tomorrow / the', accept: ['the qa will run test cases tomorrow.','qa will run test cases tomorrow.','the QA will run test cases tomorrow.'] },
+        { id: 'ft6', type: 'fill', prompt: 'attend / we / conference / will / next week / the', accept: ['we will attend the conference next week.','we will attend the conference next week'] },
+        { id: 'ft7', type: 'fill', prompt: 'database / update / will / the / they', accept: ['they will update the database.','they will update the database'] },
+        { id: 'ft8', type: 'fill', prompt: 'documentation / complete / will / I / project / the', accept: ['i will complete the project documentation.','I will complete the project documentation.'] },
+        { id: 'ft9', type: 'fill', prompt: 'feedback / give / users / will / the', accept: ['the users will give feedback.','the users will give feedback'] },
+        { id: 'ft10', type: 'fill', prompt: 'sprint / finish / team / will / the / Friday / on', accept: ['the team will finish the sprint on Friday.','the team will finish the sprint on friday.'] }
+      ]
+    },
+    'grammar-tenses-task-4': {
+      id: 'grammar-tenses-task-4',
+      title: 'Task 4: Future Tense – Will + Verb',
+      description: 'Fill in the blanks with the correct future tense form (will + verb).',
+      instructions: ['Type will + base verb.'],
+      dueDate: '2025-11-23',
+      maxScore: 10,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'fv1', type: 'fill', prompt: 'Tomorrow, I ______ (review) the code changes.', accept: ['will review'] },
+        { id: 'fv2', type: 'fill', prompt: 'She ______ (test) the new login feature next week.', accept: ['will test'] },
+        { id: 'fv3', type: 'fill', prompt: 'They ______ (deploy) the app to production soon.', accept: ['will deploy'] },
+        { id: 'fv4', type: 'fill', prompt: 'Our manager ______ (discuss) the roadmap in the meeting.', accept: ['will discuss'] },
+        { id: 'fv5', type: 'fill', prompt: 'We ______ (write) unit tests for the new module.', accept: ['will write'] },
+        { id: 'fv6', type: 'fill', prompt: 'He ______ (check) the server performance later.', accept: ['will check'] },
+        { id: 'fv7', type: 'fill', prompt: 'The team ______ (fix) the bug before the release.', accept: ['will fix'] },
+        { id: 'fv8', type: 'fill', prompt: 'I ______ (join) the client call tomorrow morning.', accept: ['will join'] },
+        { id: 'fv9', type: 'fill', prompt: 'Developers ______ (work) on UI improvements.', accept: ['will work'] },
+        { id: 'fv10', type: 'fill', prompt: 'The company ______ (launch) a new product next quarter.', accept: ['will launch'] }
+      ]
+    },
+    'grammar-tenses-task-5': {
+      id: 'grammar-tenses-task-5',
+      title: 'Task 5: Present Simple – Choose the Form',
+      description: 'Choose the correct present simple verb form.',
+      instructions: ['Select one option per sentence.'],
+      dueDate: '2025-11-24',
+      maxScore: 10,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'ps1', type: 'mcq', prompt: 'She (write/writes) unit tests for the new feature.', options: ['write','writes'], correctIndex: 1 },
+        { id: 'ps2', type: 'mcq', prompt: 'They (fix/fixes) bugs reported by the users.', options: ['fix','fixes'], correctIndex: 0 },
+        { id: 'ps3', type: 'mcq', prompt: 'The server (run/runs) 24 hours a day.', options: ['run','runs'], correctIndex: 1 },
+        { id: 'ps4', type: 'mcq', prompt: 'Our manager (conduct/conducts) a sprint review every Friday.', options: ['conduct','conducts'], correctIndex: 1 },
+        { id: 'ps5', type: 'mcq', prompt: 'I (review/reviews) my teammate’s code before merging.', options: ['review','reviews'], correctIndex: 0 },
+        { id: 'ps6', type: 'mcq', prompt: 'The application (store/stores) data in the cloud.', options: ['store','stores'], correctIndex: 1 },
+        { id: 'ps7', type: 'mcq', prompt: 'We (use/uses) GitHub to manage our source code.', options: ['use','uses'], correctIndex: 0 },
+        { id: 'ps8', type: 'mcq', prompt: 'He (check/checks) the system logs every morning.', options: ['check','checks'], correctIndex: 1 },
+        { id: 'ps9', type: 'mcq', prompt: 'Developers (attend/attends) daily stand-up meetings.', options: ['attend','attends'], correctIndex: 0 },
+        { id: 'ps10', type: 'mcq', prompt: 'The client (send/sends) feedback after each demo.', options: ['send','sends'], correctIndex: 1 }
+      ]
+    }
+    ,
     // Modal Verbs Lesson - Task 1: Fill the blanks
     'modal-verbs-task-1': {
       id: 'modal-verbs-task-1',
