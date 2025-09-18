@@ -50,7 +50,13 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'grammar-assignment-1',
+            title: 'Task 1: Parts of Speech Practice',
+            description: 'Identify and categorize different parts of speech in sentences',
+            dueDate: '2025-10-05'
+          }
         },
         {
           id: 2,
@@ -58,7 +64,13 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'grammar-assignment-2',
+            title: 'Task 2: Nouns and Pronouns Exercise',
+            description: 'Practice using different types of nouns and pronouns correctly',
+            dueDate: '2025-10-06'
+          }
         },
         {
           id: 3,
@@ -66,7 +78,13 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'grammar-assignment-3',
+            title: 'Task 3: Verb Tenses Practice',
+            description: 'Complete exercises on past, present, and future tenses',
+            dueDate: '2025-10-07'
+          }
         },
         {
           id: 4,
@@ -110,7 +128,7 @@ export default function CourseDetail() {
                   <tr class="bg-gray-50">
                     <td class="border border-gray-300 px-3 py-2 align-top">Sequencing / Ordering</td>
                     <td class="border border-gray-300 px-3 py-2 align-top">first of all, then, next, finally, subsequently</td>
-                    <td class="border border-gray-300 px-3 py-2 align-top"><em>“First of all, I will explain the architecture. Then, I will demonstrate the deployment process. Finally, I will summarise the advantages.”</em></td>
+                    <td class="border border-gray-300 px-3 py-2 align-top"><em>“First of all, I will explain the architecture. Then, I will demonstrate the deployment process. Finally, I will summarise the benefits.”</em></td>
                   </tr>
                   <tr>
                     <td class="border border-gray-300 px-3 py-2 align-top">Cause and Effect</td>
@@ -315,7 +333,13 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'grammar-assignment-5',
+            title: 'Task 5: Sentence Structure Analysis',
+            description: 'Analyze and construct different types of sentence structures',
+            dueDate: '2025-10-11'
+          }
         },
         {
           id: 6,
@@ -323,7 +347,13 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'grammar-assignment-6',
+            title: 'Task 6: Punctuation Practice',
+            description: 'Apply correct punctuation and capitalization rules',
+            dueDate: '2025-10-12'
+          }
         },
         {
           id: 7,
@@ -331,7 +361,13 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'grammar-assignment-7',
+            title: 'Task 7: Complex Sentences Exercise',
+            description: 'Create and analyze complex sentence patterns',
+            dueDate: '2025-10-13'
+          }
         }
       ]
     },
@@ -408,7 +444,13 @@ export default function CourseDetail() {
             </ul>
           `,
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'vocabulary-assignment-2',
+            title: 'Task 2: Workplace Jargon Exercise',
+            description: 'Practice using workplace terminology in professional contexts',
+            dueDate: '2025-10-16'
+          }
         },
         {
           id: 2,
@@ -416,31 +458,55 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'vocabulary-assignment-2b',
+            title: 'Task 2: Business English Terms',
+            description: 'Practice using business terminology in professional contexts',
+            dueDate: '2025-10-16'
+          }
         },
         {
           id: 3,
-          title: 'Lesson 3 - Scientific and Technical Vocabulary',
+          title: 'Lesson 3 - Technical Vocabulary',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'vocabulary-assignment-3b',
+            title: 'Task 3: Technical Vocabulary',
+            description: 'Master technical terms used in various industries',
+            dueDate: '2025-10-17'
+          }
         },
         {
           id: 4,
-          title: 'Lesson 4 - Idiomatic Expressions',
+          title: 'Lesson 4 - Idioms and Expressions',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'vocabulary-assignment-4b',
+            title: 'Task 4: Idioms and Expressions',
+            description: 'Learn and practice common English idioms and expressions',
+            dueDate: '2025-10-18'
+          }
         },
         {
           id: 5,
-          title: 'Lesson 5 - Phrasal Verbs and Collocations',
+          title: 'Lesson 5 - Phrasal Verbs',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'vocabulary-assignment-5',
+            title: 'Task 5: Phrasal Verbs Practice',
+            description: 'Master common phrasal verbs and their meanings',
+            dueDate: '2025-10-19'
+          }
         },
         {
           id: 6,
@@ -491,15 +557,27 @@ export default function CourseDetail() {
             </ul>
           `,
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'vocabulary-assignment-6',
+            title: 'Task 6: Problem-Solving Vocabulary',
+            description: 'Practice troubleshooting and problem-solving terminology',
+            dueDate: '2025-10-20'
+          }
         },
         {
           id: 7,
-          title: 'Lesson 7 - Advanced Vocabulary Strategies',
+          title: 'Lesson 7 - Advanced Writing Techniques',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'vocabulary-assignment-7',
+            title: 'Task 7: Advanced Writing Practice',
+            description: 'Apply advanced vocabulary in formal writing contexts',
+            dueDate: '2025-10-21'
+          }
         }
       ]
     },
@@ -516,15 +594,27 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'business-assignment-1a',
+            title: 'Task 1: Email Writing Practice',
+            description: 'Write professional emails for different business scenarios',
+            dueDate: '2025-10-25'
+          }
         },
         {
           id: 2,
-          title: 'Lesson 2 - Meeting and Presentation Skills',
+          title: 'Lesson 2 - Meeting Participation',
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'business-assignment-2',
+            title: 'Task 2: Meeting Language Practice',
+            description: 'Practice phrases and vocabulary for effective meeting participation',
+            dueDate: '2025-10-26'
+          }
         },
         {
           id: 3,
@@ -587,7 +677,13 @@ export default function CourseDetail() {
             </ul>
           `,
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'vocabulary-assignment-3',
+            title: 'Task 3: Scientific Vocabulary Quiz',
+            description: 'Complete exercises on scientific and technical terminology',
+            dueDate: '2025-10-17'
+          }
         },
         {
           id: 4,
@@ -595,7 +691,13 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'business-assignment-4',
+            title: 'Task 4: Business Report Writing',
+            description: 'Create professional business reports with proper structure',
+            dueDate: '2025-10-28'
+          }
         },
         {
           id: 5,
@@ -603,7 +705,13 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'business-assignment-5',
+            title: 'Task 5: Customer Service Scenarios',
+            description: 'Practice handling customer service situations professionally',
+            dueDate: '2025-10-29'
+          }
         },
         {
           id: 6,
@@ -611,7 +719,13 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'business-assignment-6',
+            title: 'Task 6: Cross-Cultural Communication',
+            description: 'Practice communicating effectively across different cultures',
+            dueDate: '2025-10-30'
+          }
         },
         {
           id: 7,
@@ -684,7 +798,13 @@ export default function CourseDetail() {
           type: 'content',
           content: 'Content will be added here...',
           duration: '1 day',
-          completed: false
+          completed: false,
+          task: {
+            id: 'business-assignment-7',
+            title: 'Task 7: Advanced Business Writing',
+            description: 'Master advanced business writing techniques and formats',
+            dueDate: '2025-10-31'
+          }
         }
       ]
     }

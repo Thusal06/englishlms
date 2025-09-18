@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
+import { AssignmentsProvider } from './contexts/AssignmentsContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -10,6 +11,7 @@ import Dashboard from './pages/Dashboard';
 import CourseDetail from './pages/CourseDetail';
 import QuizDetail from './pages/QuizDetail';
 import AssignmentDetail from './pages/AssignmentDetail';
+import Assignments from './pages/Assignments';
 import Discussion from './pages/Discussion';
 import Notes from './pages/Notes';
 
@@ -17,8 +19,9 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <div className="App">
-          <Routes>
+        <AssignmentsProvider>
+          <div className="App">
+            <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
@@ -58,6 +61,14 @@ function App() {
               } 
             />
             <Route 
+              path="/assignments" 
+              element={
+                <ProtectedRoute>
+                  <Assignments />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
               path="/discussion/:courseId?" 
               element={
                 <ProtectedRoute>
@@ -74,7 +85,8 @@ function App() {
               } 
             />
           </Routes>
-        </div>
+          </div>
+        </AssignmentsProvider>
       </AuthProvider>
     </Router>
   );
