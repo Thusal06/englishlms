@@ -518,38 +518,76 @@ export default function CourseDetail() {
           title: 'Lesson 2 - Hedgings',
           type: 'content',
           content: `
-            <ul class="space-y-3">
-              <li>
-                <p><strong>Backlog:</strong> A list of all the work a team needs to complete (features, bug fixes, tasks), prioritized for development.</p>
-                <p><em>Example:</em> "We'll pick the next task from the backlog."</p>
-              </li>
-              <li>
-                <p><strong>Bandwidth:</strong> A team's or individual's capacity to take on new work.</p>
-                <p><em>Example:</em> "We don't have the bandwidth to add that feature this sprint."</p>
-              </li>
-              <li>
-                <p><strong>Bottleneck:</strong> A point where the flow of work slows or halts due to constraints.</p>
-                <p><em>Example:</em> "Code reviews are creating a bottleneck in our process."</p>
-              </li>
-              <li>
-                <p><strong>Sprint:</strong> A short, fixed period (usually 1–4 weeks) for completing selected tasks from the backlog.</p>
-                <p><em>Example:</em> "This sprint focuses on developing the payment feature."</p>
-              </li>
-              <li>
-                <p><strong>Sync‑up:</strong> A quick meeting to align on status, progress, or plans.</p>
-                <p><em>Example:</em> "Let's have a quick sync‑up before the client call."</p>
-                <p><em>Example:</em> “The prototype didn’t work, so it’s back to the drawing board.”</p>
-              </li>
+            <h4>What Are Hedgings?</h4>
+            <p>Hedgings are grammatical devices used to soften statements, make them less direct, or express uncertainty. They help make communication more polite and collaborative, especially useful in giving feedback or making suggestions in international or professional settings.</p>
+
+            <h4 class="mt-4">Forms of Hedging</h4>
+            <h5 class="font-semibold mt-2">1. Modal Verbs for Hedging</h5>
+            <p>Modal verbs such as <em>might, may, could, would, should</em> express possibility, permission, or polite requests.</p>
+            <p class="mt-1"><strong>Possibility:</strong></p>
+            <ul class="list-disc pl-6">
+              <li>“The server might be down.”</li>
+              <li>“This could cause delays.”</li>
+            </ul>
+            <p class="mt-1"><strong>Polite Requests:</strong></p>
+            <ul class="list-disc pl-6">
+              <li>“Could you please check the code?”</li>
+              <li>“Would you review this document?”</li>
+            </ul>
+
+            <h5 class="font-semibold mt-3">2. Adverbs and Adjectives for Hedging</h5>
+            <p>Words like <em>perhaps, maybe, somewhat, rather, possibly, apparently</em> add uncertainty or soften the tone.</p>
+            <ul class="list-disc pl-6">
+              <li>“Perhaps we should restart the application.”</li>
+              <li>“The system is somewhat slow during high traffic.”</li>
+              <li>“The connection is possibly unstable.”</li>
+            </ul>
+
+            <h5 class="font-semibold mt-3">3. Introductory Phrases for Hedging Opinions</h5>
+            <p>Use phrases like <em>I think, I believe, it seems, it appears, as far as I can tell, in my opinion</em> to clearly mark your statement as personal or tentative.</p>
+            <ul class="list-disc pl-6">
+              <li>“I think the update improves performance.”</li>
+              <li>“It seems there is a bug in the code.”</li>
+              <li>“In my opinion, we should revise the deadline.”</li>
+            </ul>
+
+            <h5 class="font-semibold mt-3">4. Conditional and Softening Phrases</h5>
+            <p>Phrases with <em>if</em> and modal verbs or conditional forms express polite suggestions or hypothetical statements.</p>
+            <ul class="list-disc pl-6">
+              <li>“If possible, could you update the documentation?”</li>
+              <li>“It would be helpful if you tested the new features.”</li>
+            </ul>
+
+            <h4 class="mt-4">Examples Relevant to Software Engineers</h4>
+            <p><strong>Giving feedback:</strong></p>
+            <ul class="list-disc pl-6">
+              <li>Direct: “You made mistakes in the code.”</li>
+              <li>Hedged: “I think there might be some errors in the code.”</li>
+            </ul>
+            <p class="mt-2"><strong>Making suggestions:</strong></p>
+            <ul class="list-disc pl-6">
+              <li>Direct: “Change the design.”</li>
+              <li>Hedged: “Perhaps we could consider a new design.”</li>
+            </ul>
+            <p class="mt-2"><strong>Expressing uncertainty:</strong></p>
+            <ul class="list-disc pl-6">
+              <li>Direct: “The server is causing delays.”</li>
+              <li>Hedged: “It seems the server could be causing delays.”</li>
+            </ul>
+            <p class="mt-2"><strong>Polite requests:</strong></p>
+            <ul class="list-disc pl-6">
+              <li>“Would you mind reviewing the documentation?”</li>
+              <li>“Could you please check the test cases?”</li>
             </ul>
           `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'vocabulary-assignment-2',
-            title: 'Task 2: Workplace Jargon Exercise',
-            description: 'Practice using workplace terminology in professional contexts',
-            dueDate: '2025-10-16'
-          }
+          tasks: [
+            { id: 'av-hedgings-task-1', title: 'Task 1: Identify the Modal Verb or Hedging', description: 'Choose the correct modal/hedging word.', dueDate: '2025-10-16' },
+            { id: 'av-hedgings-task-2', title: 'Task 2: Fill with Appropriate Hedging', description: 'Complete the sentences with correct hedging forms.', dueDate: '2025-10-17' },
+            { id: 'av-hedgings-task-3', title: 'Task 3: Rewrite with Hedging', description: 'Rewrite the sentences to be more polite and less direct.', dueDate: '2025-10-18' },
+            { id: 'av-hedgings-task-4', title: 'Task 4: Match – Build Polite Sentences', description: 'Match Column A with Column B to form hedged sentences.', dueDate: '2025-10-19' }
+          ]
         },
         
         {

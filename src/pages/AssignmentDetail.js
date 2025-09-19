@@ -360,6 +360,80 @@ export default function AssignmentDetail() {
       ]
     }
     ,
+    // Advanced Vocabulary - Lesson 2: Hedgings
+    'av-hedgings-task-1': {
+      id: 'av-hedgings-task-1',
+      title: 'Task 1: Identify the Modal Verb or Hedging',
+      description: 'Choose the correct modal verb or hedging word.',
+      instructions: ['Select the best option for each sentence.'],
+      dueDate: '2025-10-16',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'h1', type: 'mcq', prompt: 'The server _____ be down due to maintenance.', options: ['must', 'might', 'will'], correctIndex: 1 },
+        { id: 'h2', type: 'mcq', prompt: '_____ you please review the bug report?', options: ['Could', 'Should', 'Shall'], correctIndex: 0 },
+        { id: 'h3', type: 'mcq', prompt: 'It _____ helpful to update the documentation.', options: ['would', 'must', 'will'], correctIndex: 0 },
+        { id: 'h4', type: 'mcq', prompt: 'The connection is _____ unstable during peak hours.', options: ['possibly', 'definitely', 'clearly'], correctIndex: 0 },
+        { id: 'h5', type: 'mcq', prompt: '_____ we try using a different algorithm?', options: ['Could', 'Should', 'Would'], correctIndex: 0 }
+      ]
+    }
+    ,
+    'av-hedgings-task-2': {
+      id: 'av-hedgings-task-2',
+      title: 'Task 2: Fill with Appropriate Hedging',
+      description: 'Complete the sentences with the correct hedging forms.',
+      instructions: ['Word bank: might, could, perhaps, think, please, would'],
+      dueDate: '2025-10-17',
+      maxScore: 5,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'h2f1', type: 'fill', prompt: 'I _____ there could be an issue with the network.', accept: ['think','Think'] },
+        { id: 'h2f2', type: 'fill', prompt: '_____ you check the system logs when you have time?', accept: ['Would','would','Please would','please would'] },
+        { id: 'h2f3', type: 'fill', prompt: '_____ we consider revising the design for better performance?', accept: ['Perhaps','perhaps'] },
+        { id: 'h2f4', type: 'fill', prompt: 'It _____ be better to test the software again.', accept: ['might','Might','could','Could','would','Would'] },
+        { id: 'h2f5', type: 'fill', prompt: 'I _____ the update might improve speed.', accept: ['think','Think'] }
+      ]
+    }
+    ,
+    'av-hedgings-task-3': {
+      id: 'av-hedgings-task-3',
+      title: 'Task 3: Rewrite with Hedging',
+      description: 'Rewrite the sentences to make them more polite and less direct, using appropriate hedging.',
+      instructions: ['Write a polite, hedged version for each sentence. Your answer will be reviewed by a teacher.'],
+      dueDate: '2025-10-18',
+      maxScore: 10,
+      submissionType: 'text',
+      status: 'not-started',
+      prompts: [
+        'Fix the bug immediately.',
+        'Your code is incorrect.',
+        'The database is slow.',
+        'We should change the project deadline.',
+        'Explain the problem in detail.'
+      ]
+    }
+    ,
+    'av-hedgings-task-4': {
+      id: 'av-hedgings-task-4',
+      title: 'Task 4: Match – Build Polite Sentences',
+      description: 'Match Column A with Column B to form polite, hedged sentences.',
+      instructions: ['Drag the correct letter (a–e) to each item.'],
+      dueDate: '2025-10-19',
+      maxScore: 5,
+      submissionType: 'match',
+      status: 'not-started',
+      functions: [
+        { key: 'a', text: 'there might be a bug.' },
+        { key: 'b', text: 'check the error logs?' },
+        { key: 'c', text: 'consider an alternative approach.' },
+        { key: 'd', text: 'the server is unstable.' },
+        { key: 'e', text: 'reviewing the latest patch?' }
+      ],
+      phrases: ['I think','Could you','Perhaps we could','It seems','Would you mind']
+    }
+    ,
     // Grammar Lesson 7 - Clarification Techniques
     'grammar-clarification-task-a': {
       id: 'grammar-clarification-task-a',
