@@ -562,26 +562,39 @@ export default function AssignmentDetail() {
     'av-workplace-jargon-task-2': {
       id: 'av-workplace-jargon-task-2',
       title: 'Task 2: Workplace Jargon – Finish the Sentences',
-      description: 'Finish each sentence using your own ideas, making sure to use the given word correctly.',
+      description: 'Drag the correct word from the bank into each sentence, then optionally finish the sentence in your own words.',
       instructions: [
-        'Write 1–2 sentences for each prompt using the given term naturally.',
-        'Focus on clarity and correctness rather than length.'
+        'Drag each word from the word bank into the correct blank. Each word is used exactly once.',
+        'After placing the word, optionally complete the sentence in your own words (not graded).',
+        'Submit to check your score for the word placements.'
       ],
       dueDate: '2025-10-16',
       maxScore: 10,
-      submissionType: 'text',
+      submissionType: 'dragdrop',
       status: 'not-started',
-      prompts: [
-        'The backlog is full of pending bug fixes, so…',
-        'Our team doesn’t have enough bandwidth this week, which means…',
-        'During the daily stand-up, I mentioned that…',
-        'The developers had to go back to the drawing board because…',
-        'The new hire’s onboarding included…',
-        'A major bottleneck in our project is…',
-        'The CEO presented the go-to-market plan to…',
-        'After the detailed blow-by-blow explanation, everyone understood…',
-        'In the last sprint, our team managed to…',
-        'We had a quick sync-up before the client meeting to…'
+      wordBank: [
+        'backlog',
+        'bandwidth',
+        'stand-up',
+        'back to the drawing board',
+        'onboarding',
+        'bottleneck',
+        'go-to-market',
+        'blow-by-blow',
+        'sprint',
+        'sync-up'
+      ],
+      sentences: [
+        { text: 'The __________ is full of pending bug fixes, so…', answer: 'backlog' },
+        { text: 'Our team doesn’t have enough __________ this week, which means…', answer: 'bandwidth' },
+        { text: 'During the daily __________, I mentioned that…', answer: 'stand-up' },
+        { text: 'The developers had to go __________ because…', answer: 'back to the drawing board' },
+        { text: 'The new hire’s __________ included…', answer: 'onboarding' },
+        { text: 'A major __________ in our project is…', answer: 'bottleneck' },
+        { text: 'The CEO presented the __________ plan to…', answer: 'go-to-market' },
+        { text: 'After the detailed __________ explanation, everyone understood…', answer: 'blow-by-blow' },
+        { text: 'In the last __________, our team managed to…', answer: 'sprint' },
+        { text: 'We had a quick __________ before the client meeting to…', answer: 'sync-up' }
       ]
     }
     ,
