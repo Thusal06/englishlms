@@ -456,6 +456,61 @@ export default function AssignmentDetail() {
       ]
     }
     ,
+    // Advanced Vocabulary - Lesson 1: Workplace Jargon
+    'av-workplace-jargon-task-1': {
+      id: 'av-workplace-jargon-task-1',
+      title: 'Task 1: Workplace Jargon – Word Bank Fill',
+      description: 'Complete each sentence with the correct term from the box.',
+      instructions: ['Drag a word from the bank into each blank. Each word is used exactly once.'],
+      dueDate: '2025-10-15',
+      maxScore: 11,
+      submissionType: 'dragdrop',
+      status: 'not-started',
+      wordBank: [
+        'bottleneck', 'bandwidth', 'blow-by-blow', 'stand-up', 'back to the drawing board',
+        'onboarding', 'go-to-market', 'sprint', 'black economy', 'sync-up', 'backlog'
+      ],
+      sentences: [
+        { text: 'The testing phase has become a __________, slowing down the release schedule.', answer: 'bottleneck' },
+        { text: 'We don’t have the __________ to take on an additional project this month.', answer: 'bandwidth' },
+        { text: 'The product manager explained the new feature development in a __________ manner.', answer: 'blow-by-blow' },
+        { text: 'The team met for their morning __________ to share updates and blockers.', answer: 'stand-up' },
+        { text: 'After the client rejected the proposal, it was __________.', answer: 'back to the drawing board' },
+        { text: 'Every new engineer goes through a two-week __________ process before joining their team.', answer: 'onboarding' },
+        { text: 'The marketing team is preparing a __________ strategy for the new mobile app.', answer: 'go-to-market' },
+        { text: 'Tasks that were not completed in the last __________ will be carried over.', answer: 'sprint' },
+        { text: 'The finance department warns that illegal freelance work may contribute to the __________.', answer: 'black economy' },
+        { text: 'Let’s have a quick __________ call to finalize the release plan.', answer: 'sync-up' },
+        { text: 'The project manager checked the __________ to prioritize which tasks should be tackled first.', answer: 'backlog' }
+      ]
+    }
+    ,
+    'av-workplace-jargon-task-2': {
+      id: 'av-workplace-jargon-task-2',
+      title: 'Task 2: Workplace Jargon – Finish the Sentences',
+      description: 'Finish each sentence using your own ideas, making sure to use the given word correctly.',
+      instructions: [
+        'Write 1–2 sentences for each prompt using the given term naturally.',
+        'Focus on clarity and correctness rather than length.'
+      ],
+      dueDate: '2025-10-16',
+      maxScore: 10,
+      submissionType: 'text',
+      status: 'not-started',
+      prompts: [
+        'The backlog is full of pending bug fixes, so…',
+        'Our team doesn’t have enough bandwidth this week, which means…',
+        'During the daily stand-up, I mentioned that…',
+        'The developers had to go back to the drawing board because…',
+        'The new hire’s onboarding included…',
+        'A major bottleneck in our project is…',
+        'The CEO presented the go-to-market plan to…',
+        'After the detailed blow-by-blow explanation, everyone understood…',
+        'In the last sprint, our team managed to…',
+        'We had a quick sync-up before the client meeting to…'
+      ]
+    }
+    ,
     // Advanced Vocabulary - Lesson 3: Cross-Cultural Communication Phrases
     'av-crosscultural-task-1': {
       id: 'av-crosscultural-task-1',

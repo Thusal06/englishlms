@@ -488,39 +488,30 @@ export default function CourseDetail() {
       lessons: [
         {
           id: 1,
-          title: 'Lesson 1 - Academic Vocabulary',
+          title: 'Lesson 1 - Workplace Jargon',
           type: 'content',
           content: `
-            <h4>Academic Vocabulary Essentials</h4>
-            <p>Academic vocabulary forms the foundation of professional and scholarly communication. These words appear frequently in research papers, presentations, and formal discussions.</p>
-
-            <h4 class="mt-4">Core Academic Terms</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Analyze:</strong> To examine in detail to understand structure or meaning.</li>
-              <li><strong>Synthesize:</strong> To combine elements to form a coherent whole.</li>
-              <li><strong>Evaluate:</strong> To assess the value, importance, or quality of something.</li>
-              <li><strong>Hypothesis:</strong> A proposed explanation for a phenomenon.</li>
-              <li><strong>Methodology:</strong> The systematic approach to research or problem-solving.</li>
-            </ul>
-
-            <h4 class="mt-6">Usage in Context</h4>
-            <p><em>"To analyze the data effectively, we must first synthesize information from multiple sources. Our methodology allows us to evaluate each hypothesis systematically."</em></p>
-
-            <h4 class="mt-6">Practice Tips</h4>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Use academic vocabulary in professional emails and reports.</li>
-              <li>Practice with synonyms to avoid repetition.</li>
-              <li>Focus on precision over complexity.</li>
-            </ul>
+            <p>Workplace jargon refers to the special words and expressions used in professional environments. Knowing these terms helps software engineers and other professionals communicate effectively in meetings, projects, and team discussions.</p>
+            <ol class="list-decimal pl-6 space-y-2 mt-3">
+              <li><strong>Backlog</strong> – A list of all the work that a team needs to complete, including features, bug fixes, and other tasks, prioritized for development.<br/><em>Example:</em> “We’ll pick the next task from the backlog.”</li>
+              <li><strong>Bandwidth</strong> – Refers to a team’s or individual’s capacity to take on new work.<br/><em>Example:</em> “We don’t have the bandwidth to add that feature this sprint.”</li>
+              <li><strong>Black Economy</strong> – Economic activity that is unrecorded and untaxed by the government, often linked to informal or illegal transactions.<br/><em>Example:</em> “Some freelance jobs done without invoices contribute to the black economy.”</li>
+              <li><strong>Blow-by-blow</strong> – A detailed, step-by-step account of an event or process.<br/><em>Example:</em> “The team lead gave us a blow-by-blow explanation of the release issue.”</li>
+              <li><strong>Bottleneck</strong> – A point where the flow of work slows or halts due to constraints.<br/><em>Example:</em> “Code reviews are creating a bottleneck in our process.”</li>
+              <li><strong>Go-to-Market (GTM)</strong> – The strategy a company uses to launch a new product or service, covering marketing, sales, distribution, and pricing.<br/><em>Example:</em> “The go-to-market plan for our app targets small businesses first.”</li>
+              <li><strong>Onboarding</strong> – The process of welcoming and integrating a new employee into the company and team.<br/><em>Example:</em> “The onboarding program includes training sessions and mentorship.”</li>
+              <li><strong>Stand-up</strong> – A short, daily team meeting where members share updates, plans, and blockers.<br/><em>Example:</em> “During today’s stand-up, I’ll update on the bug fix progress.”</li>
+              <li><strong>Sprint</strong> – A short, fixed period (usually 1–4 weeks) in which a team completes a set of tasks from the backlog.<br/><em>Example:</em> “This sprint focuses on developing the payment feature.”</li>
+              <li><strong>Sync-up</strong> – A meeting or discussion to align the team on project status, progress, or plans.<br/><em>Example:</em> “Let’s have a quick sync-up before the client call.”</li>
+              <li><strong>Back to the Drawing Board</strong> – An expression meaning to start over after a failed or flawed attempt.<br/><em>Example:</em> “The prototype didn’t work, so it’s back to the drawing board.”</li>
+            </ol>
           `,
           duration: '1 day',
           completed: false,
-          task: {
-            id: 'vocabulary-assignment-1',
-            title: 'Task 1: Academic Vocabulary Practice',
-            description: 'Complete exercises on academic vocabulary usage and context',
-            dueDate: '2025-10-15'
-          }
+          tasks: [
+            { id: 'av-workplace-jargon-task-1', title: 'Task 1: Workplace Jargon – Word Bank Fill', description: 'Complete each sentence with the correct term from the box.', dueDate: '2025-10-15' },
+            { id: 'av-workplace-jargon-task-2', title: 'Task 2: Workplace Jargon – Finish the Sentences', description: 'Finish each sentence using your own ideas with the given term.', dueDate: '2025-10-16' }
+          ]
         },
         {
           id: 2,
