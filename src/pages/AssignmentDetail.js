@@ -708,6 +708,32 @@ export default function AssignmentDetail() {
         }
       ]
     },
+    // Advanced Vocabulary - Lesson 6: Problem-Solving & Troubleshooting Vocabulary
+    'vocabulary-assignment-6': {
+      id: 'vocabulary-assignment-6',
+      title: 'Task 6: Problem-Solving Vocabulary',
+      description: 'Practice troubleshooting and problem-solving terminology used by software engineers.',
+      instructions: [
+        'Answer all parts. For fill-ins, type the exact term (case-insensitive).',
+        'Submit to see your score.'
+      ],
+      dueDate: '2025-10-20',
+      maxScore: 10,
+      submissionType: 'quiz',
+      status: 'not-started',
+      questions: [
+        { id: 'pv1', type: 'mcq', prompt: 'An immediate, urgent software update that solves a specific critical problem is called a:', options: ['workaround','rollback','hotfix','patch'], correctIndex: 2 },
+        { id: 'pv2', type: 'mcq', prompt: 'The main underlying reason for a problem is the:', options: ['root cause','log','permission error','pipeline'], correctIndex: 0 },
+        { id: 'pv3', type: 'fill', prompt: 'A temporary solution to bypass a problem until a permanent fix is applied is a __________.', accept: ['workaround'] },
+        { id: 'pv4', type: 'fill', prompt: 'Messages that record how a system runs are called __________.', accept: ['logs','log'] },
+        { id: 'pv5', type: 'mcq', prompt: 'Reverting a system to a previous stable version is known as a:', options: ['patch','rollback','escalation','debugging'], correctIndex: 1 },
+        { id: 'pv6', type: 'fill', prompt: 'A small update designed to fix bugs or vulnerabilities is a __________.', accept: ['patch'] },
+        { id: 'pv7', type: 'mcq', prompt: 'Systematically identifying and solving problems step‑by‑step is:', options: ['escalation','troubleshooting','deployment','pair programming'], correctIndex: 1 },
+        { id: 'pv8', type: 'fill', prompt: 'If the issue cannot be resolved at the current level, the team may __________ it to senior support.', accept: ['escalate','escalates','escalated','escalating'] },
+        { id: 'pv9', type: 'mcq', prompt: 'A complete stop in application functioning that often requires a restart is a:', options: ['system crash','workaround','stand-up','sprint'], correctIndex: 0 },
+        { id: 'pv10', type: 'fill', prompt: 'A sequence of automated steps to release software is a deployment __________.', accept: ['pipeline'] }
+      ]
+    },
     // Advanced Vocabulary - Lesson 7: Persuasion Phrases
     'av-persuasion-task-1': {
       id: 'av-persuasion-task-1',
@@ -1738,7 +1764,24 @@ export default function AssignmentDetail() {
     }
   };
 
+  // Fallbacks
   if (!assignment) {
+    const missing = !assignmentData[assignmentId];
+    if (missing) {
+      return (
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+          <div className="max-w-lg w-full text-center card">
+            <h2 className="text-xl font-semibold text-gray-900 mb-2">Assignment Not Found</h2>
+            <p className="text-gray-600 mb-4">We couldn't find an assignment for ID: <span className="font-mono text-gray-800">{assignmentId}</span>.</p>
+            <p className="text-gray-600 mb-6">Please go back to the course and try again, or contact your instructor if the problem persists.</p>
+            <div className="flex items-center justify-center gap-3">
+              <Link to="/dashboard" className="btn-secondary">Back to Dashboard</Link>
+              <Link to="/assignments" className="btn-primary">View All Assignments</Link>
+            </div>
+          </div>
+        </div>
+      );
+    }
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -1912,8 +1955,8 @@ export default function AssignmentDetail() {
                           </div>
                         )}
 
-                        {/* Optional free-text completion for vocab-assignment-2 */}
-                        {assignment.id === 'vocab-assignment-2' && (
+                        {/* Optional free-text completion for Vocab Lesson 1 - Task 2 */}
+                        {(assignment.id === 'av-workplace-jargon-task-2' || assignment.id === 'vocab-assignment-2') && (
                           <div className="mt-3">
                             <label className="block text-xs text-gray-500 mb-1">Complete the sentence in your own words</label>
                             <input
